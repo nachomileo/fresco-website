@@ -27,10 +27,10 @@ const entries: ArchiveEntry[] = [
     images: { hero: "/images/archive/laura-lopez-balza/hero.jpg", process: "/images/archive/laura-lopez-balza/process-01.jpeg", portrait: "/images/archive/laura-lopez-balza/portrait.jpeg", closing: "/images/archive/laura-lopez-balza/process-02.jpeg" },
   },
   {
-    slug: "nicolas-romero", name: "Nicolás Romero", title: "Naturalezas muertas", type: "Taller intensivo", period: "SEP 2022", date: "2022-09-01",
-    tagline: "La cultura popular atravesada por el bodegón.", summary: "Una investigación pictórica sobre el bodegón como dispositivo para reunir símbolos, objetos cotidianos y cultura popular.",
-    description: "El taller recorrió las posibilidades contemporáneas de la naturaleza muerta junto a Nicolás Romero Escalada. El grupo trabajó la selección de objetos, la composición y el valor simbólico de cada elemento para desarrollar una escena personal desde la pintura.", practices: "Pintura y composición", place: "Madrid",
-    images: { hero: "/images/archive/nicolas-romero/hero.jpg", process: "/images/archive/nicolas-romero/process-01.png", portrait: "/images/archive/nicolas-romero/process-02.png", closing: "/images/archive/nicolas-romero/process-03.png" },
+    slug: "nicolas-romero", name: "Nicolás Romero Escalada", title: "Lumbre — Ensayos sobre el bodegón y la Vanitas", type: "Taller intensivo", period: "19—21 JUN 2026", date: "2026-06-19",
+    tagline: "Una escena detenida para pensar lo común, lo simbólico y lo transitorio.", summary: "Tres encuentros para explorar el bodegón contemporáneo y la Vanitas desde la observación, la investigación y la producción personal.",
+    description: "La experiencia comenzó con una visita al Museo del Prado en busca de gestos y detalles capaces de activar una investigación. Junto a Nicolás Romero, el grupo revisó el género desde Zurbarán, Clara Peeters, Juan van der Hamen y Juan Sánchez Cotán, y desarrolló ensayos propios mediante pintura, cerámica, escritura u otros lenguajes.", practices: "Pintura, cerámica, escritura e investigación", place: "Fresca. La Nave + Museo del Prado · Madrid",
+    images: { hero: "/images/archive/nicolas-romero/ensayos sobre el bodegon y la vanitas/55C7F914-E564-4624-9EC5-4F76C235A883_1_105_c.jpeg", process: "/images/archive/nicolas-romero/ensayos sobre el bodegon y la vanitas/869CBA46-7B6A-4998-9239-A277356453AD_1_105_c.jpeg", portrait: "/images/archive/nicolas-romero/ensayos sobre el bodegon y la vanitas/A245A87D-9C5D-4888-9659-156E8D582DF5_1_105_c.jpeg", closing: "/images/archive/nicolas-romero/ensayos sobre el bodegon y la vanitas/B4B26761-A9C2-4ACB-9ABD-10A4254AD600_1_105_c.jpeg" },
   },
   {
     slug: "mercedes-bellido", name: "Mercedes Bellido", title: "Paisajes oníricos", type: "Taller intensivo", period: "1—2 OCT 2022", date: "2022-10-01",
@@ -48,13 +48,13 @@ const entries: ArchiveEntry[] = [
     slug: "pablo-merchante", name: "Pablo Merchante", title: "Naturaleza para la pintura", type: "Residencia artística", period: "2—5 JUN 2023", date: "2023-06-02",
     tagline: "Ritual, vigor e intuición.", summary: "Cuatro días de investigación pictórica, intercambio artístico y trabajo en contacto con la naturaleza.",
     description: "La residencia reunió trabajo de campo, demostraciones, mentorías individuales y conversaciones colectivas. Junto a Pablo Merchante, cada participante revisó su proceso creativo y ensayó formas de hacer donde lo ritual, lo manual y la intuición pudieran sostener una investigación pictórica propia.", practices: "Pintura e investigación", place: "Navalcarnero · Madrid",
-    images: { hero: "/images/archive/pablo-merchante/hero.jpg", process: "/images/archive/pablo-merchante/process-01.jpg", portrait: "/images/archive/pablo-merchante/portrait.jpg", closing: "/images/archive/pablo-merchante/process-02.jpg" },
+    images: { hero: "/images/archive/pablo-merchante/naturaleza para la pintura/hero.jpg", process: "/images/archive/pablo-merchante/naturaleza para la pintura/process-01.jpg", portrait: "/images/archive/pablo-merchante/portrait.jpg", closing: "/images/archive/pablo-merchante/naturaleza para la pintura/process-02.jpg" },
   },
   {
     slug: "nacho-martin-silva", name: "Nacho Martín Silva", title: "Relatos fragmentados", type: "Taller intensivo", period: "2024", date: "2024-01-01",
     tagline: "Entre la abstracción y la figuración.", summary: "Una práctica pictórica para trabajar la imagen desde el fragmento, la superposición y la tensión entre lenguajes.",
     description: "Nacho Martín Silva acompañó un proceso de observación y producción que puso en relación imágenes de distinta procedencia. A través del montaje, la pintura y la conversación crítica, el taller exploró cómo un relato puede aparecer sin cerrarse por completo.", practices: "Pintura y montaje de imágenes", place: "Fresca. La Nave · Madrid",
-    images: { hero: "/images/archive/nacho-martin-silva/hero.jpeg", process: "/images/archive/nacho-martin-silva/process-01.jpg", portrait: "/images/archive/nacho-martin-silva/process-02.jpg", closing: "/images/archive/nacho-martin-silva/process-03.jpg" },
+    images: { hero: "/images/archive/nacho-martin-silva/049BB22F-F507-47C8-8E12-7661F13F3052_1_105_c.jpeg", process: "/images/archive/nacho-martin-silva/42296654-7FA9-4C49-8444-B32D4A920CB7_1_105_c.jpeg", portrait: "/images/archive/nacho-martin-silva/4D228124-09C3-4FAC-AF8C-81D7A42EED60_1_105_c.jpeg", closing: "/images/archive/nacho-martin-silva/699F8505-AD4C-4277-8A86-1BD183CE4BAE_1_105_c.jpeg" },
   },
   {
     slug: "sophie-aguilera", name: "Sophie Aguilera", title: "Naturalezas muertas", type: "Taller intensivo", period: "2024", date: "2024-02-01",

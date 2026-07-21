@@ -26,8 +26,8 @@ export default function Home() {
         </a>
         <nav className="desktop-nav" aria-label="Navegación principal">
           <a href="#programa">Programa</a>
-          <a href="#archivo">Archivo</a>
           <a href="#la-nave">La Nave</a>
+          <a href="#archivo">Archivo</a>
         </nav>
         <a className="header-cta" href="#contacto">ME SUMO <span aria-hidden="true">↘</span></a>
       </header>
@@ -78,9 +78,9 @@ export default function Home() {
           <p>Procesos compartidos, aprendizajes y encuentros desde 2021.</p>
         </div>
         <div className="archive-grid" data-reveal>
-          <div className="archive-image"><Image src="/images/home/pintura.jpg" alt="Proceso pictórico de una experiencia Fresco" fill sizes="(max-width: 760px) 100vw, 48vw" /><span>Archivo fotográfico · 2021—26</span></div>
+          <div className="archive-image"><Image src="/images/home/Archivo.png" alt="Archivo de experiencias y procesos de Fresco" fill sizes="(max-width: 760px) 100vw, 48vw" /><span>Archivo fotográfico · 2021—26</span></div>
           <div className="archive-content">
-            <div className="archive-stats"><div><strong>31</strong><span>experiencias documentadas</span></div><div><strong>25</strong><span>artistas y colectivos</span></div><div><strong>5</strong><span>años creando</span></div></div>
+            <div className="archive-stats"><div><strong>50</strong><span>experiencias</span></div><div><strong>30+</strong><span>artistas</span></div><div><strong>5</strong><span>años creando</span></div></div>
             <ol className="archive-list">{featuredArchiveLinks.map((entry, index) => <li key={`${entry.date}-${entry.artist}`}><Link href={entry.href} target={entry.href.startsWith("http") ? "_blank" : undefined} rel={entry.href.startsWith("http") ? "noreferrer" : undefined}><span>{String(index + 1).padStart(2, "0")}</span><span className="archive-list-name"><small>{entry.period} · {entry.workshop}</small>{entry.artist}</span><span aria-hidden="true">↗</span></Link></li>)}</ol>
             <Link className="text-link" href="/archivo">Explorar todo el archivo <span aria-hidden="true">→</span></Link>
           </div>
@@ -92,11 +92,21 @@ export default function Home() {
           <div><p className="eyebrow">06 · Carabanchel, Madrid</p><h2>Fresca. La Nave</h2></div>
           <p>Una antigua imprenta transformada en espacio para la creación contemporánea.</p>
         </div>
-        <div className="studio-grid" data-reveal>
-          <div className="studio-logo"><Image src="/branding/fresca-la-nave.png" alt="Fresca. La Nave" fill sizes="(max-width: 760px) 100vw, 28vw" /></div>
-          <div className="studio-statement"><blockquote>“Un lugar donde la materia se piensa con las manos y las ideas encuentran tiempo para transformarse.”</blockquote><p>Fresca · 2026</p></div>
-          <div className="studio-column"><p className="eyebrow">El espacio</p><ul><li>Taller compartido · 110 m²</li><li>Hornos y área de cerámica</li><li>Zona de trabajo y exposición</li><li>Biblioteca de materiales</li></ul></div>
-          <div className="studio-column"><p className="eyebrow">Líneas de trabajo</p><ul><li>Investigación matérica</li><li>Cerámica contemporánea</li><li>Pintura e imagen</li><li>Edición y práctica colectiva</li></ul></div>
+        <div className="studio-layout" data-reveal>
+          <div className="studio-mosaic" aria-label="Imágenes de Fresca. La Nave">
+            <figure className="studio-photo-main"><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026.png" alt="Vista general del taller Fresca. La Nave" fill sizes="(max-width: 760px) 100vw, 50vw" /></figure>
+            <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_1.png" alt="Zona de trabajo de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
+            <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_7.png" alt="Vista interior de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
+            <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_2.png" alt="Actividad dentro de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
+            <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_8.png" alt="Detalle del taller artístico Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
+          </div>
+          <div className="studio-info">
+            <div className="studio-statement"><blockquote>Fresca. La Nave es un taller artístico en Carabanchel donde la producción cotidiana convive con talleres, seminarios, exposiciones y encuentros públicos. Un espacio para investigar materiales, sostener procesos de creación y ponerlos en común.</blockquote><div className="studio-location"><p>Creación contemporánea · Madrid</p><a href="https://www.google.com/maps/search/?api=1&query=Salvador+Alonso+12%2C+Madrid" target="_blank" rel="noreferrer">Salvador Alonso 12 <span aria-hidden="true">↗</span></a></div></div>
+            <div className="studio-info-columns">
+              <div className="studio-column"><p className="eyebrow">El espacio</p><ul><li>Taller artístico · 110 m²</li><li>Zona de trabajo. Horno y área especializada en cerámica</li><li>Sala expositiva</li><li>Sala para talleres y eventos</li></ul><a className="studio-mail-link" href="mailto:info@fresco.art">Escríbenos para sumarte al espacio <span aria-hidden="true">↗</span></a></div>
+              <div className="studio-column"><p className="eyebrow">Líneas de trabajo</p><ul><li>Investigación matérica</li><li>Cerámica contemporánea</li><li>Pintura e imagen</li><li>Edición</li><li>Prácticas situadas y colectivas</li></ul></div>
+            </div>
+          </div>
         </div>
       </section>
 

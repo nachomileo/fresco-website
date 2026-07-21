@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { allArchiveLinks } from "../archive-index-data";
+import { FrescaFixedMark } from "../fresca-fixed-mark";
 
 export const metadata: Metadata = {
   title: "Archivo de experiencias — Fresco",
@@ -13,7 +14,7 @@ export default function ArchivePage() {
     <main>
       <header className="site-header">
         <Link className="brand" href="/" aria-label="Fresco, inicio"><Image src="/branding/fresco-wordmark-black.png" alt="fresco." fill sizes="96px" priority /></Link>
-        <nav className="desktop-nav" aria-label="Navegación principal"><Link href="/#programa">Programa</Link><Link href="/archivo">Archivo</Link><Link href="/#la-nave">La Nave</Link></nav>
+        <nav className="desktop-nav" aria-label="Navegación principal"><Link href="/#programa">Programa</Link><Link href="/#la-nave">La Nave</Link><Link href="/archivo">Archivo</Link></nav>
         <Link className="header-cta" href="/#contacto">ME SUMO <span aria-hidden="true">↘</span></Link>
       </header>
 
@@ -38,6 +39,7 @@ export default function ArchivePage() {
       </section>
 
       <footer className="site-footer"><Link className="brand" href="/"><Image src="/branding/fresco-wordmark-black.png" alt="fresco." fill sizes="96px" /></Link><div><a href="https://www.instagram.com/fresca.lanave/" target="_blank" rel="noreferrer">Fresca. La Nave ↗</a><a href="https://www.instagram.com/fresco.arte/" target="_blank" rel="noreferrer">fresco. arte ↗</a><a href="mailto:info@fresco.art">info@fresco.art</a><span>© 2026</span></div></footer>
+      <FrescaFixedMark />
     </main>
   );
 }
