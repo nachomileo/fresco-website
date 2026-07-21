@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FrescaFixedMark } from "./fresca-fixed-mark";
 
-const base = "/images/program/procesos cuatrimestrales/seminario de autoedición";
+const base = "/images/program/procesos cuatrimestrales/seminario-autoedicion";
 
 const gallery = [
   { image: "Open Studio_Libros a la fresca_34.png", layout: "portrait" },
