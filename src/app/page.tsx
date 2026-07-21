@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { archiveEntries } from "./archive-data";
+import { featuredArchiveLinks } from "./archive-index-data";
 import { programGroups } from "./program-data";
 import { ProgramSlider } from "./program-slider";
 import { ScrollEffects } from "./scroll-effects";
@@ -80,9 +80,9 @@ export default function Home() {
         <div className="archive-grid" data-reveal>
           <div className="archive-image"><Image src="/images/home/pintura.jpg" alt="Proceso pictórico de una experiencia Fresco" fill sizes="(max-width: 760px) 100vw, 48vw" /><span>Archivo fotográfico · 2021—26</span></div>
           <div className="archive-content">
-            <div className="archive-stats"><div><strong>50</strong><span>experiencias</span></div><div><strong>30+</strong><span>artistas</span></div><div><strong>5</strong><span>años creando</span></div></div>
-            <ol className="archive-list">{archiveEntries.map((entry, index) => <li key={entry.slug}><Link href={`/archivo/${entry.slug}`}><span>{String(index + 1).padStart(2, "0")}</span><span className="archive-list-name"><small>{entry.period} · {entry.title}</small>{entry.name}</span><span aria-hidden="true">↗</span></Link></li>)}</ol>
-            <a className="text-link" href="#contacto">Explorar todo el archivo <span aria-hidden="true">→</span></a>
+            <div className="archive-stats"><div><strong>31</strong><span>experiencias documentadas</span></div><div><strong>25</strong><span>artistas y colectivos</span></div><div><strong>5</strong><span>años creando</span></div></div>
+            <ol className="archive-list">{featuredArchiveLinks.map((entry, index) => <li key={`${entry.date}-${entry.artist}`}><Link href={entry.href} target={entry.href.startsWith("http") ? "_blank" : undefined} rel={entry.href.startsWith("http") ? "noreferrer" : undefined}><span>{String(index + 1).padStart(2, "0")}</span><span className="archive-list-name"><small>{entry.period} · {entry.workshop}</small>{entry.artist}</span><span aria-hidden="true">↗</span></Link></li>)}</ol>
+            <Link className="text-link" href="/archivo">Explorar todo el archivo <span aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

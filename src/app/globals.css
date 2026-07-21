@@ -319,6 +319,16 @@ button, input { font: inherit; }
 .archive-list-name { display: grid; gap: 4px; color: var(--bone) !important; font: inherit !important; }
 .archive-list-name small { color: var(--muted); font: 8px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: .8px; text-transform: uppercase; }
 
+.archive-index-hero { min-height: 82vh; padding: 150px 40px 80px; display: flex; flex-direction: column; justify-content: flex-end; border-bottom: 1px solid var(--line); }
+.archive-index-hero h1 { margin: 28px 0 42px; font-size: clamp(78px, 13vw, 190px); line-height: .78; letter-spacing: -.075em; }
+.archive-index-hero > p:last-child { max-width: 540px; margin: 0 0 0 50%; color: var(--muted); font-size: 18px; line-height: 1.6; }
+.archive-index-list { padding: 0 40px 130px; }
+.archive-index-list > a { min-height: 98px; display: grid; grid-template-columns: 54px 150px 1fr auto; gap: 24px; align-items: center; border-bottom: 1px solid var(--line); transition: padding 200ms ease, color 200ms ease; }
+.archive-index-list > a:hover { padding: 0 14px; color: var(--blue-bright); }
+.archive-index-list > a > span:first-child, .archive-index-list > a > span:nth-child(2), .archive-index-list > a > span:last-child { color: var(--muted); font: 9px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
+.archive-index-title { display: grid; gap: 5px; font-size: clamp(22px, 2.7vw, 40px); letter-spacing: -.035em; }
+.archive-index-title small { color: var(--muted); font: 9px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: .8px; text-transform: uppercase; }
+
 .archive-entry-page { min-height: 82vh; padding: 145px 40px 100px; }
 .archive-entry-index { display: flex; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid var(--line); color: var(--blue-bright); font: 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1.4px; text-transform: uppercase; }
 .archive-entry-heading { padding: 70px 0 78px; border-bottom: 1px solid var(--line); }
@@ -562,6 +572,14 @@ button, input { font: inherit; }
   .archive-image { min-height: 440px; }
   .archive-content { padding: 28px 24px 34px; }
   .archive-stats strong { font-size: 25px; }
+  .archive-stats span { font-size: 7px; }
+  .archive-index-hero { min-height: 72vh; padding: 120px 24px 65px; }
+  .archive-index-hero h1 { margin: 24px 0 36px; font-size: clamp(66px, 20vw, 94px); }
+  .archive-index-hero > p:last-child { margin-left: 0; font-size: 16px; }
+  .archive-index-list { padding: 0 24px 95px; }
+  .archive-index-list > a { min-height: 112px; grid-template-columns: 34px 1fr auto; gap: 12px; }
+  .archive-index-list > a > span:nth-child(2) { display: none; }
+  .archive-index-title { font-size: 25px; }
   .archive-entry-page { min-height: auto; padding: 110px 24px 80px; }
   .archive-entry-heading { padding: 55px 0 60px; }
   .archive-entry-heading h1 { font-size: clamp(64px, 20vw, 92px); }
