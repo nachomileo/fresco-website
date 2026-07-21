@@ -15,6 +15,9 @@
 # production
 /build
 
+# local WordPress media source backup
+/fresco_uploads-clean/
+
 # misc
 .DS_Store
 *.pem
