@@ -316,6 +316,8 @@ button, input { font: inherit; }
 .archive-list li a { padding: 17px 0; display: grid; grid-template-columns: 44px 1fr auto; transition: color 180ms ease, padding 180ms ease; }
 .archive-list li a:hover { padding-left: 10px; color: var(--blue-bright); }
 .archive-list li span { color: var(--muted); font: 10px/1.5 "SFMono-Regular", Consolas, monospace; }
+.archive-list-name { display: grid; gap: 4px; color: var(--bone) !important; font: inherit !important; }
+.archive-list-name small { color: var(--muted); font: 8px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: .8px; text-transform: uppercase; }
 
 .archive-entry-page { min-height: 82vh; padding: 145px 40px 100px; }
 .archive-entry-index { display: flex; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid var(--line); color: var(--blue-bright); font: 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1.4px; text-transform: uppercase; }
@@ -343,6 +345,7 @@ button, input { font: inherit; }
 .archive-story-intro { padding: 130px 40px; display: grid; grid-template-columns: minmax(0, 25fr) minmax(0, 75fr); gap: 30px; border-bottom: 1px solid var(--line); }
 .archive-story-intro h2 { max-width: 1200px; margin: 0 0 45px; font-size: clamp(48px, 7vw, 105px); line-height: .94; letter-spacing: -.06em; }
 .archive-story-intro div > p { max-width: 700px; margin: 0; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.archive-story-intro .archive-story-description { margin-top: 24px; color: #d1cec6; }
 .archive-story-grid { padding: 40px; display: grid; grid-template-columns: 1.7fr 1fr; gap: 6px; background: var(--panel); }
 .archive-story-grid figure, .archive-story-pair figure { position: relative; min-height: 520px; margin: 0; overflow: hidden; }
 .archive-story-grid figure img, .archive-story-pair figure img { object-fit: cover; filter: grayscale(.08) saturate(.8) contrast(1.04); }
@@ -358,6 +361,8 @@ button, input { font: inherit; }
 .archive-story-pair { padding: 0 40px 120px; display: grid; grid-template-columns: 1.55fr 1fr; gap: 6px; }
 .archive-story-pair figure { min-height: 680px; }
 .archive-story-back { padding: 0 40px 120px; }
+.archive-entry-nav-name { display: grid; gap: 4px; color: var(--bone) !important; font: inherit !important; }
+.archive-entry-nav-name small { color: var(--muted); font: 8px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: .8px; text-transform: uppercase; }
 
 .workshop-hero { min-height: 100vh; padding-top: 68px; display: grid; grid-template-columns: 44% 56%; }
 .workshop-hero-image { position: relative; min-height: calc(100vh - 68px); overflow: hidden; }

@@ -81,7 +81,7 @@ export default function Home() {
           <div className="archive-image"><Image src="/images/home/pintura.jpg" alt="Proceso pictórico de una experiencia Fresco" fill sizes="(max-width: 760px) 100vw, 48vw" /><span>Archivo fotográfico · 2021—26</span></div>
           <div className="archive-content">
             <div className="archive-stats"><div><strong>50</strong><span>experiencias</span></div><div><strong>30+</strong><span>artistas</span></div><div><strong>5</strong><span>años creando</span></div></div>
-            <ol className="archive-list">{archiveEntries.map((entry, index) => <li key={entry.slug}><Link href={`/archivo/${entry.slug}`}><span>{String(index + 1).padStart(2, "0")}</span>{entry.name}<span aria-hidden="true">↗</span></Link></li>)}</ol>
+            <ol className="archive-list">{archiveEntries.map((entry, index) => <li key={entry.slug}><Link href={`/archivo/${entry.slug}`}><span>{String(index + 1).padStart(2, "0")}</span><span className="archive-list-name"><small>{entry.period} · {entry.title}</small>{entry.name}</span><span aria-hidden="true">↗</span></Link></li>)}</ol>
             <a className="text-link" href="#contacto">Explorar todo el archivo <span aria-hidden="true">→</span></a>
           </div>
         </div>
