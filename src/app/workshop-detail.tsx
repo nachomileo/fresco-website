@@ -55,18 +55,64 @@ const alejandraWorks = [
   "SaveClip.App_713164236_18590077168030561_6206997300848343689_n.jpg",
 ];
 
+const eventDates: Record<string, { startDate: string; endDate: string }> = {
+  "ese-instante-de-luz": { startDate: "2026-10-02T19:00:00+02:00", endDate: "2026-10-02T23:00:00+02:00" },
+  "experimentacion-pictorica-sobre-ceramica": { startDate: "2026-10-10", endDate: "2026-10-11" },
+  "micelio-y-textil": { startDate: "2026-11-21T10:00:00+01:00", endDate: "2026-12-12T14:00:00+01:00" },
+  "arcillas-silvestres-y-paisaje-urbano": { startDate: "2026-11-27T16:00:00+01:00", endDate: "2026-11-29T14:00:00+01:00" },
+  "criaturas-elementales": { startDate: "2026-12-11T18:00:00+01:00", endDate: "2026-12-11T21:00:00+01:00" },
+  "sirviendo-un-plato-bodegon": { startDate: "2027-01-16T10:00:00+01:00", endDate: "2027-01-23T14:00:00+01:00" },
+};
+
+const imageSource = (image: string) => {
+  if (image === "/images/program/paginas/ese instante de luz/Rayogramas_Taller Ana Paes_Fresca_22.jpeg") return "/images/program/derivas materiales/paginas/ese instante de luz/Rayogramas_Taller Ana Paes_Fresca_22.png";
+  if (image.includes("/del papel a la cerámica/")) return image.replace("/images/program/paginas/del papel a la cerámica/", "/images/program/derivas materiales/paginas/ana-cano-grafica-ceramica/");
+  if (image.includes("/bodegones en ceramica/Bodegones en cerámica_Sophie Aguilera")) return image.replace("/images/program/paginas/bodegones en ceramica/Bodegones en cerámica_Sophie Aguilera", "/images/program/derivas materiales/paginas/bodegones en ceramica/sophie-");
+  if (image.startsWith("/images/program/paginas/")) return image.replace("/images/program/paginas/", "/images/program/derivas materiales/paginas/");
+  return image;
+};
+
 export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
   const images = [...workshop.images.filter((image) => !excludedWorkshopImages.has(image)), ...(workshop.extraImages ?? [])];
-  const imageSource = (image: string) => {
-    if (image === "/images/program/paginas/ese instante de luz/Rayogramas_Taller Ana Paes_Fresca_22.jpeg") return "/images/program/derivas materiales/paginas/ese instante de luz/Rayogramas_Taller Ana Paes_Fresca_22.png";
-    if (image.includes("/del papel a la cerámica/")) return image.replace("/images/program/paginas/del papel a la cerámica/", "/images/program/derivas materiales/paginas/ana-cano-grafica-ceramica/");
-    if (image.includes("/bodegones en ceramica/Bodegones en cerámica_Sophie Aguilera")) return image.replace("/images/program/paginas/bodegones en ceramica/Bodegones en cerámica_Sophie Aguilera", "/images/program/derivas materiales/paginas/bodegones en ceramica/sophie-");
-    if (image.startsWith("/images/program/paginas/")) return image.replace("/images/program/paginas/", "/images/program/derivas materiales/paginas/");
-    return image;
-  };
-
+  const siteUrl = "https://fresco.art";
+  const dates = eventDates[workshop.slug];
+  const eventSchema = dates ? {
+    "@context": "https://schema.org",
+    "@type": "EducationEvent",
+    name: workshop.title,
+    description: `${workshop.intro} ${workshop.context}`,
+    startDate: dates.startDate,
+    endDate: dates.endDate,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    image: `${siteUrl}${imageSource(workshop.heroImage)}`,
+    url: `${siteUrl}/talleres/${workshop.slug}`,
+    location: {
+      "@type": "Place",
+      name: "Fresca. La Nave",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Calle Salvador Alonso 12",
+        addressLocality: "Madrid",
+        addressCountry: "ES",
+      },
+    },
+    organizer: {
+      "@type": "ArtsOrganization",
+      name: "Fresca. La Nave",
+      url: siteUrl,
+    },
+    offers: {
+      "@type": "Offer",
+      url: `${siteUrl}/talleres/${workshop.slug}`,
+      price: Number.parseFloat(workshop.price.replace(",", ".")),
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
+    },
+  } : null;
   return (
     <main>
+      {eventSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema).replace(/</g, "\\u003c") }} />}
       <header className="site-header">
         <Link className="brand" href="/" aria-label="Fresco, inicio"><Image src="/branding/fresco-wordmark-black.png" alt="fresco." fill sizes="96px" priority /></Link>
         <nav className="desktop-nav" aria-label="Navegación principal"><Link href="/#programa">Programa</Link><Link href="/#la-nave">La Nave</Link><Link href="/#archivo">Archivo</Link></nav>

@@ -12,7 +12,25 @@ export const generateStaticParams = () => programGroups.map(({ slug }) => ({ pro
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const group = getProgramGroup((await params).program);
-  return group ? { title: `${group.title} — Fresca. La Nave`, description: group.pageDescription ?? group.description } : {};
+  if (!group) return {};
+  const description = group.pageDescription ?? group.description;
+  return {
+    title: group.title,
+    description,
+    alternates: { canonical: `/${group.slug}` },
+    openGraph: {
+      title: `${group.title} | fresco.`,
+      description,
+      url: `/${group.slug}`,
+      images: [{ url: group.image, alt: `${group.title}, programa de Fresca. La Nave` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${group.title} | fresco.`,
+      description,
+      images: [group.image],
+    },
+  };
 }
 
 export default async function ProgramPage({ params }: Props) {

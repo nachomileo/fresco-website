@@ -5,8 +5,21 @@ import { allArchiveLinks } from "../archive-index-data";
 import { FrescaFixedMark } from "../fresca-fixed-mark";
 
 export const metadata: Metadata = {
-  title: "Archivo de experiencias — Fresco",
+  title: "Archivo de experiencias",
   description: "Talleres, residencias y procesos compartidos de Fresco desde 2022.",
+  alternates: { canonical: "/archivo" },
+  openGraph: {
+    title: "Archivo de experiencias | fresco.",
+    description: "Talleres, residencias y procesos compartidos de Fresco desde 2022.",
+    url: "/archivo",
+    images: [{ url: "/images/home/Archivo.png", alt: "Archivo de experiencias de Fresco" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Archivo de experiencias | fresco.",
+    description: "Talleres, residencias y procesos compartidos de Fresco desde 2022.",
+    images: ["/images/home/Archivo.png"],
+  },
 };
 
 export default function ArchivePage() {

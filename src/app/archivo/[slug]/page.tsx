@@ -66,9 +66,44 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const entry = getArchiveEntry(slug);
   const indexEntry = getArchiveIndexEntry(slug);
-  return entry
-    ? { title: `${entry.title} — Archivo Fresco`, description: entry.summary }
-    : indexEntry ? { title: `${indexEntry.workshop} — Archivo Fresco`, description: `${indexEntry.workshop} con ${indexEntry.artist}.` } : {};
+  if (entry) return {
+    title: `${entry.title} — ${entry.name}`,
+    description: entry.summary,
+    alternates: { canonical: `/archivo/${slug}` },
+    openGraph: {
+      title: `${entry.title} — ${entry.name} | Archivo fresco.`,
+      description: entry.summary,
+      url: `/archivo/${slug}`,
+      type: "article",
+      images: [{ url: entry.images.hero, alt: `${entry.title} con ${entry.name}` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${entry.title} — ${entry.name} | Archivo fresco.`,
+      description: entry.summary,
+      images: [entry.images.hero],
+    },
+  };
+  if (indexEntry) {
+    const description = `${indexEntry.workshop} con ${indexEntry.artist}. Archivo de experiencias de Fresco.`;
+    return {
+      title: `${indexEntry.workshop} — ${indexEntry.artist}`,
+      description,
+      alternates: { canonical: `/archivo/${slug}` },
+      openGraph: {
+        title: `${indexEntry.workshop} — ${indexEntry.artist} | Archivo fresco.`,
+        description,
+        url: `/archivo/${slug}`,
+        type: "article",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: `${indexEntry.workshop} — ${indexEntry.artist} | Archivo fresco.`,
+        description,
+      },
+    };
+  }
+  return {};
 }
 
 export default async function ArchiveEntryPage({ params }: { params: Promise<{ slug: string }> }) {
