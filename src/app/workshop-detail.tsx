@@ -17,7 +17,7 @@ const tutorLinks: Record<string, { web?: string; instagram?: string }> = {
   "Ana Paes": { web: "https://www.manoloeirin.com/ana-paes", instagram: "https://www.instagram.com/ana__paes/" },
   "Luka Andeyro": { instagram: "https://www.instagram.com/luka.andeyro/" },
   "Brenda Ranieri": { web: "https://brendaranieri.art/", instagram: "https://www.instagram.com/brendaranieri.studio/" },
-  "Alejandra Díaz-Guerra": { web: "https://es.linkedin.com/in/alejandradiaz-guerra", instagram: "https://www.instagram.com/alejandradiazguerra/" },
+  "Alejandra Díaz-Guerra": { instagram: "https://www.instagram.com/alejandradiazguerra/" },
   "Cecilia Czornogas": { instagram: "https://www.instagram.com/c_e_c_z/" },
   "Ana Cano Brookbank": { web: "https://www.anacanobrookbank.com/", instagram: "https://www.instagram.com/anacanobrookbank/" },
   "Sophie Aguilera": { web: "https://www.sophieaguilera.com/", instagram: "https://www.instagram.com/sophiaguilera/" },
@@ -44,6 +44,15 @@ const anaCanoWorks = [
   { image: "spoons.jpg", title: "Cucharas de paper clay y gres negro" },
   { image: "shot-glasses.jpg", title: "Vasos de porcelana" },
   { image: "composition.jpg", title: "Composición" },
+];
+
+const alejandraWorksBase = "/images/program/derivas materiales/paginas/micelo y textil/obra alejandra";
+const alejandraWorks = [
+  "Alejandra Diaz Guerra-micelio-oo-.jpg",
+  "Alejandra_laboratorio.jpg",
+  "SaveClip.App_621450717_18552499615030561_3336511676195108464_n.jpg",
+  "SaveClip.App_711531952_18590077411030561_4034927005839063974_n.jpg",
+  "SaveClip.App_713164236_18590077168030561_6206997300848343689_n.jpg",
 ];
 
 export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
@@ -101,6 +110,11 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
         {workshop.slug === "experimentacion-pictorica-sobre-ceramica" && <section className="artist-work-section">
           <header className="artist-work-heading-single"><p className="eyebrow">Obra de la artista</p></header>
           <div>{anaCanoWorks.map((work, index) => <figure className={index % 4 === 0 ? "artist-work-wide" : ""} key={work.image}><Image src={`${anaCanoWorksBase}/${work.image}`} alt={`${work.title}, obra de Ana Cano Brookbank`} fill sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>{work.title} · Ana Cano Brookbank</figcaption></figure>)}</div>
+        </section>}
+
+        {workshop.slug === "micelio-y-textil" && <section className="artist-work-section">
+          <header className="artist-work-heading-single"><p className="eyebrow">Obra de la artista</p></header>
+          <div>{alejandraWorks.map((image, index) => <figure className={index % 4 === 0 ? "artist-work-wide" : ""} key={image}><Image src={`${alejandraWorksBase}/${image}`} alt="Obra e investigación con micelio de Alejandra Díaz-Guerra" fill sizes="(max-width: 760px) 100vw, 50vw" /></figure>)}</div>
         </section>}
 
         {workshop.slug === "sirviendo-un-plato-bodegon" && <section className="artist-work-section">
