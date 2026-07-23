@@ -39,10 +39,14 @@ const artistWorks = [
   `${archiveBase}/nacho-silva-obra-02.jpg`,
   `${archiveBase}/nacho-silva-obra-03.jpg`,
   `${archiveBase}/nacho-silva-obra-04.jpg`,
+  `${archiveBase}/sala_3.jpg`,
+  `${archiveBase}/sala_8.jpg`,
 ];
 
+const tangereCaption = "“Tangere”. Vista parcial de la exposición. La Térmica, Málaga. 2026";
+
 const steps = [
-  { title: "Situar", text: "Presentar las prácticas, preguntas y materiales de cada participante para reconocer el punto de partida del proyecto personal." },
+  { title: "Situar", text: "Presentar las prácticas, preguntas y materiales de cada participante para reconocer el punto de partida de su proyecto. Una entrevista inicial y la revisión de los trabajos en tutorías individuales permitirán definir la dirección del seminario y ajustar el programa a los intereses y necesidades de cada proceso." },
   { title: "Sesiones de lectura y conversación", text: "Referencias, casos de estudio y herramientas para situar el trabajo en el arte contemporáneo." },
   { title: "Visitas y contexto", text: "Salidas a exposiciones, estudios o actividades de la agenda local que ayuden a abrir preguntas sobre la producción y la puesta en público de los proyectos." },
   { title: "Probar", text: "Explorar formatos y probar materiales en las instancias de producción, conversación y crítica de obra." },
@@ -116,7 +120,7 @@ export function EnObraDetail() {
 
         <section className="artist-work-section">
           <header className="artist-work-heading-single"><p className="eyebrow">Obra del artista</p></header>
-          <div>{artistWorks.map((image, index) => <figure className={index % 4 === 0 ? "artist-work-wide" : ""} key={index}><Image src={image} alt="Obra y vista de exposición de Nacho Martín Silva" fill sizes="(max-width: 760px) 100vw, 50vw" /></figure>)}</div>
+          <div>{artistWorks.map((image, index) => { const isTangereView = image.endsWith("sala_3.jpg") || image.endsWith("sala_8.jpg"); return <figure className={index % 4 === 0 || isTangereView ? "artist-work-wide" : ""} key={image}><Image src={image} alt={isTangereView ? "Tangere, vista parcial de la exposición en La Térmica de Málaga" : "Obra y vista de exposición de Nacho Martín Silva"} fill sizes="(max-width: 760px) 100vw, 50vw" />{isTangereView && <figcaption>{tangereCaption}</figcaption>}</figure>; })}</div>
         </section>
 
         <nav className="workshop-back"><Link href="/seminarios">← Volver a Seminarios</Link><Link href="mailto:seminario@fresco.art">Consultar inscripción ↗</Link></nav>

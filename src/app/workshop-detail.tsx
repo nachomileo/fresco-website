@@ -23,6 +23,16 @@ const tutorLinks: Record<string, { web?: string; instagram?: string }> = {
   "Sophie Aguilera": { web: "https://www.sophieaguilera.com/", instagram: "https://www.instagram.com/sophiaguilera/" },
 };
 
+const sophieWorksBase = "/images/program/paginas/bodegones en ceramica/obra-sophie-aguilera";
+const sophieWorks = [
+  { image: "naranjas-y-limones.jpg", title: "Naranjas y limones" },
+  { image: "mientras-dure.jpg", title: "Mientras dure" },
+  { image: "jarron-sobre-pano-y-taburetes.jpg", title: "Jarrón sobre paño y taburetes" },
+  { image: "accidente-domestico.jpg", title: "Accidente doméstico" },
+  { image: "la-vida-es-domingo.jpg", title: "La vida es domingo" },
+  { image: "bajo-las-margaritas.jpg", title: "Bajo las margaritas" },
+];
+
 export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
   const images = workshop.images.filter((image) => !excludedWorkshopImages.has(image));
   const imageSource = (image: string) => {
@@ -72,6 +82,11 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
         <section className="workshop-gallery workshop-gallery-masonry">{images.slice(1).map((image) => <figure key={image}><Image src={imageSource(image)} alt={`Proceso de ${workshop.cardTitle}`} width={0} height={0} sizes="(max-width: 760px) 100vw, 33vw" /></figure>)}</section>
 
         <section className="workshop-tutors"><p className="eyebrow">Imparten</p><div>{workshop.tutors.map((tutor, index) => { const links = tutorLinks[tutor.name]; return <article key={tutor.name}><span>{String(index + 1).padStart(2, "0")}</span><div className="workshop-tutor-heading"><h2>{tutor.name}</h2>{links && <nav aria-label={`Enlaces de ${tutor.name}`}>{links.web && <a href={links.web} target="_blank" rel="noreferrer">Web ↗</a>}{links.instagram && <a href={links.instagram} target="_blank" rel="noreferrer">Instagram ↗</a>}</nav>}</div><div className="workshop-tutor-bio"><p>{tutor.text}</p></div></article>; })}</div></section>
+
+        {workshop.slug === "bodegones-en-porcelana" && <section className="artist-work-section">
+          <header className="artist-work-heading-single"><p className="eyebrow">Obra de la artista</p></header>
+          <div>{sophieWorks.map((work, index) => <figure className={index % 4 === 0 ? "artist-work-wide" : ""} key={work.image}><Image src={`${sophieWorksBase}/${work.image}`} alt={`${work.title}, obra de Sophie Aguilera`} fill sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>{work.title} · Sophie Aguilera</figcaption></figure>)}</div>
+        </section>}
 
         <nav className="workshop-back"><Link href="/talleres">← Volver a Derivas materiales</Link><Link href="mailto:info@fresco.art">Consultar inscripción ↗</Link></nav>
       </article>
