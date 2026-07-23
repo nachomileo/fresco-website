@@ -43,8 +43,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/branding/fresco-logo.png",
-    apple: "/branding/fresco-logo.png",
+    icon: "/branding/fresca-la-nave-icon.png",
+    shortcut: "/branding/fresca-la-nave-icon.png",
+    apple: "/branding/fresca-la-nave-icon.png",
   },
   manifest: "/manifest.webmanifest",
 };

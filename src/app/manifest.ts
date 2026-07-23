@@ -12,8 +12,8 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "es",
     icons: [
       {
-        src: "/branding/fresco-logo.png",
-        sizes: "500x500",
+        src: "/branding/fresca-la-nave-icon.png",
+        sizes: "512x512",
         type: "image/png",
         purpose: "any",
       },
