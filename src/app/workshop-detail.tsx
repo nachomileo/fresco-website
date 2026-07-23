@@ -18,25 +18,40 @@ const tutorLinks: Record<string, { web?: string; instagram?: string }> = {
   "Luka Andeyro": { instagram: "https://www.instagram.com/luka.andeyro/" },
   "Brenda Ranieri": { web: "https://brendaranieri.art/", instagram: "https://www.instagram.com/brendaranieri.studio/" },
   "Alejandra Díaz-Guerra": { web: "https://es.linkedin.com/in/alejandradiaz-guerra", instagram: "https://www.instagram.com/alejandradiazguerra/" },
-  "Cecilia Czornogas": { web: "https://ra.co/dj/cecz", instagram: "https://www.instagram.com/c_e_c_z/" },
+  "Cecilia Czornogas": { instagram: "https://www.instagram.com/c_e_c_z/" },
   "Ana Cano Brookbank": { web: "https://www.anacanobrookbank.com/", instagram: "https://www.instagram.com/anacanobrookbank/" },
   "Sophie Aguilera": { web: "https://www.sophieaguilera.com/", instagram: "https://www.instagram.com/sophiaguilera/" },
 };
 
 const sophieWorksBase = "/images/program/paginas/bodegones en ceramica/obra-sophie-aguilera";
 const sophieWorks = [
-  { image: "naranjas-y-limones.jpg", title: "Naranjas y limones" },
-  { image: "mientras-dure.jpg", title: "Mientras dure" },
-  { image: "jarron-sobre-pano-y-taburetes.jpg", title: "Jarrón sobre paño y taburetes" },
-  { image: "accidente-domestico.jpg", title: "Accidente doméstico" },
-  { image: "la-vida-es-domingo.jpg", title: "La vida es domingo" },
-  { image: "bajo-las-margaritas.jpg", title: "Bajo las margaritas" },
+  { image: "naranjas-y-limones.webp", title: "Naranjas y limones", portrait: true },
+  { image: "mientras-dure.webp", title: "Mientras dure", portrait: true },
+  { image: "jarron-sobre-pano-y-taburetes.webp", title: "Jarrón sobre paño y taburetes", portrait: true },
+  { image: "accidente-domestico.webp", title: "Accidente doméstico", portrait: true },
+  { image: "la-vida-es-domingo.webp", title: "La vida es domingo", portrait: true },
+  { image: "estudio-floral.jpg", title: "Estudio floral", portrait: true },
+  { image: "jarron-sobre-fondo-azul.jpg", title: "Jarrón sobre fondo azul", portrait: true },
+  { image: "leda.jpg", title: "Leda", portrait: true },
+  { image: "bajo-las-margaritas.webp", title: "Bajo las margaritas", portrait: false },
+];
+
+const anaCanoWorksBase = "/images/program/derivas materiales/paginas/ana-cano-grafica-ceramica/obra-ana-cano";
+const anaCanoWorks = [
+  { image: "stoneware-plate.jpg", title: "Plato de gres" },
+  { image: "porcelain-glass.jpg", title: "Vaso de porcelana" },
+  { image: "stoneware-glass.jpg", title: "Vaso de gres" },
+  { image: "spoons.jpg", title: "Cucharas de paper clay y gres negro" },
+  { image: "shot-glasses.jpg", title: "Vasos de porcelana" },
+  { image: "composition.jpg", title: "Composición" },
 ];
 
 export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
-  const images = workshop.images.filter((image) => !excludedWorkshopImages.has(image));
+  const images = [...workshop.images.filter((image) => !excludedWorkshopImages.has(image)), ...(workshop.extraImages ?? [])];
   const imageSource = (image: string) => {
     if (image === "/images/program/paginas/ese instante de luz/Rayogramas_Taller Ana Paes_Fresca_22.jpeg") return "/images/program/derivas materiales/paginas/ese instante de luz/Rayogramas_Taller Ana Paes_Fresca_22.png";
+    if (image.includes("/del papel a la cerámica/")) return image.replace("/images/program/paginas/del papel a la cerámica/", "/images/program/derivas materiales/paginas/ana-cano-grafica-ceramica/");
+    if (image.includes("/bodegones en ceramica/Bodegones en cerámica_Sophie Aguilera")) return image.replace("/images/program/paginas/bodegones en ceramica/Bodegones en cerámica_Sophie Aguilera", "/images/program/derivas materiales/paginas/bodegones en ceramica/sophie-");
     if (image.startsWith("/images/program/paginas/")) return image.replace("/images/program/paginas/", "/images/program/derivas materiales/paginas/");
     return image;
   };
@@ -54,7 +69,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
           <div className="workshop-hero-image"><Image src={imageSource(workshop.heroImage)} alt={workshop.cardTitle} fill sizes="(max-width: 760px) 100vw, 44vw" priority /></div>
           <div className="workshop-hero-copy">
             <p className="meta-label">Derivas materiales · {workshop.number}</p>
-            <div className="workshop-title-stack"><h1>{workshop.title}</h1><p>{workshop.byline}</p>{workshop.edition && <span>{workshop.edition}</span>}</div>
+            <div className="workshop-title-stack"><h1>{workshop.slug === "sirviendo-un-plato-bodegon" ? <>Sirviendo.<br />Un plato-bodegón</> : workshop.title}</h1><p>{workshop.byline}</p>{workshop.edition && <span>{workshop.edition}</span>}</div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>{workshop.duration}</dd></div><div><dt>Precio</dt><dd>{workshop.price}</dd></div></dl>
               <Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>
@@ -70,12 +85,12 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
         </section>
 
         <section className="workshop-journey">
-          <header><p className="eyebrow">El recorrido</p><h2>{workshop.steps.map((step) => step.title).join(", ")}.</h2></header>
-          <ol>{workshop.steps.map((step, index) => <li key={step.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
+          <header><p className="eyebrow">El recorrido</p><h2>{workshop.journeyTitle ?? `${workshop.steps.map((step) => step.title).join(", ")}.`}</h2></header>
+          <ol>{workshop.steps.map((step, index) => <li key={step.title}><span>{step.number ?? String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
         </section>
 
         <section className="workshop-info">
-          <div>{workshop.edition && <p className="eyebrow">{workshop.edition}</p>}<h2>{workshop.duration} en Fresca. La Nave.</h2><Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link></div>
+          <div>{workshop.edition && <p className="eyebrow">{workshop.edition}</p>}<h2>{workshop.infoTitle ?? `${workshop.duration} en Fresca. La Nave.`}</h2><Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link></div>
           <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Horario</dt><dd>{workshop.schedule}</dd></div><div><dt>Lugar</dt><dd>{workshop.place}</dd></div><div><dt>Plazas</dt><dd>{workshop.group}</dd></div><div><dt>Precio</dt><dd>{workshop.price}<br />{workshop.includes}</dd></div></dl>
         </section>
 
@@ -83,9 +98,14 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
 
         <section className="workshop-tutors"><p className="eyebrow">Imparten</p><div>{workshop.tutors.map((tutor, index) => { const links = tutorLinks[tutor.name]; return <article key={tutor.name}><span>{String(index + 1).padStart(2, "0")}</span><div className="workshop-tutor-heading"><h2>{tutor.name}</h2>{links && <nav aria-label={`Enlaces de ${tutor.name}`}>{links.web && <a href={links.web} target="_blank" rel="noreferrer">Web ↗</a>}{links.instagram && <a href={links.instagram} target="_blank" rel="noreferrer">Instagram ↗</a>}</nav>}</div><div className="workshop-tutor-bio"><p>{tutor.text}</p></div></article>; })}</div></section>
 
-        {workshop.slug === "bodegones-en-porcelana" && <section className="artist-work-section">
+        {workshop.slug === "experimentacion-pictorica-sobre-ceramica" && <section className="artist-work-section">
           <header className="artist-work-heading-single"><p className="eyebrow">Obra de la artista</p></header>
-          <div>{sophieWorks.map((work, index) => <figure className={index % 4 === 0 ? "artist-work-wide" : ""} key={work.image}><Image src={`${sophieWorksBase}/${work.image}`} alt={`${work.title}, obra de Sophie Aguilera`} fill sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>{work.title} · Sophie Aguilera</figcaption></figure>)}</div>
+          <div>{anaCanoWorks.map((work, index) => <figure className={index % 4 === 0 ? "artist-work-wide" : ""} key={work.image}><Image src={`${anaCanoWorksBase}/${work.image}`} alt={`${work.title}, obra de Ana Cano Brookbank`} fill sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>{work.title} · Ana Cano Brookbank</figcaption></figure>)}</div>
+        </section>}
+
+        {workshop.slug === "sirviendo-un-plato-bodegon" && <section className="artist-work-section">
+          <header className="artist-work-heading-single"><p className="eyebrow">Obra de la artista</p></header>
+          <div>{sophieWorks.map((work) => <figure className={work.portrait ? "artist-work-portrait" : "artist-work-wide"} key={work.image}><Image src={`${sophieWorksBase}/${work.image}`} alt={`${work.title}, obra de Sophie Aguilera`} fill sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>{work.title} · Sophie Aguilera</figcaption></figure>)}</div>
         </section>}
 
         <nav className="workshop-back"><Link href="/talleres">← Volver a Derivas materiales</Link><Link href="mailto:info@fresco.art">Consultar inscripción ↗</Link></nav>

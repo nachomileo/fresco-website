@@ -5,7 +5,7 @@ import { getWorkshop, workshops } from "../../workshop-data";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export const generateStaticParams = () => workshops.filter(({ slug }) => slug !== "arcillas-silvestres").map(({ slug }) => ({ slug }));
+export const generateStaticParams = () => workshops.filter(({ slug }) => slug !== "arcillas-silvestres-y-paisaje-urbano").map(({ slug }) => ({ slug }));
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const workshop = getWorkshop((await params).slug);

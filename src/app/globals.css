@@ -473,6 +473,8 @@ button, input { font: inherit; }
 .artist-work-section figure { position: relative; min-height: 480px; margin: 0; overflow: hidden; background: var(--panel); }
 .artist-work-section figure.artist-work-wide { grid-column: span 2; }
 .artist-work-section figure img { object-fit: cover; filter: saturate(.72) contrast(1.1) brightness(1.03); }
+.artist-work-section figure.artist-work-portrait { min-height: 0; aspect-ratio: 3 / 4; background: #fff; }
+.artist-work-section figure.artist-work-portrait img { object-fit: contain; }
 .artist-work-section figcaption { position: absolute; left: 16px; right: 16px; bottom: 14px; padding: 9px 11px; background: rgba(16,16,16,.82); color: var(--bone); font: 9px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: .4px; text-transform: uppercase; }
 .workshop-back { padding: 40px; display: flex; justify-content: space-between; border-top: 1px solid var(--line); }
 .workshop-back a { color: var(--blue-bright); font: 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }

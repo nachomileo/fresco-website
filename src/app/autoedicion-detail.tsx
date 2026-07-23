@@ -33,7 +33,6 @@ const artistWorks = [
   "Fresco.jpg",
   "Museo ABC Ana Bustelo.jpeg",
   "Penélope e Ítaca...Penélope, además de llorar y rezar por el regreso de su esposo, engaña a los .jpg",
-  "ana bustelo.jpeg",
   "ervilha_1. El dibujo a línea con pilot_2. La compo de stencils con lápices_3. El dibujo editado .jpg",
   "images.jpeg",
   "ñ1. El dibujo a línea con pilot_2. La compo de stencils con lápices_3. El dibujo editado y public.jpg",
@@ -78,7 +77,7 @@ export function AutoedicionDetail() {
         </section>
 
         <section className="workshop-journey">
-          <header><p className="eyebrow">El formato</p><h2>Un comienzo intensivo y tres revisiones para acompañar el proyecto hasta su presentación.</h2><Link href="mailto:info@fresco.art">Quiero más info <span aria-hidden="true">↗</span></Link></header>
+          <header><p className="eyebrow">El formato</p><h2>Diseñar, producir y presentar tu edición.</h2><Link href="mailto:info@fresco.art">Quiero más info <span aria-hidden="true">↗</span></Link></header>
           <ol>{steps.map((step, index) => <li key={step.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
         </section>
 
