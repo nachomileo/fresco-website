@@ -13,9 +13,11 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; max-width: 100%; overflow-x: clip; }
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: clip;
   background: var(--ink);
   color: var(--bone);
   font-family: Arial, Helvetica, sans-serif;
@@ -544,6 +546,8 @@ button, input { font: inherit; }
 .motion-ready .program-card:nth-child(4) { transition-delay: 160ms; }
 
 @media (max-width: 760px) {
+  main, section, article, header, footer, nav, div { min-width: 0; }
+  h1, h2, h3, p, a, dd { overflow-wrap: anywhere; }
   .site-header { height: 60px; padding: 0 20px; grid-template-columns: 1fr 1fr; }
   .desktop-nav { display: none; }
   .header-cta { font-size: 9px; }

@@ -2,40 +2,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { FrescaFixedMark } from "./fresca-fixed-mark";
 
-const base = "/images/program/procesos cuatrimestrales/seminario-autoedicion";
+const base = "/images/program/procesos cuatrimestrales/seminario-autoedicion-web";
 
 const gallery = [
-  { image: "Open Studio_Libros a la fresca_34.png", layout: "portrait" },
-  { image: "Open Studio_Libros a la fresca_2.png", layout: "portrait" },
-  { image: "Open Studio_Libros a la fresca_83.png", layout: "portrait" },
-  { image: "Open Studio_Libros a la fresca_14.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_21.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_23.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_30.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_32.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_36.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_38.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_39.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_43.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_44.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_78.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_85.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_88.png", layout: "landscape" },
-  { image: "Open Studio_Libros a la fresca_89.png", layout: "landscape" },
+  { image: "gallery-01.jpg", layout: "portrait" },
+  { image: "gallery-02.jpg", layout: "portrait" },
+  { image: "gallery-03.jpg", layout: "portrait" },
+  { image: "gallery-04.jpg", layout: "landscape" },
+  { image: "gallery-05.jpg", layout: "landscape" },
+  { image: "gallery-06.jpg", layout: "landscape" },
+  { image: "gallery-07.jpg", layout: "landscape" },
+  { image: "gallery-08.jpg", layout: "landscape" },
+  { image: "gallery-09.jpg", layout: "landscape" },
+  { image: "gallery-10.jpg", layout: "landscape" },
+  { image: "gallery-11.jpg", layout: "landscape" },
+  { image: "gallery-12.jpg", layout: "landscape" },
+  { image: "gallery-13.jpg", layout: "landscape" },
+  { image: "gallery-14.jpg", layout: "landscape" },
+  { image: "gallery-15.jpg", layout: "landscape" },
+  { image: "gallery-16.jpg", layout: "landscape" },
+  { image: "gallery-17.jpg", layout: "landscape" },
 ];
 
-const artistWorksBase = `${base}/obra ana-bustelo`;
+const artistWorksBase = `${base}/obra-ana-bustelo`;
 const artistWorks = [
-  "A veces_ las cosas no salen como una espera.Edición de 250 copias en offset, firmadas y numeradas.jpg",
-  "A_ veces las´ cosas no salen como una espera.Edición de 250 copias en offset, firmadas y numeradas.jpg",
-  "El tiempo se escapa como una nube, como las naves, como una sombra._Edición en riso por les veci.jpg",
-  "Esta es una de mis piezas favoritas de loderoma, con una compo en espiral inspirada en el juego .jpg",
-  "Fresco.jpg",
-  "Museo ABC Ana Bustelo.jpeg",
-  "Penélope e Ítaca...Penélope, además de llorar y rezar por el regreso de su esposo, engaña a los .jpg",
-  "ervilha_1. El dibujo a línea con pilot_2. La compo de stencils con lápices_3. El dibujo editado .jpg",
-  "images.jpeg",
-  "ñ1. El dibujo a línea con pilot_2. La compo de stencils con lápices_3. El dibujo editado y public.jpg",
+  "obra-01.jpg",
+  "obra-02.jpg",
+  "obra-03.jpg",
+  "obra-04.jpg",
+  "obra-05.jpg",
+  "obra-06.jpg",
+  "obra-07.jpg",
+  "obra-08.jpg",
+  "obra-09.jpg",
+  "obra-10.jpg",
 ];
 
 const steps = [
@@ -58,7 +58,7 @@ export function AutoedicionDetail() {
 
       <article className="workshop-page seminar-page">
         <header className="workshop-hero">
-          <div className="workshop-hero-image"><Image src={`${base}/Open Studio_Libros a la fresca_42.png`} alt="Publicación desarrollada en el seminario de autoedición" fill sizes="(max-width: 760px) 100vw, 44vw" priority /></div>
+          <div className="workshop-hero-image"><Image src={`${base}/hero.jpg`} alt="Publicación desarrollada en el seminario de autoedición" fill sizes="(max-width: 760px) 100vw, 44vw" priority /></div>
           <div className="workshop-hero-copy">
             <p className="meta-label">Procesos cuatrimestrales · SE—02</p>
             <div className="workshop-title-stack"><h1>Autoedición.</h1><p>Herramientas para crear y producir una publicación.</p><span>Con Ana Bustelo · Febrero—mayo 2027<br />II edición</span></div>
@@ -72,7 +72,7 @@ export function AutoedicionDetail() {
         <section className="workshop-question"><p className="eyebrow">El seminario</p><h2>Ilustración y dibujo como herramientas narrativas para imaginar, producir y editar una publicación propia.</h2></section>
 
         <section className="workshop-overview">
-          <div className="workshop-overview-image"><Image src={`${base}/Open Studio_Libros a la fresca_13.png`} alt="Publicaciones y procesos editoriales desplegados sobre una mesa" fill sizes="(max-width: 760px) 100vw, 48vw" /></div>
+          <div className="workshop-overview-image"><Image src={`${base}/overview.jpg`} alt="Publicaciones y procesos editoriales desplegados sobre una mesa" fill sizes="(max-width: 760px) 100vw, 48vw" /></div>
           <div className="workshop-overview-copy"><p className="eyebrow">Autoedición</p><p className="workshop-overview-lead">Sesiones prácticas que combinan referentes, recursos y técnicas para idear, desarrollar y presentar una edición contemporánea.</p><div className="workshop-overview-body"><p>A lo largo del seminario se abordan todas las fases del proceso creativo —investigación, boceto, color, producción y acabados— aplicadas a proyectos editoriales o autoediciones.</p><p>Ana Bustelo acompaña el proceso creativo y productivo de cada participante, compartiendo consejos profesionales, referencias y un modelo de trabajo completo para dar forma a una publicación personal.</p></div></div>
         </section>
 
