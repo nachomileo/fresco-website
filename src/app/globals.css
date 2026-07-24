@@ -724,6 +724,60 @@ button, input { font: inherit; }
   .nave-fixed-mark { display: none; }
 }
 
+/* Instagram links page */
+.links-page { min-height: 100svh; padding: 0 20px; background: var(--ink); color: var(--bone); }
+.links-page-inner { width: min(100%, 820px); margin: 0 auto; }
+.links-page-header { padding: 42px 0 46px; border-bottom: 1px solid var(--line); }
+.links-page-wordmark { position: relative; display: block; width: 132px; height: 44px; margin-bottom: 44px; }
+.links-page-wordmark img { object-fit: contain; object-position: left center; filter: invert(1); }
+.links-page-location { margin: 0 0 28px; color: var(--blue-bright); font: 700 10px/1.5 "SFMono-Regular", Consolas, monospace; letter-spacing: 1.6px; text-transform: uppercase; }
+.links-page-header h1 { max-width: 720px; margin: 0; font-size: clamp(44px, 9vw, 78px); line-height: .92; letter-spacing: -3.5px; }
+.links-page-intro { max-width: 590px; margin: 32px 0 0; color: #aaa79f; font-size: 16px; line-height: 1.55; }
+.links-page-nav { padding: 18px 0 34px; }
+.links-page-link { display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; gap: 14px; align-items: center; min-height: 104px; padding: 20px 16px 20px 0; color: var(--bone); border-bottom: 1px solid var(--line); transition: background-color 220ms ease, color 220ms ease, padding 220ms ease; }
+.links-page-link:first-child { border-top: 1px solid var(--line); }
+.links-page-number { align-self: start; padding-top: 4px; color: var(--blue-bright); font: 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; }
+.links-page-link-copy { display: grid; gap: 8px; }
+.links-page-link-copy strong { font-size: clamp(23px, 6vw, 38px); line-height: 1; letter-spacing: -1.2px; text-transform: uppercase; }
+.links-page-link-copy > span { color: #8e8c86; font-size: 13px; line-height: 1.45; }
+.links-page-arrow { font: 14px/1 "SFMono-Regular", Consolas, monospace; transition: transform 220ms ease; }
+.links-page-link-primary { min-height: 132px; margin: 16px 0 10px; padding: 24px 20px; background: var(--blue); color: white; border: 0; }
+.links-page-link-primary .links-page-number, .links-page-link-primary .links-page-link-copy > span { color: rgba(255,255,255,.78); }
+.links-page-link-primary .links-page-link-copy strong { font-size: clamp(27px, 7vw, 44px); }
+.links-page-link-newsletter { min-height: 116px; margin-top: 10px; padding: 22px 18px; border: 1px solid var(--blue); }
+.links-page-link-newsletter .links-page-link-copy strong { color: var(--blue-bright); font-size: clamp(20px, 5.5vw, 32px); }
+.links-page-link:hover { padding-left: 14px; background: #20201f; }
+.links-page-link-primary:hover { padding-left: 30px; background: #3763e9; }
+.links-page-link-newsletter:hover { padding-left: 28px; background: rgba(43,89,232,.09); }
+.links-page-link:hover .links-page-arrow { transform: translate(3px, -3px); }
+.links-page a:focus-visible { outline: 2px solid var(--bone); outline-offset: 4px; }
+.links-page-link-primary:focus-visible { outline-color: white; }
+.links-page-link:active { background: #292927; }
+.links-page-link-primary:active { background: #2149c7; }
+.links-page-footer { display: flex; justify-content: space-between; gap: 28px; padding: 30px 0 42px; color: #797771; border-top: 1px solid var(--line); font: 10px/1.5 "SFMono-Regular", Consolas, monospace; letter-spacing: .5px; }
+.links-page-footer nav { display: flex; flex-wrap: wrap; gap: 14px 24px; }
+.links-page-footer a { color: #94918b; }
+.links-page-footer a:hover { color: var(--blue-bright); }
+
+@media (min-width: 761px) {
+  .links-page { padding: 0 40px; }
+  .links-page-header { padding-top: 64px; }
+}
+
+@media (max-width: 420px) {
+  .links-page { padding: 0 16px; }
+  .links-page-header { padding-top: 32px; }
+  .links-page-wordmark { width: 116px; height: 39px; margin-bottom: 36px; }
+  .links-page-header h1 { font-size: clamp(40px, 13vw, 54px); letter-spacing: -2.7px; }
+  .links-page-intro { font-size: 15px; }
+  .links-page-link { grid-template-columns: 30px minmax(0, 1fr) auto; gap: 10px; min-height: 98px; padding-right: 8px; }
+  .links-page-link-primary { min-height: 126px; padding: 22px 16px; }
+  .links-page-link-newsletter { padding: 20px 14px; }
+  .links-page-link-copy > span { font-size: 12px; }
+  .links-page-footer { display: grid; }
+  .links-page-footer nav { display: grid; gap: 13px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }

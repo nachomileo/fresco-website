@@ -8,6 +8,7 @@ const siteUrl = "https://fresco.art";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: siteUrl, changeFrequency: "weekly", priority: 1 },
+    { url: `${siteUrl}/links`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${siteUrl}/archivo`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${siteUrl}/seminarios/en-obra`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/seminarios/autoedicion`, changeFrequency: "monthly", priority: 0.9 },
