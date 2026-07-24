@@ -72,24 +72,9 @@ export default function Home() {
         <ProgramSlider groups={programGroups} />
       </section>
 
-      <section className="section archive-section" id="archivo">
-        <div className="section-heading" data-reveal>
-          <div><p className="eyebrow">05 · Memoria viva</p><h2>Archivo de experiencias</h2></div>
-          <p>Procesos compartidos, aprendizajes y encuentros desde 2021.</p>
-        </div>
-        <div className="archive-grid" data-reveal>
-          <div className="archive-image"><Image src="/images/home/Archivo.png" alt="Archivo de experiencias y procesos de Fresco" fill sizes="(max-width: 760px) 100vw, 48vw" /><span>Archivo fotográfico · 2021—26</span></div>
-          <div className="archive-content">
-            <div className="archive-stats"><div><strong>50</strong><span>experiencias</span></div><div><strong>30+</strong><span>artistas</span></div><div><strong>5</strong><span>años creando</span></div></div>
-            <ol className="archive-list">{featuredArchiveLinks.map((entry, index) => <li key={`${entry.date}-${entry.artist}`}><Link href={entry.href} target={entry.href.startsWith("http") ? "_blank" : undefined} rel={entry.href.startsWith("http") ? "noreferrer" : undefined}><span>{String(index + 1).padStart(2, "0")}</span><span className="archive-list-name"><small>{entry.period} · {entry.workshop}</small>{entry.artist}</span><span aria-hidden="true">↗</span></Link></li>)}</ol>
-            <Link className="text-link" href="/archivo">Explorar todo el archivo <span aria-hidden="true">→</span></Link>
-          </div>
-        </div>
-      </section>
-
       <section className="section studio-section" id="la-nave">
         <div className="section-heading" data-reveal>
-          <div><p className="eyebrow">06 · Carabanchel, Madrid</p><h2>Fresca. La Nave</h2></div>
+          <div><p className="eyebrow">05 · Carabanchel, Madrid</p><h2>Fresca. La Nave</h2></div>
           <p>Una antigua imprenta transformada en espacio para la creación contemporánea.</p>
         </div>
         <div className="studio-layout" data-reveal>
@@ -106,6 +91,39 @@ export default function Home() {
               <div className="studio-column"><p className="eyebrow">El espacio</p><ul><li>Taller artístico · 110 m²</li><li>Zona de trabajo. Horno y área especializada en cerámica</li><li>Sala expositiva</li><li>Sala para talleres y eventos</li></ul><a className="studio-mail-link" href="mailto:info@fresco.art">Escríbenos para sumarte al espacio <span aria-hidden="true">↗</span></a></div>
               <div className="studio-column"><p className="eyebrow">Líneas de trabajo</p><ul><li>Investigación matérica</li><li>Cerámica contemporánea</li><li>Pintura e imagen</li><li>Edición</li><li>Prácticas situadas y colectivas</li></ul></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="director-section" aria-labelledby="director-title" data-reveal>
+        <figure className="director-image">
+          <Image
+            src="/images/home/brenda-ranieri-estudio.jpg"
+            alt="Brenda Ranieri en su estudio de cerámica"
+            fill
+            sizes="(max-width: 760px) 100vw, 40vw"
+            style={{ objectFit: "cover", objectPosition: "center 44%" }}
+          />
+        </figure>
+        <div className="director-copy">
+          <p className="eyebrow">Fresco es un proyecto autogestionado con sede en Fresca. La Nave</p>
+          <h2 id="director-title">Dirigido por <span>Brenda Ranieri</span></h2>
+          <p>Artista, ceramista y gestora cultural. Investiga cómo la materia, el territorio y los procesos colectivos pueden abrir nuevas formas de creación.</p>
+          <a href="https://www.instagram.com/brendaranieri.studio/" target="_blank" rel="noreferrer">Conocer su práctica <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section className="section archive-section" id="archivo">
+        <div className="section-heading" data-reveal>
+          <div><p className="eyebrow">06 · Memoria viva</p><h2>Archivo de experiencias</h2></div>
+          <p>Procesos compartidos, aprendizajes y encuentros desde 2021.</p>
+        </div>
+        <div className="archive-grid" data-reveal>
+          <div className="archive-image"><Image src="/images/home/Archivo.png" alt="Archivo de experiencias y procesos de Fresco" fill sizes="(max-width: 760px) 100vw, 48vw" /><span>Archivo fotográfico · 2021—26</span></div>
+          <div className="archive-content">
+            <div className="archive-stats"><div><strong>50</strong><span>experiencias</span></div><div><strong>30+</strong><span>artistas</span></div><div><strong>5</strong><span>años creando</span></div></div>
+            <ol className="archive-list">{featuredArchiveLinks.map((entry, index) => <li key={`${entry.date}-${entry.artist}`}><Link href={entry.href} target={entry.href.startsWith("http") ? "_blank" : undefined} rel={entry.href.startsWith("http") ? "noreferrer" : undefined}><span>{String(index + 1).padStart(2, "0")}</span><span className="archive-list-name"><small>{entry.period} · {entry.workshop}</small>{entry.artist}</span><span aria-hidden="true">↗</span></Link></li>)}</ol>
+            <Link className="text-link" href="/archivo">Explorar todo el archivo <span aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
