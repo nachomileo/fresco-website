@@ -509,6 +509,7 @@ button, input { font: inherit; }
 .signup-form input:focus { border-color: var(--blue); }
 .signup-form button { padding: 16px 28px; border: 0; background: var(--blue); color: white; font-weight: 700; cursor: pointer; }
 .signup-form > p { margin: 12px 0 0; color: var(--muted); font-size: 11px; }
+.signup-form > .signup-form-honeypot { position: absolute; left: -5000px; display: block; }
 .site-footer { min-height: 120px; padding: 38px 40px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 30px; align-items: center; background: var(--ink); color: var(--muted); border-color: var(--line); font-size: 11px; }
 .site-footer .brand img { filter: invert(1); }
 .site-footer > .brand { grid-column: 2; justify-self: center; }

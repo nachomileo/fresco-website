@@ -112,7 +112,22 @@ export default function Home() {
 
       <section className="contact-section" id="contacto" data-reveal>
         <div><p className="eyebrow">Próximas experiencias</p><h2>Quiero estar al tanto del programa.</h2></div>
-        <form className="signup-form"><label htmlFor="email">Correo electrónico</label><div><input id="email" name="email" type="email" placeholder="tu@email.com" /><button type="submit">Suscribirme <span aria-hidden="true">→</span></button></div><p>Te invitamos a investigar, producir, aprender y crear comunidad.</p></form>
+        <form
+          className="signup-form"
+          action="https://art.us5.list-manage.com/subscribe/post?u=e9d310075dc515b605aaa6985&id=59664f4974&f_id=00509ce6f0"
+          method="post"
+          target="_blank"
+        >
+          <label htmlFor="email">Correo electrónico</label>
+          <div>
+            <input id="email" name="EMAIL" type="email" autoComplete="email" placeholder="tu@email.com" required />
+            <button type="submit">Suscribirme <span aria-hidden="true">→</span></button>
+          </div>
+          <div className="signup-form-honeypot" aria-hidden="true">
+            <input type="text" name="b_e9d310075dc515b605aaa6985_59664f4974" tabIndex={-1} defaultValue="" />
+          </div>
+          <p>Te invitamos a investigar, producir, aprender y crear comunidad.</p>
+        </form>
       </section>
 
       <footer className="site-footer">

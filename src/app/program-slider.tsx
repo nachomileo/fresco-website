@@ -48,7 +48,9 @@ export function ProgramSlider({ groups }: { groups: ProgramGroup[] }) {
         <div className="program-preview-grid">
           {activeGroup.items.map((item) => (
             <article className="program-preview-card" key={item.number}>
-              <Link className="program-preview-image" href={item.href ?? `/${activeGroup.slug}`} aria-label={`Ir a ${item.title}`}><Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 100vw, 31vw" /></Link>
+              {activeGroup.slug === "talleres"
+                ? <div className="program-preview-image"><Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 100vw, 31vw" /></div>
+                : <Link className="program-preview-image" href={item.href ?? `/${activeGroup.slug}`} aria-label={`Ir a ${item.title}`}><Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 100vw, 31vw" /></Link>}
               <div className="program-preview-body">
                 <div className="program-preview-meta"><span>{item.number}</span><span>{item.type}</span></div>
                 <div><p>{item.artist}</p><h4>{item.title}</h4>{item.subtitle && <p className="program-preview-subtitle">{item.subtitle}</p>}<p className="program-preview-description">{item.description}</p></div>

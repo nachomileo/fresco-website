@@ -69,7 +69,7 @@ export default async function ProgramPage({ params }: Props) {
         <div className="program-list">
           {group.items.map((item, index) => (
             <article className={`program-card ${index % 2 ? "program-card-reverse" : ""}`} key={item.number} data-reveal>
-              {item.href
+              {item.href && group.slug !== "talleres"
                 ? <Link className="program-image" href={item.href} aria-label={`Ver ${item.title}`}><Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 100vw, 42vw" unoptimized={group.slug === "seminarios"} /></Link>
                 : <div className="program-image"><Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 100vw, 42vw" /></div>}
               <div className="program-content">
