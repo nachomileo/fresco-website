@@ -75,7 +75,7 @@ export default async function ProgramPage({ params }: Props) {
               <div className="program-content">
                 <div className="card-meta"><span>{item.type}</span><span>{item.number}</span></div>
                 <div><p className="artist">{item.artist}</p><h3>{item.title}</h3>{item.subtitle && <p className="card-subtitle">{item.subtitle}</p>}<p className="card-description">{item.description}</p></div>
-                <div className="card-footer"><strong>{item.detail}</strong><Link href={group.slug === "talleres" || group.slug === "musica" || item.href === "/seminarios/autoedicion" ? "mailto:info@fresco.art" : item.href ?? "/#contacto"}>{group.slug === "talleres" || group.slug === "musica" || item.href === "/seminarios/autoedicion" ? "Consultar" : group.slug === "seminarios" ? "Me apunto" : item.href ? "Ver ficha" : "Consultar"} <span aria-hidden="true">↗</span></Link></div>
+                <div className="card-footer"><strong>{item.detail}</strong><Link href={group.slug === "talleres" || group.slug === "musica" || item.href === "/seminarios/autoedicion" ? "mailto:info@fresco.art" : item.href ?? "/#contacto"}>{group.slug === "talleres" || group.slug === "musica" ? "Consultar" : group.slug === "seminarios" ? "Me apunto" : item.href ? "Ver ficha" : "Consultar"} <span aria-hidden="true">↗</span></Link></div>
               </div>
             </article>
           ))}
