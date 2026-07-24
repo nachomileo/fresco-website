@@ -733,7 +733,11 @@ button, input { font: inherit; }
 .links-page-location { margin: 0 0 28px; color: var(--blue-bright); font: 700 10px/1.5 "SFMono-Regular", Consolas, monospace; letter-spacing: 1.6px; text-transform: uppercase; }
 .links-page-header h1 { max-width: 720px; margin: 0; font-size: clamp(44px, 9vw, 78px); line-height: .92; letter-spacing: -3.5px; }
 .links-page-intro { max-width: 590px; margin: 32px 0 0; color: #aaa79f; font-size: 16px; line-height: 1.55; }
+.links-page-full-site { display: inline-block; margin-top: 28px; padding-bottom: 7px; color: var(--blue-bright); border-bottom: 1px solid var(--blue); font: 700 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1.4px; text-transform: uppercase; }
 .links-page-nav { padding: 18px 0 34px; }
+.links-page-nav-group { margin-top: 52px; }
+.links-page-nav-group > p { margin: 0 0 16px; color: var(--blue-bright); font: 700 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1.5px; text-transform: uppercase; }
+.links-page-nav-group .links-page-link:first-of-type { border-top: 1px solid var(--line); }
 .links-page-link { display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; gap: 14px; align-items: center; min-height: 104px; padding: 20px 16px 20px 0; color: var(--bone); border-bottom: 1px solid var(--line); transition: background-color 220ms ease, color 220ms ease, padding 220ms ease; }
 .links-page-link:first-child { border-top: 1px solid var(--line); }
 .links-page-number { align-self: start; padding-top: 4px; color: var(--blue-bright); font: 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; }

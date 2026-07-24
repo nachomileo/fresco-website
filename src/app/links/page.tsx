@@ -39,11 +39,36 @@ const links: LinkItem[] = [
   { number: "03", title: "Derivas materiales", description: "Talleres de investigación material y creación contemporánea", href: "/talleres" },
   { number: "04", title: "Derivas sonoras", description: "Investigación, creación y encuentro musical", href: "/musica" },
   { number: "05", title: "Openings", description: "Exposiciones, puertas abiertas y programa público", href: "/openings" },
-  { number: "06", title: "Quiero estar al tanto del programa", description: "Te invitamos a investigar, producir, aprender y crear comunidad.", href: "/#contacto", emphasis: "newsletter" },
-  { number: "07", title: "Contacto", description: "Información e inscripciones", href: "mailto:info@fresco.art" },
+  { number: "06", title: "Espacio de trabajo", description: "Fresca. La Nave · Taller artístico en Carabanchel", href: "/#la-nave" },
+  { number: "07", title: "Archivo", description: "Procesos, artistas y experiencias compartidas desde 2021", href: "/archivo" },
+  { number: "08", title: "Quiero estar al tanto del programa", description: "Te invitamos a investigar, producir, aprender y crear comunidad.", href: "/#contacto", emphasis: "newsletter" },
+  { number: "09", title: "Contacto", description: "Información e inscripciones", href: "mailto:info@fresco.art" },
 ];
 
 export default function LinksPage() {
+  const renderLink = (item: LinkItem) => {
+    const className = [
+      "links-page-link",
+      item.emphasis === "primary" ? "links-page-link-primary" : "",
+      item.emphasis === "newsletter" ? "links-page-link-newsletter" : "",
+    ].filter(Boolean).join(" ");
+
+    const content = (
+      <>
+        <span className="links-page-number" aria-hidden="true">{item.number}</span>
+        <span className="links-page-link-copy">
+          <strong>{item.title}</strong>
+          <span>{item.description}</span>
+        </span>
+        <span className="links-page-arrow" aria-hidden="true">↗</span>
+      </>
+    );
+
+    return item.href.startsWith("mailto:")
+      ? <a className={className} href={item.href} key={item.number}>{content}</a>
+      : <Link className={className} href={item.href} key={item.number}>{content}</Link>;
+  };
+
   return (
     <main className="links-page">
       <div className="links-page-inner">
@@ -54,31 +79,16 @@ export default function LinksPage() {
           <p className="links-page-location">Fresca. La Nave · Carabanchel, Madrid</p>
           <h1>Programa para la creación contemporánea.</h1>
           <p className="links-page-intro">Talleres, seminarios, música y encuentros para investigar, crear y poner los procesos en común.</p>
+          <Link className="links-page-full-site" href="/">Explorar fresco <span aria-hidden="true">↗</span></Link>
         </header>
 
         <nav className="links-page-nav" aria-label="Programa, actividades y contacto">
-          {links.map((item) => {
-            const className = [
-              "links-page-link",
-              item.emphasis === "primary" ? "links-page-link-primary" : "",
-              item.emphasis === "newsletter" ? "links-page-link-newsletter" : "",
-            ].filter(Boolean).join(" ");
-
-            const content = (
-              <>
-                <span className="links-page-number" aria-hidden="true">{item.number}</span>
-                <span className="links-page-link-copy">
-                  <strong>{item.title}</strong>
-                  <span>{item.description}</span>
-                </span>
-                <span className="links-page-arrow" aria-hidden="true">↗</span>
-              </>
-            );
-
-            return item.href.startsWith("mailto:")
-              ? <a className={className} href={item.href} key={item.number}>{content}</a>
-              : <Link className={className} href={item.href} key={item.number}>{content}</Link>;
-          })}
+          {links.slice(0, 5).map(renderLink)}
+          <div className="links-page-nav-group">
+            <p>Más sobre fresco.</p>
+            {links.slice(5, 7).map(renderLink)}
+          </div>
+          {links.slice(7).map(renderLink)}
         </nav>
 
         <footer className="links-page-footer">
