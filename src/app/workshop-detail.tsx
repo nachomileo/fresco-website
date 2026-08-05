@@ -41,7 +41,6 @@ const anaCanoWorks = [
   { image: "stoneware-plate.jpg", title: "Plato de gres" },
   { image: "porcelain-glass.jpg", title: "Vaso de porcelana" },
   { image: "stoneware-glass.jpg", title: "Vaso de gres" },
-  { image: "spoons.jpg", title: "Cucharas de paper clay y gres negro" },
   { image: "shot-glasses.jpg", title: "Vasos de porcelana" },
   { image: "composition.jpg", title: "Composición" },
 ];
@@ -151,7 +150,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
 
         <section className="workshop-gallery workshop-gallery-masonry">{images.slice(1).map((image) => <figure key={image}><Image src={imageSource(image)} alt={`Proceso de ${workshop.cardTitle}`} width={0} height={0} sizes="(max-width: 760px) 100vw, 33vw" /></figure>)}</section>
 
-        <section className="workshop-tutors"><p className="eyebrow">Imparten</p><div>{workshop.tutors.map((tutor, index) => { const links = tutorLinks[tutor.name]; return <article key={tutor.name}><span>{String(index + 1).padStart(2, "0")}</span><div className="workshop-tutor-heading"><h2>{tutor.name}</h2>{links && <nav aria-label={`Enlaces de ${tutor.name}`}>{links.web && <a href={links.web} target="_blank" rel="noreferrer">Web ↗</a>}{links.instagram && <a href={links.instagram} target="_blank" rel="noreferrer">Instagram ↗</a>}</nav>}</div><div className="workshop-tutor-bio"><p>{tutor.text}</p></div></article>; })}</div></section>
+        <section className="workshop-tutors"><p className="eyebrow">Imparten</p><div>{workshop.tutors.map((tutor, index) => { const links = tutorLinks[tutor.name]; return <article key={tutor.name}><span>{String(index + 1).padStart(2, "0")}</span><div className="workshop-tutor-heading"><h2>{tutor.name}</h2>{links && <nav aria-label={`Enlaces de ${tutor.name}`}>{links.web && <a href={links.web} target="_blank" rel="noreferrer">Web ↗</a>}{links.instagram && <a href={links.instagram} target="_blank" rel="noreferrer">Instagram ↗</a>}</nav>}</div><div className="workshop-tutor-bio">{tutor.text.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></article>; })}</div></section>
 
         {workshop.slug === "experimentacion-pictorica-sobre-ceramica" && <section className="artist-work-section">
           <header className="artist-work-heading-single"><p className="eyebrow">Obra de la artista</p></header>
