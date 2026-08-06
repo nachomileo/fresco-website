@@ -57,7 +57,7 @@ export const workshops: WorkshopEntry[] = [
     intro: "Una aproximación práctica y ritual al micelio como agente vivo de creación, trabajando con fibras naturales y tiempos de crecimiento compartidos.",
     context: "En la primera sesión, Alejandra compartirá su investigación sobre las posibilidades del micelio y las fibras, y realizaremos la inoculación de textiles. Durante el intervalo, las piezas permanecerán en la nave y se hará un seguimiento de su desarrollo. En la segunda sesión, se observarán los resultados, se abrirá un espacio de conversación en torno al proceso y finalizaremos con la creación de una obra colectiva inoculada, como ejercicio de co-creación con el micelio. Incluye todos los materiales y picoteo.",
     infoTitle: "Un laboratorio para acercarnos a los micomateriales desde las nuevas ecologías y la co-creación.",
-    date: "21 de noviembre y 12 de diciembre de 2026", duration: "2 sesiones", schedule: "21 de noviembre y 12 de diciembre · 10—14 h", place: "Fresca. La Nave · Carabanchel, Madrid", price: "75 €", includes: "Materiales y picoteo incluidos",
+    date: "21 de noviembre y 12 de diciembre de 2026", duration: "8 horas", schedule: "10—14 h", place: "Fresca. La Nave · Carabanchel, Madrid", price: "75 €", includes: "Materiales y picoteo incluidos",
     heroImage: "/images/program/paginas/micelo y textil/Alejandra Diaz Guerra-micelio--.jpg", images: [
       "/images/program/paginas/micelo y textil/Alejandra Diaz Guerra-micelio_2026.jpeg",
       "/images/program/paginas/micelo y textil/A_lejandra Diaz Guerra-micelio_2026.jpeg",
