@@ -83,14 +83,16 @@ export default function Home() {
             <figure className="studio-photo-exhibition"><Image src="/images/home/la nave/Fresca-La-Nave-exposicion-Julia-Alfaro-2025.jpg" alt="Vista de una exposición de Julia Alfaro en Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
             <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_1.png" alt="Zona de trabajo de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
             <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_7.png" alt="Vista interior de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
-            <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_2.png" alt="Actividad dentro de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
-            <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_8.png" alt="Detalle del taller artístico Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
           </div>
           <div className="studio-info">
             <div className="studio-statement"><blockquote>Fresca. La Nave es un taller artístico en Carabanchel donde la producción cotidiana convive con talleres, seminarios, exposiciones y encuentros públicos. Un espacio para investigar materiales, sostener procesos de creación y ponerlos en común.</blockquote><div className="studio-location"><p>Creación contemporánea · Madrid</p><a href="https://www.google.com/maps/search/?api=1&query=Salvador+Alonso+12%2C+Madrid" target="_blank" rel="noreferrer">Salvador Alonso 12 <span aria-hidden="true">↗</span></a></div></div>
             <div className="studio-info-columns">
               <div className="studio-column"><p className="eyebrow">El espacio</p><ul><li>Taller artístico · 110 m²</li><li>Zona de trabajo. Horno y área especializada en cerámica</li><li>Sala expositiva</li><li>Sala para talleres y eventos</li></ul><a className="studio-mail-link" href="mailto:info@fresco.art">Escríbenos para sumarte al espacio <span aria-hidden="true">↗</span></a></div>
               <div className="studio-column"><p className="eyebrow">Líneas de trabajo</p><ul><li>Investigación matérica</li><li>Cerámica contemporánea</li><li>Pintura e imagen</li><li>Edición</li><li>Prácticas situadas y colectivas</li></ul></div>
+            </div>
+            <div className="studio-info-gallery" aria-label="Más imágenes de Fresca. La Nave">
+              <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_2.png" alt="Actividad dentro de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
+              <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_8.png" alt="Detalle del taller artístico Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
             </div>
           </div>
         </div>

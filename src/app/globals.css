@@ -483,13 +483,13 @@ button, input { font: inherit; }
 .workshop-back a { color: var(--blue-bright); font: 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
 
 .studio-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(460px, .95fr); border: 1px solid var(--line); }
-.studio-mosaic { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 520px 310px 310px 340px; gap: 6px; padding: 6px; background: var(--panel); }
+.studio-mosaic { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 520px repeat(2, minmax(310px, 1fr)); gap: 6px; padding: 6px; background: var(--panel); }
 .studio-mosaic figure { position: relative; min-width: 0; margin: 0; overflow: hidden; background: #222; }
 .studio-mosaic .studio-photo-main { grid-column: 1 / -1; }
 .studio-mosaic .studio-photo-exhibition { grid-row: span 2; }
 .studio-mosaic img { object-fit: cover; filter: saturate(.78) contrast(1.03); transition: transform 700ms ease; }
 .studio-mosaic figure:hover img { transform: scale(1.018); }
-.studio-info { display: grid; grid-template-rows: auto 1fr; border-left: 1px solid var(--line); }
+.studio-info { display: grid; grid-template-rows: auto auto 340px; border-left: 1px solid var(--line); }
 .studio-statement { min-height: 520px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 1px solid var(--line); }
 .studio-statement blockquote { margin: 0; max-width: 650px; font-size: clamp(28px, 3.2vw, 47px); line-height: 1.13; letter-spacing: -.04em; }
 .studio-location { display: flex; justify-content: space-between; gap: 24px; align-items: flex-end; }
@@ -503,6 +503,10 @@ button, input { font: inherit; }
 .studio-column li { padding: 14px 0; color: #aaa79f; border-bottom: 1px solid var(--line); font-size: 13px; }
 .studio-mail-link { display: inline-block; margin-top: 30px; color: var(--blue-bright); font-size: 13px; line-height: 1.4; }
 .studio-mail-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.studio-info-gallery { padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; border-top: 1px solid var(--line); background: var(--panel); }
+.studio-info-gallery figure { position: relative; min-width: 0; margin: 0; overflow: hidden; background: #222; }
+.studio-info-gallery img { object-fit: cover; filter: saturate(.78) contrast(1.03); transition: transform 700ms ease; }
+.studio-info-gallery figure:hover img { transform: scale(1.018); }
 
 .contact-section { padding: 140px 40px; display: grid; grid-template-columns: minmax(0, 42fr) minmax(0, 58fr); gap: 70px; align-items: end; border-bottom: 1px solid var(--line); }
 .signup-form label { display: block; margin-bottom: 12px; color: var(--muted); font: 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1.5px; text-transform: uppercase; }
@@ -701,7 +705,7 @@ button, input { font: inherit; }
   .artist-work-section figure, .artist-work-section figure.artist-work-wide { min-height: 520px; grid-column: auto; }
   .workshop-back { padding: 35px 24px; display: grid; gap: 25px; }
   .studio-layout { grid-template-columns: 1fr; }
-  .studio-mosaic { grid-template-rows: 68vh 235px 235px 310px; }
+  .studio-mosaic { grid-template-rows: 68vh 235px 235px; }
   .studio-info { border-left: 0; border-top: 1px solid var(--line); }
   .studio-statement { min-height: 380px; padding: 32px 24px; }
   .studio-statement blockquote { font-size: 30px; }
@@ -710,6 +714,7 @@ button, input { font: inherit; }
   .studio-column { padding: 32px 24px; }
   .studio-column + .studio-column { border-left: 0; border-top: 1px solid var(--line); }
   .studio-column ul { margin-top: 32px; }
+  .studio-info-gallery { min-height: 310px; }
   .contact-section { padding: 96px 24px 130px; grid-template-columns: 1fr; gap: 54px; }
   .signup-form > div { grid-template-columns: 1fr; gap: 6px; }
   .director-section { grid-template-columns: 1fr; min-height: 0; }
