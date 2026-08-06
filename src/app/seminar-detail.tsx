@@ -96,7 +96,6 @@ export function EnObraDetail() {
             <div><dt>Fechas</dt><dd>Octubre 2026—enero 2027</dd></div>
             <div><dt>Horario</dt><dd>Viernes de 18 a 21 h · A confirmar con el grupo</dd></div>
             <div><dt>Formato</dt><dd>16 encuentros semanales · 48 horas lectivas</dd></div>
-            <div><dt>Plazas</dt><dd>6 plazas</dd></div>
             <div><dt>Open studio</dt><dd>Exposición colectiva de fin de semana · Marzo 2027</dd></div>
             <div><dt>Precio</dt><dd>690 €</dd></div>
             <div><dt>Pago</dt><dd>Reserva de 100 € y dos pagos de 295 €</dd></div>

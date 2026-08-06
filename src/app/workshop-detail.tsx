@@ -56,11 +56,11 @@ const alejandraWorks = [
 
 const eventDates: Record<string, { startDate: string; endDate: string }> = {
   "ese-instante-de-luz": { startDate: "2026-10-02T19:00:00+02:00", endDate: "2026-10-02T23:00:00+02:00" },
-  "experimentacion-pictorica-sobre-ceramica": { startDate: "2026-10-10", endDate: "2026-10-11" },
+  "experimentacion-pictorica-sobre-ceramica": { startDate: "2026-10-31T10:00:00+01:00", endDate: "2026-11-01T14:00:00+01:00" },
   "micelio-y-textil": { startDate: "2026-11-21T10:00:00+01:00", endDate: "2026-12-12T14:00:00+01:00" },
   "arcillas-silvestres-y-paisaje-urbano": { startDate: "2026-11-27T16:00:00+01:00", endDate: "2026-11-29T14:00:00+01:00" },
   "criaturas-elementales": { startDate: "2026-12-11T18:00:00+01:00", endDate: "2026-12-11T21:00:00+01:00" },
-  "sirviendo-un-plato-bodegon": { startDate: "2027-01-16T10:00:00+01:00", endDate: "2027-01-23T14:00:00+01:00" },
+  "sirviendo-un-plato-bodegon": { startDate: "2027-01-16T10:00:00+01:00", endDate: "2027-01-17T14:00:00+01:00" },
 };
 
 const imageSource = (image: string) => {
@@ -123,7 +123,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
           <div className="workshop-hero-image"><Image src={imageSource(workshop.heroImage)} alt={workshop.cardTitle} fill sizes="(max-width: 760px) 100vw, 44vw" priority /></div>
           <div className="workshop-hero-copy">
             <p className="meta-label">Derivas materiales · {workshop.number}</p>
-            <div className="workshop-title-stack"><h1>{workshop.slug === "sirviendo-un-plato-bodegon" ? <>Sirviendo.<br />Un plato-bodegón</> : workshop.title}</h1><p>{workshop.byline}</p>{workshop.edition && <span>{workshop.edition}</span>}</div>
+            <div className="workshop-title-stack"><h1>{workshop.title}</h1><p>{workshop.byline}</p>{workshop.edition && <span>{workshop.edition}</span>}</div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>{workshop.duration}</dd></div><div><dt>Precio</dt><dd>{workshop.price}</dd></div></dl>
               <Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>
@@ -145,7 +145,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
 
         <section className="workshop-info">
           <div>{workshop.edition && <p className="eyebrow">{workshop.edition}</p>}<h2>{workshop.infoTitle ?? `${workshop.duration} en Fresca. La Nave.`}</h2><Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link></div>
-          <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Horario</dt><dd>{workshop.schedule}</dd></div><div><dt>Lugar</dt><dd>{workshop.place}</dd></div><div><dt>Plazas</dt><dd>{workshop.group}</dd></div><div><dt>Precio</dt><dd>{workshop.price}<br />{workshop.includes}</dd></div></dl>
+          <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Horario</dt><dd>{workshop.schedule}</dd></div><div><dt>Lugar</dt><dd>{workshop.place}</dd></div><div><dt>Precio</dt><dd>{workshop.price}<br />{workshop.includes}</dd></div></dl>
         </section>
 
         <section className="workshop-gallery workshop-gallery-masonry">{images.slice(1).map((image) => <figure key={image}><Image src={imageSource(image)} alt={`Proceso de ${workshop.cardTitle}`} width={0} height={0} sizes="(max-width: 760px) 100vw, 33vw" /></figure>)}</section>
