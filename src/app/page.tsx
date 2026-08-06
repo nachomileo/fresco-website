@@ -80,6 +80,7 @@ export default function Home() {
         <div className="studio-layout" data-reveal>
           <div className="studio-mosaic" aria-label="Imágenes de Fresca. La Nave">
             <figure className="studio-photo-main"><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026.png" alt="Vista general del taller Fresca. La Nave" fill sizes="(max-width: 760px) 100vw, 50vw" /></figure>
+            <figure className="studio-photo-exhibition"><Image src="/images/home/la nave/Fresca-La-Nave-exposicion-Julia-Alfaro-2025.jpg" alt="Vista de una exposición de Julia Alfaro en Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
             <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_1.png" alt="Zona de trabajo de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
             <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_7.png" alt="Vista interior de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
             <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_2.png" alt="Actividad dentro de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>

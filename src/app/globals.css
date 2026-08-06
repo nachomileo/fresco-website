@@ -482,9 +482,10 @@ button, input { font: inherit; }
 .workshop-back a { color: var(--blue-bright); font: 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
 
 .studio-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(460px, .95fr); border: 1px solid var(--line); }
-.studio-mosaic { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 520px 290px 340px; gap: 6px; padding: 6px; background: var(--panel); }
+.studio-mosaic { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 520px 310px 310px 340px; gap: 6px; padding: 6px; background: var(--panel); }
 .studio-mosaic figure { position: relative; min-width: 0; margin: 0; overflow: hidden; background: #222; }
 .studio-mosaic .studio-photo-main { grid-column: 1 / -1; }
+.studio-mosaic .studio-photo-exhibition { grid-row: span 2; }
 .studio-mosaic img { object-fit: cover; filter: saturate(.78) contrast(1.03); transition: transform 700ms ease; }
 .studio-mosaic figure:hover img { transform: scale(1.018); }
 .studio-info { display: grid; grid-template-rows: auto 1fr; border-left: 1px solid var(--line); }
@@ -699,7 +700,7 @@ button, input { font: inherit; }
   .artist-work-section figure, .artist-work-section figure.artist-work-wide { min-height: 520px; grid-column: auto; }
   .workshop-back { padding: 35px 24px; display: grid; gap: 25px; }
   .studio-layout { grid-template-columns: 1fr; }
-  .studio-mosaic { grid-template-rows: 68vh 235px 310px; }
+  .studio-mosaic { grid-template-rows: 68vh 235px 235px 310px; }
   .studio-info { border-left: 0; border-top: 1px solid var(--line); }
   .studio-statement { min-height: 380px; padding: 32px 24px; }
   .studio-statement blockquote { font-size: 30px; }
