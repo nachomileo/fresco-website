@@ -60,7 +60,7 @@ const eventDates: Record<string, { startDate: string; endDate: string }> = {
   "micelio-y-textil": { startDate: "2026-11-21T10:00:00+01:00", endDate: "2026-12-12T14:00:00+01:00" },
   "arcillas-silvestres-y-paisaje-urbano": { startDate: "2026-11-27T16:00:00+01:00", endDate: "2026-11-29T14:00:00+01:00" },
   "criaturas-elementales": { startDate: "2026-12-11T18:00:00+01:00", endDate: "2026-12-11T21:00:00+01:00" },
-  "sirviendo-un-plato-bodegon": { startDate: "2027-01-16T10:00:00+01:00", endDate: "2027-01-17T14:00:00+01:00" },
+  "sirviendo-un-plato-bodegon": { startDate: "2027-01-23T10:00:00+01:00", endDate: "2027-01-24T14:00:00+01:00" },
 };
 
 const imageSource = (image: string) => {
