@@ -419,6 +419,7 @@ button, input { font: inherit; }
 .workshop-overview { min-height: 760px; display: grid; grid-template-columns: 50% 50%; background: var(--bone); color: var(--ink); }
 .workshop-overview-image { position: relative; min-height: 760px; overflow: hidden; }
 .workshop-overview-image img { object-fit: cover; filter: saturate(.68) contrast(1.14) brightness(1.06); }
+.workshop-photo-credit { position: absolute; right: 12px; bottom: 12px; z-index: 1; padding: 7px 9px; background: rgba(16,16,16,.82); color: var(--bone); font: 9px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: .4px; text-transform: uppercase; }
 .workshop-overview-copy { padding: 65px 55px; display: flex; flex-direction: column; justify-content: space-between; }
 .workshop-overview-copy > .workshop-overview-lead { margin: 0; font-size: clamp(27px, 3.2vw, 47px); line-height: 1.08; letter-spacing: -.04em; }
 .workshop-overview-body { display: grid; gap: 20px; }

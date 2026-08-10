@@ -109,7 +109,7 @@ export const workshops: WorkshopEntry[] = [
     question: "¿Cómo transformar objetos cotidianos en una composición escultórica capaz de contar una historia?",
     intro: "Un taller de escultura cerámica para explorar el género del bodegón desde la tradición de los platos de engaño (trompe-l’œil).",
     context: "Los platos de engaño son piezas que juegan con la ilusión óptica y transforman objetos cotidianos en composiciones escultóricas. Cada participante desarrollará una obra inspirada en elementos cercanos, construyendo una narrativa a través de frutas, flores, telas y otros objetos domésticos modelados íntegramente en cerámica. Más allá de la técnica, el taller propone una reflexión sobre la composición, la observación y la capacidad de los objetos para contar historias.",
-    date: "23 y 24 de enero de 2027", duration: "10 horas", schedule: "Sábado 23 · 10—16 h · Domingo 24 · 10—14 h", place: "Fresca. La Nave · Carabanchel, Madrid", price: "285 €", includes: "Incluye materiales y cocciones",
+    date: "30 y 31 de enero de 2027", duration: "10 horas", schedule: "Sábado 30 · 10—16 h · Domingo 31 · 10—14 h", place: "Fresca. La Nave · Carabanchel, Madrid", price: "285 €", includes: "Incluye materiales y cocciones",
     journeyTitle: "Observar, modelar, componer, dar color.",
     infoTitle: "Sirviendo un plato-bodegón.",
     heroImage: "/images/program/derivas materiales/paginas/sirviendo-chasco/sirviendo-chasco-01.jpg", images: [
