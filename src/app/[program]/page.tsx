@@ -69,13 +69,13 @@ export default async function ProgramPage({ params }: Props) {
         <div className="program-list">
           {group.items.map((item, index) => (
             <article className={`program-card ${index % 2 ? "program-card-reverse" : ""}`} key={item.number} data-reveal>
-              {item.href && item.href !== "/seminarios/autoedicion"
+              {item.href
                 ? <Link className="program-image" href={item.href} aria-label={`Ver ${item.title}`}><Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 100vw, 42vw" unoptimized={group.slug === "seminarios"} /></Link>
                 : <div className="program-image"><Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 100vw, 42vw" /></div>}
               <div className="program-content">
                 <div className="card-meta"><span>{item.type}</span><span>{item.number}</span></div>
                 <div><p className="artist">{item.artist}</p><h3>{item.title}</h3>{item.subtitle && <p className="card-subtitle">{item.subtitle}</p>}<p className="card-description">{item.description}</p></div>
-                <div className="card-footer"><strong>{item.detail}</strong><Link href={group.slug === "talleres" ? item.href ?? "mailto:info@fresco.art" : group.slug === "musica" || item.href === "/seminarios/autoedicion" ? "mailto:info@fresco.art" : item.href ?? "/#contacto"}>{group.slug === "talleres" || group.slug === "musica" ? "Consultar" : group.slug === "seminarios" ? "Me apunto" : item.href ? "Ver ficha" : "Consultar"} <span aria-hidden="true">↗</span></Link></div>
+                <div className="card-footer"><strong>{item.detail}</strong><Link href={group.slug === "talleres" ? item.href ?? "mailto:info@fresco.art" : group.slug === "musica" ? "mailto:info@fresco.art" : item.href ?? "/#contacto"}>{group.slug === "talleres" || group.slug === "musica" ? "Consultar" : group.slug === "seminarios" ? "Me apunto" : item.href ? "Ver ficha" : "Consultar"} <span aria-hidden="true">↗</span></Link></div>
               </div>
             </article>
           ))}
