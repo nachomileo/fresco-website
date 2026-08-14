@@ -39,12 +39,12 @@ const artistWorks = [
 ];
 
 const steps = [
-  { title: "Taller intensivo", text: "Un fin de semana de 14 horas para abrir referencias y posibilidades editoriales, activar el proyecto mediante ejercicios de narrativa y exploración formal y plantear una primera maqueta." },
-  { title: "Tiempo de trabajo", text: "Un intervalo para que cada participante desarrolle su propuesta y llegue a la primera revisión con materiales, pruebas y preguntas concretas." },
-  { title: "Sesión de apoyo 01", text: "Tres horas de revisión y seguimiento para leer el estado de cada proyecto, desbloquear decisiones y orientar los siguientes pasos." },
-  { title: "Sesión de apoyo 02", text: "Tres horas centradas en la producción: formatos, recursos gráficos, pruebas de estado y avances de la maqueta o display." },
-  { title: "Sesión de apoyo 03", text: "Tres horas de revisión individual para editar contenidos, resolver acabados y preparar la publicación para su presentación." },
-  { title: "Open studio", text: "Una apertura pública en Fresca. La Nave para compartir los procesos y las publicaciones producidas durante el programa." },
+  { title: "Taller intensivo", text: "Un fin de semana de 14 horas para abrir referencias y posibilidades editoriales, activar el proyecto mediante ejercicios narrativos y de exploración formal y plantear una primera maqueta." },
+  { title: "Tiempo de trabajo", text: "Un intervalo para que cada participante avance en su autoedición y llegue al primer seguimiento con materiales, pruebas y preguntas concretas." },
+  { title: "Seguimiento 01", text: "Primer encuentro de tres horas para leer el estado de los proyectos, compartir ejercicios y orientar los siguientes pasos." },
+  { title: "Seguimiento 02", text: "Segundo encuentro de tres horas para revisar avances, resolver decisiones y ajustar herramientas a las necesidades del grupo." },
+  { title: "Seguimiento 03", text: "Tercer encuentro de tres horas para acompañar la evolución de las publicaciones y preparar su presentación." },
+  { title: "Open studio", text: "Una apertura pública en Fresca. La Nave para compartir los procesos y presentar las ediciones producidas durante el seminario." },
 ];
 
 export function AutoedicionDetail() {
@@ -63,33 +63,34 @@ export function AutoedicionDetail() {
             <p className="meta-label">Procesos cuatrimestrales · SE—02</p>
             <div className="workshop-title-stack"><h1>Autoedición.</h1><p>Herramientas para crear y producir una publicación.</p><span>Con Ana Bustelo · Febrero—mayo 2027<br />II edición</span></div>
             <div className="workshop-hero-action" id="inscripcion">
-              <dl><div><dt>Fecha</dt><dd>Febrero—mayo 2027</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>23 horas + open studio</dd></div><div><dt>Precio</dt><dd>420 €</dd></div></dl>
+              <dl><div><dt>Fecha</dt><dd>Febrero—mayo 2027</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>23 horas lectivas + open studio</dd></div><div><dt>Precio</dt><dd>420 €</dd></div></dl>
               <Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>
             </div>
           </div>
         </header>
 
-        <section className="workshop-question"><p className="eyebrow">El seminario</p><h2>Ilustración y dibujo como herramientas narrativas para imaginar, producir y editar una publicación propia.</h2></section>
+        <section className="workshop-question"><p className="eyebrow">El seminario</p><h2>Ilustración y dibujo como herramientas narrativas para desarrollar una publicación propia.</h2></section>
 
-        <section className="workshop-overview">
+        <section className="workshop-overview workshop-overview-autoedicion">
           <div className="workshop-overview-image"><Image src={`${base}/overview.jpg`} alt="Publicaciones y procesos editoriales desplegados sobre una mesa" fill sizes="(max-width: 760px) 100vw, 48vw" /></div>
-          <div className="workshop-overview-copy"><p className="eyebrow">Autoedición</p><p className="workshop-overview-lead">Sesiones prácticas que combinan referentes, recursos y técnicas para idear, desarrollar y presentar una edición contemporánea.</p><div className="workshop-overview-body"><p>A lo largo del seminario se abordan todas las fases del proceso creativo —investigación, boceto, color, producción y acabados— aplicadas a proyectos editoriales o autoediciones.</p><p>Ana Bustelo acompaña el proceso creativo y productivo de cada participante, compartiendo consejos profesionales, referencias y un modelo de trabajo completo para dar forma a una publicación personal.</p></div></div>
+          <div className="workshop-overview-copy"><p className="eyebrow">Autoedición</p><p className="workshop-overview-lead">Un seminario práctico dirigido a personas interesadas en experimentar con la ilustración y el dibujo como herramientas narrativas y desarrollar su propia publicación.</p><div className="workshop-overview-body"><p>A lo largo del programa recorreremos <strong>todas las fases del proceso creativo: investigación, boceto, color, producción y acabados.</strong> Ana Bustelo acompañará el desarrollo creativo y productivo de cada participante, compartiendo referencias, recursos, técnicas y consejos profesionales para dar forma a una edición personal.</p><p>El seminario combinará <strong>ejercicios individuales y colectivos, tutorías y seguimiento personalizado.</strong> Cada participante trabajará en <strong>una maqueta o prueba de estado de su publicación.</strong> El proceso culminará con un <strong>open studio en Fresca. La Nave</strong>, donde se presentarán al público las ediciones producidas.</p><p>El programa consta de un <strong>taller intensivo de fin de semana</strong> y <strong>tres encuentros de seguimiento de tres horas</strong>. Estos encuentros se distribuirán de forma espaciada a lo largo de la duración total del seminario, entre febrero y mayo. La organización del tiempo de trabajo, las tutorías y las revisiones se definirá según las necesidades del grupo y la evolución de los proyectos, permitiendo avanzar entre sesiones y recibir acompañamiento y feedback durante todo el proceso.</p></div></div>
         </section>
 
         <section className="workshop-journey">
-          <header><p className="eyebrow">El formato</p><h2>Diseñar, producir y presentar tu edición.</h2><Link href="mailto:info@fresco.art">Quiero más info <span aria-hidden="true">↗</span></Link></header>
+          <header><p className="eyebrow">El formato</p><h2>Diseñar, producir y presentar tu edición.</h2><p className="workshop-journey-note">Los tres encuentros de seguimiento se distribuyen de forma espaciada entre febrero y mayo. En cada uno, el tiempo dedicado al trabajo, las tutorías y las revisiones se definirá según las necesidades del grupo y la evolución de los proyectos.</p><Link href="mailto:info@fresco.art">Quiero más info <span aria-hidden="true">↗</span></Link></header>
           <ol>{steps.map((step, index) => <li key={step.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
         </section>
 
         <section className="workshop-info">
-          <div><p className="eyebrow workshop-info-eyebrow">23 horas presenciales + open studio</p><h2>Un proyecto editorial desarrollado entre sesiones de trabajo y revisión.</h2><Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link></div>
+          <div><p className="eyebrow workshop-info-eyebrow">23 horas lectivas + open studio</p><h2>Un proyecto editorial desarrollado entre sesiones de trabajo, tutoría y revisión.</h2><Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link></div>
           <dl>
             <div><dt>Fechas</dt><dd>Febrero—mayo 2027</dd></div>
-            <div><dt>Horario</dt><dd>Sábado y domingo de 11 a 19 h · Con pausa para comer</dd></div>
-            <div><dt>Formato</dt><dd>Taller intensivo de 14 horas y tres sesiones de seguimiento de 3 horas · 23 horas presenciales</dd></div>
-            <div><dt>Open studio</dt><dd>Presentación colectiva de fin de semana en Fresca. La Nave</dd></div>
-            <div><dt>Precio</dt><dd>420 €</dd></div>
-            <div><dt>Pago</dt><dd>Reserva de plaza: 130 € + dos pagos de 150 €</dd></div>
+            <div><dt>Horario</dt><dd>Intensivo: sábado y domingo de 11 a 19 h, con pausa para comer · Seguimientos: tres encuentros entre semana, distribuidos de forma espaciada entre febrero y mayo</dd></div>
+            <div><dt>Formato</dt><dd>Taller intensivo de fin de semana: 2 días · 14 horas<br />Tres encuentros de seguimiento: 3 horas cada uno · 9 horas<br />Total: 23 horas lectivas</dd></div>
+            <div><dt>Open studio</dt><dd>Presentación pública de las ediciones producidas en Fresca. La Nave</dd></div>
+            <div><dt>Precio</dt><dd>420 € · No incluye los gastos de producción</dd></div>
+            <div><dt>Forma de pago</dt><dd>100 € de inscripción para reservar la plaza + 320 €, con posibilidad de dividir este importe en dos pagos de 160 €</dd></div>
+            <div><dt>Dinámica</dt><dd>El tiempo de trabajo, tutoría y revisión de los encuentros se organizará según las necesidades del grupo y la evolución de los proyectos</dd></div>
             <div><dt>Dirigido a</dt><dd>Personas interesadas en la ilustración, el dibujo y la edición de una publicación personal</dd></div>
           </dl>
         </section>

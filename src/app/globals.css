@@ -424,8 +424,13 @@ button, input { font: inherit; }
 .workshop-overview-copy > .workshop-overview-lead { margin: 0; font-size: clamp(27px, 3.2vw, 47px); line-height: 1.08; letter-spacing: -.04em; }
 .workshop-overview-body { display: grid; gap: 20px; }
 .workshop-overview-body p { margin: 0; color: #54524d; font-size: 16px; line-height: 1.58; letter-spacing: 0; }
+.workshop-overview-autoedicion .workshop-overview-copy { justify-content: flex-start; }
+.workshop-overview-autoedicion .workshop-overview-lead { margin-top: 32px; }
+.workshop-overview-autoedicion .workshop-overview-body { margin-top: 0; padding-top: 72px; }
+.workshop-overview-autoedicion .workshop-overview-body strong { color: var(--ink); font-weight: 700; }
 .workshop-journey { padding: 140px 40px; display: grid; grid-template-columns: minmax(0, 42fr) minmax(0, 58fr); gap: 70px; }
 .workshop-journey header h2 { max-width: 580px; margin: 18px 0 0; font-size: clamp(48px, 6vw, 88px); line-height: .95; letter-spacing: -.055em; }
+.workshop-journey-note { max-width: 540px; margin: 0; padding-top: 54px; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .workshop-journey header > a { margin-top: 42px; padding: 16px 22px; display: inline-flex; align-items: center; gap: 28px; background: var(--blue-bright); color: white; font: 700 10px/1 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
 .workshop-journey ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .workshop-journey li { padding: 30px 0; display: grid; grid-template-columns: 55px 1fr; border-bottom: 1px solid var(--line); }
@@ -685,6 +690,7 @@ button, input { font: inherit; }
   .workshop-overview-copy { min-height: 650px; padding: 45px 24px; }
   .workshop-overview-copy > .workshop-overview-lead { font-size: 32px; }
   .workshop-overview-body p { font-size: 16px; }
+  .workshop-overview-autoedicion .workshop-overview-body { padding-top: 56px; }
   .workshop-journey { padding: 95px 24px; grid-template-columns: 1fr; gap: 55px; }
   .workshop-journey header h2 { font-size: 52px; }
   .workshop-info { padding: 80px 24px; grid-template-columns: 1fr; gap: 60px; }

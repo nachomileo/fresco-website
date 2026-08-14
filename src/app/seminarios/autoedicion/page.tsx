@@ -3,11 +3,11 @@ import { AutoedicionDetail } from "../../autoedicion-detail";
 
 export const metadata: Metadata = {
   title: "Autoedición — Seminario con Ana Bustelo",
-  description: "Seminario cuatrimestral para diseñar, producir y presentar una publicación propia con Ana Bustelo en Carabanchel, Madrid.",
+  description: "Seminario práctico de ilustración, dibujo y autoedición para desarrollar una publicación propia con Ana Bustelo en Carabanchel, Madrid.",
   alternates: { canonical: "/seminarios/autoedicion" },
   openGraph: {
     title: "Autoedición — Seminario con Ana Bustelo | fresco.",
-    description: "Seminario cuatrimestral para diseñar, producir y presentar una publicación propia con Ana Bustelo.",
+    description: "Seminario práctico de ilustración, dibujo y autoedición para desarrollar una publicación propia con Ana Bustelo.",
     url: "/seminarios/autoedicion",
     type: "article",
     images: [{ url: "/images/program/procesos cuatrimestrales/seminario-autoedicion-web/hero.jpg", alt: "Seminario de Autoedición con Ana Bustelo" }],
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Autoedición — Seminario con Ana Bustelo | fresco.",
-    description: "Seminario cuatrimestral para diseñar, producir y presentar una publicación propia con Ana Bustelo.",
+    description: "Seminario práctico de ilustración, dibujo y autoedición para desarrollar una publicación propia con Ana Bustelo.",
     images: ["/images/program/procesos cuatrimestrales/seminario-autoedicion-web/hero.jpg"],
   },
 };
