@@ -39,10 +39,11 @@ const links: LinkItem[] = [
   { number: "03", title: "Derivas materiales", description: "Talleres de investigación material y creación contemporánea", href: "/talleres" },
   { number: "04", title: "Derivas sonoras", description: "Investigación, creación y encuentro musical", href: "/musica" },
   { number: "05", title: "Openings", description: "Exposiciones, puertas abiertas y programa público", href: "/openings" },
-  { number: "06", title: "Espacio de trabajo", description: "Fresca. La Nave · Taller artístico en Carabanchel", href: "/#la-nave" },
-  { number: "07", title: "Archivo", description: "Procesos, artistas y experiencias compartidas desde 2021", href: "/archivo" },
-  { number: "08", title: "Quiero estar al tanto del programa", description: "Te invitamos a investigar, producir, aprender y crear comunidad.", href: "/#contacto", emphasis: "newsletter" },
-  { number: "09", title: "Contacto", description: "Información e inscripciones", href: "mailto:info@fresco.art" },
+  { number: "06", title: "Co-working de cerámica", description: "Solicitud de incorporación · Fresca. La Nave", href: "https://docs.google.com/forms/d/e/1FAIpQLSex9F4fcJsvLSL7Wv05l1zhs2N5mSxINLcvk7eT6lrbgBh3Hg/viewform?usp=sharing" },
+  { number: "07", title: "Espacio de trabajo", description: "Fresca. La Nave · Taller artístico en Carabanchel", href: "/#la-nave" },
+  { number: "08", title: "Archivo", description: "Procesos, artistas y experiencias compartidas desde 2021", href: "/archivo" },
+  { number: "09", title: "Quiero estar al tanto del programa", description: "Te invitamos a investigar, producir, aprender y crear comunidad.", href: "/#contacto", emphasis: "newsletter" },
+  { number: "10", title: "Contacto", description: "Información e inscripciones", href: "mailto:info@fresco.art" },
 ];
 
 export default function LinksPage() {
@@ -83,12 +84,12 @@ export default function LinksPage() {
         </header>
 
         <nav className="links-page-nav" aria-label="Programa, actividades y contacto">
-          {links.slice(0, 5).map(renderLink)}
+          {links.slice(0, 6).map(renderLink)}
           <div className="links-page-nav-group">
             <p>Más sobre fresco.</p>
-            {links.slice(5, 7).map(renderLink)}
+            {links.slice(6, 8).map(renderLink)}
           </div>
-          {links.slice(7).map(renderLink)}
+          {links.slice(8).map(renderLink)}
         </nav>
 
         <footer className="links-page-footer">
