@@ -40,16 +40,10 @@ const links: LinkItem[] = [
   { number: "04", title: "Derivas sonoras", description: "Investigación, creación y encuentro musical", href: "/musica" },
   { number: "05", title: "Openings", description: "Exposiciones, puertas abiertas y programa público", href: "/openings" },
   { number: "06", title: "Co-working de cerámica", description: "Solicitud de incorporación · Fresca. La Nave", href: "https://docs.google.com/forms/d/e/1FAIpQLSex9F4fcJsvLSL7Wv05l1zhs2N5mSxINLcvk7eT6lrbgBh3Hg/viewform?usp=sharing" },
-<<<<<<< HEAD
   { number: "07", title: "Espacio de trabajo", description: "Fresca. La Nave · Taller artístico en Carabanchel", href: "/#la-nave" },
   { number: "08", title: "Archivo", description: "Procesos, artistas y experiencias compartidas desde 2021", href: "/archivo" },
   { number: "09", title: "Quiero estar al tanto del programa", description: "Te invitamos a investigar, producir, aprender y crear comunidad.", href: "/#contacto", emphasis: "newsletter" },
   { number: "10", title: "Contacto", description: "Información e inscripciones", href: "mailto:info@fresco.art" },
-=======
-  { number: "07", title: "Archivo", description: "Procesos, artistas y experiencias compartidas desde 2021", href: "/archivo" },
-  { number: "08", title: "Quiero estar al tanto del programa", description: "Te invitamos a investigar, producir, aprender y crear comunidad.", href: "/#contacto", emphasis: "newsletter" },
-  { number: "09", title: "Contacto", description: "Información e inscripciones", href: "mailto:info@fresco.art" },
->>>>>>> e3dc4b1b4c04dccaf24da8bd6c28aa4c78789e66
 ];
 
 export default function LinksPage() {
