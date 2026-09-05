@@ -98,6 +98,7 @@ export default function LinksPage() {
             <a href="https://www.instagram.com/fresca.lanave/" target="_blank" rel="noreferrer" aria-label="@fresca.lanave en Instagram, abre en una pestaña nueva">@fresca.lanave <span aria-hidden="true">↗</span></a>
             <a href="https://www.instagram.com/fresco.arte/" target="_blank" rel="noreferrer" aria-label="@fresco.arte en Instagram, abre en una pestaña nueva">@fresco.arte <span aria-hidden="true">↗</span></a>
             <a href="mailto:info@fresco.art">info@fresco.art</a>
+            <Link href="/politica-de-cookies">Cookies</Link>
           </nav>
           <span>© 2026</span>
         </footer>

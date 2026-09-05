@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { CookieNotice } from "./cookie-notice";
 
 const siteUrl = "https://fresco.art";
 const siteDescription = "Programa para la creación contemporánea en Carabanchel, Madrid: talleres, seminarios, música, investigación y encuentros en Fresca. La Nave.";
@@ -106,6 +107,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c") }}
         />
         {children}
+        <CookieNotice />
       </body>
     </html>
   );

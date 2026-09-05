@@ -153,7 +153,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <a className="brand" href="#inicio" aria-label="Fresco, volver al inicio"><Image src="/branding/fresco-wordmark-black.png" alt="fresco." fill sizes="96px" /></a>
-        <div><a href="https://www.instagram.com/fresca.lanave/" target="_blank" rel="noreferrer">Fresca. La Nave ↗</a><a href="https://www.instagram.com/fresco.arte/" target="_blank" rel="noreferrer">fresco. arte ↗</a><a href="mailto:info@fresco.art">info@fresco.art</a><span>© 2026</span></div>
+        <div><a href="https://www.instagram.com/fresca.lanave/" target="_blank" rel="noreferrer">Fresca. La Nave ↗</a><a href="https://www.instagram.com/fresco.arte/" target="_blank" rel="noreferrer">fresco. arte ↗</a><a href="mailto:info@fresco.art">info@fresco.art</a><Link href="/politica-de-cookies">Cookies</Link><span>© 2026</span></div>
       </footer>
       <a className="nave-fixed-mark" href="#la-nave" aria-label="Ir a Fresca. La Nave">
         <Image src="/branding/fresca-la-nave.png" alt="" fill sizes="48px" />
