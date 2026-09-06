@@ -4,6 +4,8 @@ import { FrescaFixedMark } from "./fresca-fixed-mark";
 
 const base = "/images/program/procesos cuatrimestrales/seminario en obra";
 const archiveBase = `${base}/obra-archivo`;
+const enrollmentUrl = "https://buy.stripe.com/dRm9AT0nn07Y4WI8ca7wA0I";
+const callBookingUrl = "https://docs.google.com/forms/d/1hsDXjx0xHsvFWyHz1PrOQ_kxGdt6IzT4SC1EvDI8Hiw/viewform";
 
 const gallery = [
   { image: "C4D2EB42-27FD-417A-9559-82F1944F4D48.jpg", layout: "portrait" },
@@ -73,7 +75,7 @@ export function EnObraDetail() {
             <div className="workshop-title-stack"><h1>En obra</h1><p>Acompañamiento crítico para la práctica artística</p><span>Con Nacho Martín Silva · Octubre 2026—enero 2027<br />II edición</span></div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>Octubre 2026—enero 2027</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>16 encuentros · 48 horas</dd></div><div><dt>Precio</dt><dd>690 €</dd></div></dl>
-              <Link href="mailto:seminario@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>
+              <a href={enrollmentUrl} target="_blank" rel="noreferrer" aria-label="Inscribirme en En obra mediante Stripe (abre en una pestaña nueva)">Me apunto <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </header>
@@ -86,12 +88,17 @@ export function EnObraDetail() {
         </section>
 
         <section className="workshop-journey">
-          <header><p className="eyebrow">El recorrido</p><h2>La pintura como forma de pensamiento.<br />El proceso como eje.</h2><Link href="mailto:seminario@fresco.art">Quiero más info <span aria-hidden="true">↗</span></Link></header>
+          <header>
+            <p className="eyebrow">El recorrido</p>
+            <h2>La pintura como forma de pensamiento.<br />El proceso como eje.</h2>
+            <a href={callBookingUrl} target="_blank" rel="noreferrer" aria-label="Reservar una llamada de 15 minutos sobre En obra mediante Google Forms (abre en una pestaña nueva)">Reserva una llamada de 15&apos; <span aria-hidden="true">↗</span></a>
+            <p className="seminar-call-note">Sabemos que decidir sumarse a un proceso de varios meses puede necesitar tiempo y conversación. Estamos agendando llamadas breves de 15 minutos para conocer tu práctica, escuchar tus dudas y ayudarte a valorar si En obra encaja con el momento de tu proyecto.</p>
+          </header>
           <ol>{steps.map((step, index) => <li key={step.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
         </section>
 
         <section className="workshop-info">
-          <div><p className="eyebrow">Proceso cuatrimestral</p><h2>Seguimiento individual y trabajo colectivo.</h2><Link href="mailto:seminario@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link></div>
+          <div><p className="eyebrow">Proceso cuatrimestral</p><h2>Seguimiento individual y trabajo colectivo.</h2><a href={enrollmentUrl} target="_blank" rel="noreferrer" aria-label="Inscribirme en En obra mediante Stripe (abre en una pestaña nueva)">Me apunto <span aria-hidden="true">↗</span></a></div>
           <dl>
             <div><dt>Fechas</dt><dd>Octubre 2026—enero 2027</dd></div>
             <div><dt>Horario</dt><dd>Viernes de 18 a 21 h · A confirmar con el grupo</dd></div>
