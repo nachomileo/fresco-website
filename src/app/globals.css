@@ -432,7 +432,8 @@ button, input { font: inherit; }
 .workshop-journey header h2 { max-width: 580px; margin: 18px 0 0; font-size: clamp(48px, 6vw, 88px); line-height: .95; letter-spacing: -.055em; }
 .workshop-journey-note { max-width: 540px; margin: 0; padding-top: 54px; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .workshop-journey header > a { margin-top: 42px; padding: 16px 22px; display: inline-flex; align-items: center; gap: 28px; background: var(--blue-bright); color: white; font: 700 10px/1 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
-.seminar-call-note { max-width: 520px; margin: 20px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.seminar-call-note { max-width: 520px; box-sizing: border-box; margin: 20px 0 0; padding: 20px 22px; border: 1px solid var(--blue-bright); color: var(--ink); font-size: 15px; line-height: 1.6; }
+.seminar-call-note strong { display: block; margin-top: 12px; color: var(--blue-bright); font-family: var(--font-mono); font-size: 12px; line-height: 1.45; letter-spacing: .04em; text-transform: uppercase; }
 .workshop-journey ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .workshop-journey li { padding: 30px 0; display: grid; grid-template-columns: 55px 1fr; border-bottom: 1px solid var(--line); }
 .workshop-journey li > span { color: var(--blue-bright); font: 10px/1.4 "SFMono-Regular", Consolas, monospace; }

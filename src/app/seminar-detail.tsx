@@ -64,7 +64,7 @@ export function EnObraDetail() {
       <header className="site-header">
         <Link className="brand" href="/" aria-label="Fresco, inicio"><Image src="/branding/fresco-wordmark-black.png" alt="fresco." fill sizes="96px" priority /></Link>
         <nav className="desktop-nav" aria-label="Navegación principal"><Link href="/#programa">Programa</Link><Link href="/#la-nave">La Nave</Link><Link href="/#archivo">Archivo</Link></nav>
-        <Link className="header-cta" href="#inscripcion">ME SUMO <span aria-hidden="true">↘</span></Link>
+        <Link className="header-cta" href="/#contacto">ME SUMO <span aria-hidden="true">↘</span></Link>
       </header>
 
       <article className="workshop-page seminar-page">
@@ -75,7 +75,7 @@ export function EnObraDetail() {
             <div className="workshop-title-stack"><h1>En obra</h1><p>Acompañamiento crítico para la práctica artística</p><span>Con Nacho Martín Silva · Octubre 2026—enero 2027<br />II edición</span></div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>Octubre 2026—enero 2027</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>16 encuentros · 48 horas</dd></div><div><dt>Precio</dt><dd>690 €</dd></div></dl>
-              <a href={enrollmentUrl} target="_blank" rel="noreferrer" aria-label="Inscribirme en En obra mediante Stripe (abre en una pestaña nueva)">Me apunto <span aria-hidden="true">↗</span></a>
+              <a href={enrollmentUrl} target="_blank" rel="noreferrer" aria-label="Reservar plaza en En obra mediante Stripe (abre en una pestaña nueva)">Reserva plaza <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </header>
@@ -92,7 +92,7 @@ export function EnObraDetail() {
             <p className="eyebrow">El recorrido</p>
             <h2>La pintura como forma de pensamiento.<br />El proceso como eje.</h2>
             <a href={callBookingUrl} target="_blank" rel="noreferrer" aria-label="Reservar una llamada de 15 minutos sobre En obra mediante Google Forms (abre en una pestaña nueva)">Reserva una llamada de 15&apos; <span aria-hidden="true">↗</span></a>
-            <p className="seminar-call-note">Sabemos que decidir sumarse a un proceso de varios meses puede necesitar tiempo y conversación. Estamos agendando llamadas breves de 15 minutos para conocer tu práctica, escuchar tus dudas y ayudarte a valorar si En obra encaja con el momento de tu proyecto.</p>
+            <p className="seminar-call-note">Estamos agendando llamadas breves de 15 minutos para conocer tu práctica, escuchar tus dudas y ayudarte a valorar si En obra encaja con el momento de tu proyecto. <strong>Rellena el formulario y te llamamos a la brevedad.</strong></p>
           </header>
           <ol>{steps.map((step, index) => <li key={step.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
         </section>
