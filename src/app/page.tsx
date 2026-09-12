@@ -112,7 +112,7 @@ export default function Home() {
           <p className="eyebrow">Fresco es un proyecto autogestionado con sede en Fresca. La Nave</p>
           <h2 id="director-title">Dirigido por <span>Brenda Ranieri</span></h2>
           <p>Artista, ceramista y gestora cultural. Investiga cómo la materia, el territorio y los procesos colectivos pueden abrir nuevas formas de creación.</p>
-          <a href="https://www.instagram.com/brendaranieri.studio/" target="_blank" rel="noreferrer">Conocer su práctica <span aria-hidden="true">↗</span></a>
+          <a href="https://www.brendaranieri.art" target="_blank" rel="noreferrer">Conocer su práctica <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
