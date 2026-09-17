@@ -128,7 +128,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
             <div className="workshop-title-stack"><h1>{workshop.title}</h1><p>{workshop.byline}</p>{workshop.edition && <span>{workshop.edition}</span>}</div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>{workshop.duration}</dd></div><div><dt>Precio</dt><dd>{workshop.price}</dd></div></dl>
-              <Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>
+              <Link href={workshop.slug === "ese-instante-de-luz" ? "https://buy.stripe.com/dRmfZh4DD6wmgFq2RQ7wA0J" : "mailto:info@fresco.art"}>Me apunto <span aria-hidden="true">↗</span></Link>
             </div>
           </div>
         </header>
@@ -146,7 +146,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
         </section>
 
         <section className="workshop-info">
-          <div>{workshop.edition && <p className="eyebrow">{workshop.edition}</p>}<h2>{workshop.infoTitle ?? `${workshop.duration} en Fresca. La Nave.`}</h2><Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link></div>
+          <div>{workshop.edition && <p className="eyebrow">{workshop.edition}</p>}<h2>{workshop.infoTitle ?? `${workshop.duration} en Fresca. La Nave.`}</h2><Link href={workshop.slug === "ese-instante-de-luz" ? "https://buy.stripe.com/dRmfZh4DD6wmgFq2RQ7wA0J" : "mailto:info@fresco.art"}>Me apunto <span aria-hidden="true">↗</span></Link></div>
           <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Horario</dt><dd>{workshop.schedule}</dd></div><div><dt>Lugar</dt><dd>{workshop.place}</dd></div><div><dt>Precio</dt><dd>{workshop.price}<br />{workshop.includes}</dd></div></dl>
         </section>
 
