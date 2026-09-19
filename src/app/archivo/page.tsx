@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     title: "Archivo de experiencias | fresco.",
     description: "Talleres, residencias y procesos compartidos de Fresco desde 2022.",
     url: "/archivo",
-    images: [{ url: "/images/home/Archivo.png", alt: "Archivo de experiencias de Fresco" }],
+    images: [{ url: "/images/home/Archivo.webp", alt: "Archivo de experiencias de Fresco" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Archivo de experiencias | fresco.",
     description: "Talleres, residencias y procesos compartidos de Fresco desde 2022.",
-    images: ["/images/home/Archivo.png"],
+    images: ["/images/home/Archivo.webp"],
   },
 };
 

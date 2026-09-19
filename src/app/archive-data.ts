@@ -36,7 +36,7 @@ const entries: ArchiveEntry[] = [
     slug: "mercedes-bellido", name: "Mercedes Bellido", title: "Paisajes oníricos", type: "Taller intensivo", period: "1—2 OCT 2022", date: "2022-10-01",
     tagline: "Evocando la belleza oculta.", summary: "Dos jornadas para ensayar texturas, ampliar el lenguaje pictórico e imaginar universos ocultos detrás de lo visible.",
     description: "Partiendo de la libreta de artista, Mercedes Bellido compartió su proceso de experimentación con lápices de colores, acuarelas y pasteles. Esos primeros ensayos se trasladaron después a la pintura de un paisaje onírico, atendiendo a la composición, la textura y la imaginación.", practices: "Dibujo, acuarela y pintura", place: "Madrid · Marqués de Vadillo",
-    images: { hero: "/images/archive/mercedes-bellido/hero.png", process: "/images/archive/mercedes-bellido/process-01.png", portrait: "/images/archive/mercedes-bellido/process-02.png", closing: "/images/archive/mercedes-bellido/process-03.png" },
+    images: { hero: "/images/archive/mercedes-bellido/hero.webp", process: "/images/archive/mercedes-bellido/process-01.webp", portrait: "/images/archive/mercedes-bellido/process-02.webp", closing: "/images/archive/mercedes-bellido/process-03.webp" },
   },
   {
     slug: "los-bravu", name: "Los Bravú", title: "Escenas de un banquete", type: "Taller intensivo", period: "NOV 2022", date: "2022-11-01",
@@ -66,7 +66,7 @@ const entries: ArchiveEntry[] = [
     slug: "ana-bustelo", name: "Ana Bustelo", title: "Libros a la fresca", type: "Seminario de autoedición", period: "2025—2026", date: "2025-10-01",
     tagline: "Idear, editar y producir una publicación personal.", summary: "Un proceso cuatrimestral para transformar una investigación en una publicación y compartirla públicamente.",
     description: "El seminario acompañó cada proyecto desde la investigación y el boceto hasta las decisiones de edición, producción y acabados. Las sesiones combinaron referencias, herramientas prácticas, tutorías y conversación colectiva, culminando en un open studio dedicado a los libros realizados.", practices: "Edición, diseño y publicación", place: "Fresca. La Nave · Madrid",
-    images: { hero: "/images/program/procesos cuatrimestrales/seminario-autoedicion/Open Studio_Libros a la fresca_42.png", process: "/images/program/procesos cuatrimestrales/seminario-autoedicion/Open Studio_Libros a la fresca_37.png", portrait: "/images/program/procesos cuatrimestrales/seminario-autoedicion/Open Studio_Libros a la fresca_23.png", closing: "/images/program/procesos cuatrimestrales/seminario-autoedicion/Open Studio_Libros a la fresca_44.png" },
+    images: { hero: "/images/program/procesos cuatrimestrales/seminario-autoedicion/Open Studio_Libros a la fresca_42.webp", process: "/images/program/procesos cuatrimestrales/seminario-autoedicion/Open Studio_Libros a la fresca_37.webp", portrait: "/images/program/procesos cuatrimestrales/seminario-autoedicion/Open Studio_Libros a la fresca_23.webp", closing: "/images/program/procesos cuatrimestrales/seminario-autoedicion/Open Studio_Libros a la fresca_44.webp" },
   },
 ];
 

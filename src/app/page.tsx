@@ -7,13 +7,13 @@ import { ScrollEffects } from "./scroll-effects";
 
 const heroImages = [
   { src: "/images/home/Taller arcillas_paisaje urbano_lab4.jpeg", alt: "Exploración de arcillas y materiales del paisaje urbano" },
-  { src: "/images/home/Fresca. La nave_creacion contemporanea_Carabanchel_taller_37.png", alt: "Archivo y materiales de trabajo en Fresca La Nave" },
-  { src: "/images/home/Arcilla y paisaje urbano_Brenda Ranieri_Luka Andeyro_33.png", alt: "Materiales y procesos de un laboratorio de arcillas urbanas" },
+  { src: "/images/home/Fresca. La nave_creacion contemporanea_Carabanchel_taller_37.webp", alt: "Archivo y materiales de trabajo en Fresca La Nave" },
+  { src: "/images/home/Arcilla y paisaje urbano_Brenda Ranieri_Luka Andeyro_33.webp", alt: "Materiales y procesos de un laboratorio de arcillas urbanas" },
   { src: "/images/home/Taller Rayogramas_fresca la nave_Carabanchel.JPG", alt: "Registro de una deriva para producir rayogramas" },
   { src: "/images/home/Rayogramas_Taller Ana Paes_Fresca_16.jpeg", alt: "Rayograma producido durante un taller de experimentación" },
   { src: "/images/home/Taller criaturas elementales_Cecz_Fresca la nave6.jpeg", alt: "Proceso colectivo de dibujo, escritura y acuarela" },
   { src: "/images/home/Taller arcillas_paisaje urbano_lab1.jpeg", alt: "Muestras de arcilla recogidas en el territorio" },
-  { src: "/images/home/Fresca. La nave_creacion contemporanea_Carabanchel_taller_28.png", alt: "Vista interior de Fresca La Nave en Carabanchel" },
+  { src: "/images/home/Fresca. La nave_creacion contemporanea_Carabanchel_taller_28.webp", alt: "Vista interior de Fresca La Nave en Carabanchel" },
 ];
 
 export default function Home() {
@@ -79,10 +79,10 @@ export default function Home() {
         </div>
         <div className="studio-layout" data-reveal>
           <div className="studio-mosaic" aria-label="Imágenes de Fresca. La Nave">
-            <figure className="studio-photo-main"><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026.png" alt="Vista general del taller Fresca. La Nave" fill sizes="(max-width: 760px) 100vw, 50vw" /></figure>
+              <figure className="studio-photo-main"><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026.webp" alt="Vista general del taller Fresca. La Nave" fill sizes="(max-width: 760px) 100vw, 50vw" /></figure>
             <figure className="studio-photo-exhibition"><Image src="/images/home/la nave/Fresca-La-Nave-exposicion-Julia-Alfaro-2025.jpg" alt="Vista de una exposición de Julia Alfaro en Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
-            <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_1.png" alt="Zona de trabajo de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
-            <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_7.png" alt="Vista interior de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
+              <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_1.webp" alt="Zona de trabajo de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
+              <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_7.webp" alt="Vista interior de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
           </div>
           <div className="studio-info">
             <div className="studio-statement"><blockquote>Fresca. La Nave es un taller artístico en Carabanchel donde la producción cotidiana convive con talleres, seminarios, exposiciones y encuentros públicos. Un espacio para investigar materiales, sostener procesos de creación y ponerlos en común.</blockquote><div className="studio-location"><p>Creación contemporánea · Madrid</p><a href="https://www.google.com/maps/search/?api=1&query=Salvador+Alonso+12%2C+Madrid" target="_blank" rel="noreferrer">Salvador Alonso 12 <span aria-hidden="true">↗</span></a></div></div>
@@ -91,8 +91,8 @@ export default function Home() {
               <div className="studio-column"><p className="eyebrow">Líneas de trabajo</p><ul><li>Investigación matérica</li><li>Cerámica contemporánea</li><li>Pintura e imagen</li><li>Edición</li><li>Prácticas situadas y colectivas</li></ul></div>
             </div>
             <div className="studio-info-gallery" aria-label="Más imágenes de Fresca. La Nave">
-              <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_2.png" alt="Actividad dentro de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
-              <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_8.png" alt="Detalle del taller artístico Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
+              <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_2.webp" alt="Actividad dentro de Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
+              <figure><Image src="/images/home/la nave/Fresca. La nave_creacion contemporanea_Carabanchel_taller_julio 2026_8.webp" alt="Detalle del taller artístico Fresca. La Nave" fill sizes="(max-width: 760px) 50vw, 25vw" /></figure>
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@ export default function Home() {
           <p>Procesos compartidos, aprendizajes y encuentros desde 2021.</p>
         </div>
         <div className="archive-grid" data-reveal>
-          <div className="archive-image"><Image src="/images/home/Archivo.png" alt="Archivo de experiencias y procesos de Fresco" fill sizes="(max-width: 760px) 100vw, 48vw" /><span>Archivo fotográfico · 2021—26</span></div>
+          <div className="archive-image"><Image src="/images/home/Archivo.webp" alt="Archivo de experiencias y procesos de Fresco" fill sizes="(max-width: 760px) 100vw, 48vw" /><span>Archivo fotográfico · 2021—26</span></div>
           <div className="archive-content">
             <div className="archive-stats"><div><strong>50</strong><span>experiencias</span></div><div><strong>30+</strong><span>artistas</span></div><div><strong>5</strong><span>años creando</span></div></div>
             <ol className="archive-list">{featuredArchiveLinks.map((entry, index) => <li key={`${entry.date}-${entry.artist}`}><Link href={entry.href} target={entry.href.startsWith("http") ? "_blank" : undefined} rel={entry.href.startsWith("http") ? "noreferrer" : undefined}><span>{String(index + 1).padStart(2, "0")}</span><span className="archive-list-name"><small>{entry.period} · {entry.workshop}</small>{entry.artist}</span><span aria-hidden="true">↗</span></Link></li>)}</ol>

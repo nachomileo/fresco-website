@@ -28,9 +28,9 @@ export const archiveWorkshopAlbums: Record<string, ArchiveWorkshopAlbum[]> = {
       title: "Naturalezas muertas y cultura pop",
       description: "Un taller pictórico sobre la naturaleza muerta como dispositivo para reunir objetos cotidianos, símbolos e imágenes de la cultura popular y construir una escena personal.",
       images: [
-        `${folder}/naturalezas muertas y cultura pop/process-01.png`,
-        `${folder}/naturalezas muertas y cultura pop/process-02.png`,
-        `${folder}/naturalezas muertas y cultura pop/process-03.png`,
+        `${folder}/naturalezas muertas y cultura pop/process-01.webp`,
+        `${folder}/naturalezas muertas y cultura pop/process-02.webp`,
+        `${folder}/naturalezas muertas y cultura pop/process-03.webp`,
       ],
     },
   ],
