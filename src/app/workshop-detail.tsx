@@ -38,6 +38,12 @@ const sophieWorks = [
 
 const anaCanoWorksBase = "/images/program/derivas materiales/paginas/ana-cano-grafica-ceramica/obra-ana-cano";
 const anaCanoWorks = [
+  { image: "pinus-sylvestris-ludica.jpg", title: "Pinus sylvestris ludica" },
+  { image: "manzano.jpg", title: "Manzano" },
+  { image: "lo-que-cabe-en-mi-bolsillo.jpg", title: "Lo que cabe en mi bolsillo" },
+  { image: "el-salto-a-la-odisea.jpg", title: "El salto a la Odisea" },
+  { image: "corredor-angulo.jpg", title: "Corredor" },
+  { image: "lo-que-cabe-en-mi-bolsillo-angulo.jpg", title: "Lo que cabe en mi bolsillo" },
   { image: "stoneware-plate.jpg", title: "Plato de gres" },
   { image: "porcelain-glass.jpg", title: "Vaso de porcelana" },
   { image: "stoneware-glass.jpg", title: "Vaso de gres" },
@@ -63,6 +69,11 @@ const eventDates: Record<string, { startDate: string; endDate: string }> = {
   "sirviendo-un-plato-bodegon": { startDate: "2027-01-30T10:00:00+01:00", endDate: "2027-01-31T14:00:00+01:00" },
 };
 
+const enrollmentUrls: Record<string, string> = {
+  "ese-instante-de-luz": "https://buy.stripe.com/dRmfZh4DD6wmgFq2RQ7wA0J",
+  "experimentacion-pictorica-sobre-ceramica": "https://buy.stripe.com/bJefZheedbQGcpadwu7wA0K",
+};
+
 const hasDanielDeJorgeCredit = (image: string) => image.includes("/Foto Daniel de Jorge");
 
 const imageSource = (image: string) => {
@@ -77,6 +88,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
   const images = [...workshop.images.filter((image) => !excludedWorkshopImages.has(image)), ...(workshop.extraImages ?? [])];
   const siteUrl = "https://fresco.art";
   const dates = eventDates[workshop.slug];
+  const enrollmentUrl = enrollmentUrls[workshop.slug];
   const eventSchema = dates ? {
     "@context": "https://schema.org",
     "@type": "EducationEvent",
@@ -128,7 +140,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
             <div className="workshop-title-stack"><h1>{workshop.title}</h1><p>{workshop.byline}</p>{workshop.edition && <span>{workshop.edition}</span>}</div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>{workshop.duration}</dd></div><div><dt>Precio</dt><dd>{workshop.price}</dd></div></dl>
-              <Link href={workshop.slug === "ese-instante-de-luz" ? "https://buy.stripe.com/dRmfZh4DD6wmgFq2RQ7wA0J" : "mailto:info@fresco.art"}>Me apunto <span aria-hidden="true">↗</span></Link>
+              {enrollmentUrl ? <a href={enrollmentUrl} target="_blank" rel="noreferrer">Me apunto <span aria-hidden="true">↗</span></a> : <Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>}
             </div>
           </div>
         </header>
@@ -146,7 +158,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
         </section>
 
         <section className="workshop-info">
-          <div>{workshop.edition && <p className="eyebrow">{workshop.edition}</p>}<h2>{workshop.infoTitle ?? `${workshop.duration} en Fresca. La Nave.`}</h2><Link href={workshop.slug === "ese-instante-de-luz" ? "https://buy.stripe.com/dRmfZh4DD6wmgFq2RQ7wA0J" : "mailto:info@fresco.art"}>Me apunto <span aria-hidden="true">↗</span></Link></div>
+          <div>{workshop.edition && <p className="eyebrow">{workshop.edition}</p>}<h2>{workshop.infoTitle ?? `${workshop.duration} en Fresca. La Nave.`}</h2>{enrollmentUrl ? <a href={enrollmentUrl} target="_blank" rel="noreferrer">Me apunto <span aria-hidden="true">↗</span></a> : <Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>}</div>
           <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Horario</dt><dd>{workshop.schedule}</dd></div><div><dt>Lugar</dt><dd>{workshop.place}</dd></div><div><dt>Precio</dt><dd>{workshop.price}<br />{workshop.includes}</dd></div></dl>
         </section>
 
