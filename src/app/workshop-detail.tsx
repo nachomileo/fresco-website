@@ -127,7 +127,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
     <main>
       {eventSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema).replace(/</g, "\\u003c") }} />}
       <header className="site-header">
-        <Link className="brand" href="/" aria-label="Fresco, inicio"><Image src="/branding/fresco-wordmark-black.webp" alt="fresco." fill sizes="96px" priority /></Link>
+        <Link className="brand" href="/" aria-label="Fresco, inicio"><Image src="/branding/fresco-wordmark-black.png" alt="fresco." fill sizes="96px" priority /></Link>
         <nav className="desktop-nav" aria-label="Navegación principal"><Link href="/#programa">Programa</Link><Link href="/#la-nave">La Nave</Link><Link href="/#archivo">Archivo</Link></nav>
         <Link className="header-cta" href="/#contacto">ME SUMO <span aria-hidden="true">↘</span></Link>
       </header>
@@ -183,7 +183,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
 
         <nav className="workshop-back"><Link href="/talleres">← Volver a Derivas materiales</Link><Link href="mailto:info@fresco.art">Consultar inscripción ↗</Link></nav>
       </article>
-      <footer className="site-footer"><Link className="brand" href="/"><Image src="/branding/fresco-wordmark-black.webp" alt="fresco." fill sizes="96px" /></Link><div><a href="https://www.instagram.com/fresca.lanave/" target="_blank" rel="noreferrer">Fresca. La Nave ↗</a><a href="https://www.instagram.com/fresco.arte/" target="_blank" rel="noreferrer">fresco. arte ↗</a><a href="mailto:info@fresco.art">info@fresco.art</a><Link href="/politica-de-cookies">Cookies</Link><span>© 2026</span></div></footer>
+      <footer className="site-footer"><Link className="brand" href="/"><Image src="/branding/fresco-wordmark-black.png" alt="fresco." fill sizes="96px" /></Link><div><a href="https://www.instagram.com/fresca.lanave/" target="_blank" rel="noreferrer">Fresca. La Nave ↗</a><a href="https://www.instagram.com/fresco.arte/" target="_blank" rel="noreferrer">fresco. arte ↗</a><a href="mailto:info@fresco.art">info@fresco.art</a><Link href="/politica-de-cookies">Cookies</Link><span>© 2026</span></div></footer>
       <FrescaFixedMark />
     </main>
   );
