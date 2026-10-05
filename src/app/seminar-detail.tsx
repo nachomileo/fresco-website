@@ -71,7 +71,7 @@ export function EnObraDetail() {
         <header className="workshop-hero">
           <div className="workshop-hero-image"><Image src={`${base}/IMG_6709.jpeg`} alt="Montaje colectivo de la exposición del seminario En obra" fill sizes="(max-width: 760px) 100vw, 44vw" priority /></div>
           <div className="workshop-hero-copy">
-            <p className="meta-label">Procesos cuatrimestrales · SE—01</p>
+            <p className="meta-label">Seminarios · SE—01</p>
             <div className="workshop-title-stack"><h1>En obra</h1><p>Acompañamiento crítico para la práctica artística</p><span>Con Nacho Martín Silva · Octubre 2026—enero 2027<br />II edición</span></div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>Octubre 2026—enero 2027</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>16 encuentros · 48 horas</dd></div><div><dt>Precio</dt><dd>690 €</dd></div></dl>
@@ -98,7 +98,7 @@ export function EnObraDetail() {
         </section>
 
         <section className="workshop-info">
-          <div><p className="eyebrow">Proceso cuatrimestral</p><h2>Seguimiento individual y trabajo colectivo.</h2><a href={enrollmentUrl} target="_blank" rel="noreferrer" aria-label="Inscribirme en En obra mediante Stripe (abre en una pestaña nueva)">Me apunto <span aria-hidden="true">↗</span></a></div>
+          <div><p className="eyebrow">Seminario</p><h2>Seguimiento individual y trabajo colectivo.</h2><a href={enrollmentUrl} target="_blank" rel="noreferrer" aria-label="Inscribirme en En obra mediante Stripe (abre en una pestaña nueva)">Me apunto <span aria-hidden="true">↗</span></a></div>
           <dl>
             <div><dt>Fechas</dt><dd>Octubre 2026—enero 2027</dd></div>
             <div><dt>Horario</dt><dd>Viernes de 18 a 21 h · A confirmar con el grupo</dd></div>

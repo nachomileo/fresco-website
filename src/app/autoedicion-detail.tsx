@@ -60,7 +60,7 @@ export function AutoedicionDetail() {
         <header className="workshop-hero">
           <div className="workshop-hero-image"><Image src={`${base}/hero.jpg`} alt="Publicación desarrollada en el seminario de autoedición" fill sizes="(max-width: 760px) 100vw, 44vw" priority /></div>
           <div className="workshop-hero-copy">
-            <p className="meta-label">Procesos cuatrimestrales · SE—02</p>
+            <p className="meta-label">Seminarios · SE—02</p>
             <div className="workshop-title-stack"><h1>Autoedición.</h1><p>Herramientas para crear y producir una publicación.</p><span>Con Ana Bustelo · Febrero—mayo 2027<br />II edición</span></div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>Febrero—mayo 2027</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>23 horas lectivas + open studio</dd></div><div><dt>Precio</dt><dd>420 €</dd></div></dl>
