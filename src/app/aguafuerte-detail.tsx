@@ -59,7 +59,7 @@ export function AguafuerteDetail() {
           <div className="workshop-hero-image"><Image src={`${base}/aguafuerte-estampas-en-proceso.jpg`} alt="Pruebas de aguafuerte en el taller de Paula Cid Cerezo" fill sizes="(max-width: 760px) 100vw, 44vw" priority /></div>
           <div className="workshop-hero-copy">
             <p className="meta-label">Seminarios · SE—03</p>
-            <div className="workshop-title-stack"><h1>Exploraciones<br />al aguafuerte.</h1><p>Explorar los límites gráficos del propio dibujo gracias a las bondades del grabado.</p><span>Con Paula Cid Cerezo · Febrero 2027</span></div>
+            <div className="workshop-title-stack"><h1>Exploraciones<br />al aguafuerte.</h1><p>Seminario de dibujo y grabado.</p><span>Con Paula Cid Cerezo · Febrero 2027</span></div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>13, 14, 20, 21 y 27 de febrero de 2027</dd></div><div><dt>Lugar</dt><dd>Colonia de la Prensa, Carabanchel</dd></div><div><dt>Duración</dt><dd>32 horas + open studio</dd></div><div><dt>Precio</dt><dd>460 €</dd></div></dl>
               <Link href="mailto:info@fresco.art?subject=Exploraciones%20al%20aguafuerte">Reserva plaza <span aria-hidden="true">↗</span></Link>
@@ -69,7 +69,7 @@ export function AguafuerteDetail() {
 
         <section className="workshop-question"><p className="eyebrow">El seminario</p><h2>Un taller experimental de investigación gráfica para explorar las capacidades del aguafuerte y expandir el dibujo.</h2></section>
 
-        <section className="workshop-overview">
+        <section className="workshop-overview workshop-overview-aguafuerte">
           <div className="workshop-overview-image"><Image src={`${base}/plancha-de-aguafuerte.jpg`} alt="Plancha de aguafuerte en el taller de Paula Cid Cerezo" fill sizes="(max-width: 760px) 100vw, 48vw" /></div>
           <div className="workshop-overview-copy"><p className="eyebrow">Exploraciones al aguafuerte</p><p className="workshop-overview-lead">Explorar los límites gráficos del propio dibujo gracias a las bondades del grabado.</p><div className="workshop-overview-body"><p>Taller experimental de investigación gráfica enfocado en explorar las capacidades del aguafuerte y sus límites. A través de dinámicas de dibujo creativo orientadas a la observación desinhibida y el trazo libre, el seminario aborda el potencial contemporáneo de esta técnica calcográfica tradicional, donde el objetivo no es sólo reproducir el dibujo sino expandirlo. Lxs participantes investigarán la producción de múltiples versiones de una misma imagen, profundizando en la versatilidad plástica del dibujo y la estampación. Al finalizar el seminario, presentaremos al público los ensayos y proyectos finales.</p><h3 className="workshop-overview-subheading">¿Qué vas a aprender?</h3><p>A perder el miedo al dibujo y descubrir la vigencia del aguafuerte: una técnica histórica que se consolida como motor para la exploración gráfica contemporánea. A través de la reproducción y estampación, llevaremos una misma imagen hasta sus límites para descubrir todo el potencial expresivo que oculta la línea. No se necesita experiencia previa.</p></div></div>
         </section>
