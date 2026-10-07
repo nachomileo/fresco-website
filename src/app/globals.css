@@ -430,6 +430,12 @@ button, input { font: inherit; }
 .workshop-overview-autoedicion .workshop-overview-body { margin-top: 0; padding-top: 72px; }
 .workshop-overview-autoedicion .workshop-overview-body strong { color: var(--ink); font-weight: 700; }
 .workshop-overview-aguafuerte .workshop-overview-body { margin-top: 64px; }
+.sonic-program-note { padding: 120px 40px; display: grid; grid-template-columns: minmax(300px, 42fr) minmax(0, 58fr); gap: 70px; align-items: end; border-top: 1px solid var(--line); background: var(--panel); color: var(--text); }
+.sonic-program-note-heading .eyebrow { margin-bottom: 24px; }
+.sonic-program-note h2 { max-width: 650px; margin: 0; font-size: clamp(62px, 8vw, 118px); line-height: .86; letter-spacing: -.065em; }
+.sonic-program-note-copy { max-width: 720px; }
+.sonic-program-note-copy p { margin: 0; color: var(--muted); font-size: clamp(20px, 2.1vw, 30px); line-height: 1.35; letter-spacing: -.025em; }
+.sonic-program-note a { margin-top: 42px; padding: 16px 22px; display: inline-flex; align-items: center; gap: 28px; background: var(--blue-bright); color: white; font: 700 10px/1 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
 .workshop-journey { padding: 140px 40px; display: grid; grid-template-columns: minmax(0, 42fr) minmax(0, 58fr); gap: 70px; }
 .workshop-journey header h2 { max-width: 580px; margin: 18px 0 0; font-size: clamp(48px, 6vw, 88px); line-height: .95; letter-spacing: -.055em; }
 .workshop-journey-note { max-width: 540px; margin: 0; padding-top: 54px; color: var(--muted); font-size: 14px; line-height: 1.65; }
@@ -461,6 +467,14 @@ button, input { font: inherit; }
 .workshop-gallery-autoedicion figure { min-height: 0; }
 .workshop-gallery-autoedicion .workshop-gallery-portrait { grid-column: span 4; aspect-ratio: 3 / 4; }
 .workshop-gallery-autoedicion .workshop-gallery-landscape { grid-column: span 6; aspect-ratio: 4 / 3; }
+.workshop-page-laicha .workshop-hero-image img { object-position: 60% center; }
+.workshop-page-laicha .workshop-title-stack h1 { max-width: 11ch; }
+.workshop-overview-laicha .workshop-overview-image img { object-position: center; }
+.workshop-gallery-laicha { grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: start; }
+.workshop-gallery-laicha figure { min-height: 0; }
+.workshop-gallery-laicha .workshop-gallery-portrait { grid-column: span 4; aspect-ratio: 3 / 4; }
+.workshop-gallery-laicha .workshop-gallery-landscape { grid-column: span 8; aspect-ratio: 16 / 10; }
+.workshop-gallery-laicha figure img { object-position: center; }
 .workshop-gallery-masonry { display: block; columns: 3; column-gap: 8px; column-fill: balance; }
 .workshop-gallery-masonry figure { min-height: 0; margin: 0 0 8px; break-inside: avoid; }
 .workshop-gallery-masonry figure img { position: static !important; display: block; width: 100%; height: auto; object-fit: contain; }
@@ -703,6 +717,9 @@ button, input { font: inherit; }
   .workshop-overview-body p { font-size: 16px; }
   .workshop-overview-autoedicion .workshop-overview-body { padding-top: 56px; }
   .workshop-overview-aguafuerte .workshop-overview-body { margin-top: 42px; }
+  .sonic-program-note { padding: 90px 24px; grid-template-columns: 1fr; gap: 44px; align-items: start; }
+  .sonic-program-note h2 { font-size: clamp(55px, 17vw, 78px); overflow-wrap: anywhere; }
+  .sonic-program-note-copy p { font-size: 21px; }
   .workshop-journey { padding: 95px 24px; grid-template-columns: 1fr; gap: 55px; }
   .workshop-journey header h2 { font-size: 52px; }
   .workshop-info { padding: 80px 24px; grid-template-columns: 1fr; gap: 60px; }
@@ -712,6 +729,10 @@ button, input { font: inherit; }
   .workshop-gallery { grid-template-columns: 1fr; }
   .workshop-gallery figure, .workshop-gallery .workshop-gallery-wide { min-height: 520px; grid-column: auto; }
   .workshop-gallery-editorial, .workshop-gallery-autoedicion { grid-template-columns: 1fr; }
+  .workshop-gallery-laicha { grid-template-columns: 1fr; }
+  .workshop-gallery-laicha .workshop-gallery-portrait, .workshop-gallery-laicha .workshop-gallery-landscape { min-height: 0; grid-column: auto; aspect-ratio: auto; }
+  .workshop-gallery-laicha figure img { position: static !important; width: 100%; height: auto; object-fit: contain; }
+  .workshop-page-laicha .workshop-title-stack h1 { max-width: none; font-size: clamp(42px, 12vw, 62px); overflow-wrap: anywhere; }
   .workshop-gallery-editorial .workshop-gallery-portrait, .workshop-gallery-editorial .workshop-gallery-landscape, .workshop-gallery-autoedicion .workshop-gallery-portrait, .workshop-gallery-autoedicion .workshop-gallery-landscape { min-height: 0; grid-column: auto; aspect-ratio: 3 / 4; }
   .workshop-gallery-masonry { columns: 1; }
   .workshop-tutors { padding: 95px 24px; }

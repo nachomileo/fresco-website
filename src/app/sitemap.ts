@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/seminarios/en-obra`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/seminarios/autoedicion`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/seminarios/exploraciones-al-aguafuerte`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${siteUrl}/musica/laboratorio-creacion-de-canciones`, changeFrequency: "monthly", priority: 0.9 },
   ];
 
   const programPages: MetadataRoute.Sitemap = programGroups.map(({ slug }) => ({
