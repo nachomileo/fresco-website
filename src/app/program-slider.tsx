@@ -47,7 +47,7 @@ export function ProgramSlider({ groups }: { groups: ProgramGroup[] }) {
         </header>
         <div className="program-preview-grid">
           {activeGroup.items.map((item) => {
-            const cardHref = activeGroup.slug === "talleres" || activeGroup.slug === "musica" || item.href === "/seminarios/autoedicion" ? item.href : undefined;
+            const cardHref = item.href;
             return <article className="program-preview-card" key={item.number}>
               {item.href
                 ? <Link className="program-preview-image" href={item.href} aria-label={`Ir a ${item.title}`}><Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 100vw, 31vw" /></Link>
