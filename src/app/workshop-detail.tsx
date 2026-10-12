@@ -72,6 +72,10 @@ const eventDates: Record<string, { startDate: string; endDate: string }> = {
 const enrollmentUrls: Record<string, string> = {
   "ese-instante-de-luz": "https://buy.stripe.com/dRmfZh4DD6wmgFq2RQ7wA0J",
   "experimentacion-pictorica-sobre-ceramica": "https://buy.stripe.com/bJefZheedbQGcpadwu7wA0K",
+  "micelio-y-textil": "https://buy.stripe.com/8x27sL8TT7Aqdte1NM7wA0N",
+  "arcillas-silvestres-y-paisaje-urbano": "https://buy.stripe.com/cNi3cv3zzaMC74Qaki7wA0O",
+  "criaturas-elementales": "https://buy.stripe.com/dRm6oH2vv1c22OAaki7wA0P",
+  "sirviendo-un-plato-bodegon": "https://buy.stripe.com/fZu7sL8TT4oefBm2RQ7wA0Q",
 };
 
 const hasDanielDeJorgeCredit = (image: string) => image.includes("/Foto Daniel de Jorge");
