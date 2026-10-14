@@ -55,7 +55,7 @@ const steps = [
   { title: "Decidir", text: "Analizar y encontrar las formas materiales, discursivas y expositivas que cada propuesta necesita." },
   { title: "Compartir", text: "Presentar los avances al grupo y contrastar decisiones a través de la conversación y la crítica de obra." },
   { title: "Preparar", text: "Cerrar la selección de obra, resolver las necesidades técnicas y preparar el montaje, la mediación y la comunicación de cara a la exposición." },
-  { title: "Open studio", text: "Exposición colectiva de fin de semana en Fresca. La Nave durante marzo de 2027." },
+  { title: "Open studio", text: "Exposición colectiva de fin de semana en Fresca. La Nave al finalizar el seminario." },
 ];
 
 export function EnObraDetail() {
@@ -72,9 +72,9 @@ export function EnObraDetail() {
           <div className="workshop-hero-image"><Image src={`${base}/IMG_6709.jpeg`} alt="Montaje colectivo de la exposición del seminario En obra" fill sizes="(max-width: 760px) 100vw, 44vw" priority /></div>
           <div className="workshop-hero-copy">
             <p className="meta-label">Seminarios · SE—01</p>
-            <div className="workshop-title-stack"><h1>En obra</h1><p>Acompañamiento crítico para la práctica artística</p><span>Con Nacho Martín Silva · Octubre 2026—mediados de febrero 2027<br />II edición</span></div>
+            <div className="workshop-title-stack"><h1>En obra</h1><p>Acompañamiento crítico para la práctica artística</p><span>Reprogramado para principios de 2027<br />Con Nacho Martín Silva · II edición</span></div>
             <div className="workshop-hero-action" id="inscripcion">
-              <dl><div><dt>Fecha</dt><dd>Desde el 28 de octubre de 2026 hasta mediados de febrero de 2027</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>16 encuentros · 48 horas</dd></div><div><dt>Precio</dt><dd>690 €</dd></div></dl>
+              <dl><div><dt>Fecha</dt><dd>Reprogramado para principios de 2027</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>16 encuentros · 48 horas</dd></div><div><dt>Precio</dt><dd>690 €</dd></div></dl>
               <a href={enrollmentUrl} target="_blank" rel="noreferrer" aria-label="Reservar plaza en En obra mediante Stripe (abre en una pestaña nueva)">Reserva plaza <span aria-hidden="true">↗</span></a>
             </div>
           </div>
@@ -100,10 +100,10 @@ export function EnObraDetail() {
         <section className="workshop-info">
           <div><p className="eyebrow">Seminario</p><h2>Seguimiento individual y trabajo colectivo.</h2><a href={enrollmentUrl} target="_blank" rel="noreferrer" aria-label="Inscribirme en En obra mediante Stripe (abre en una pestaña nueva)">Me apunto <span aria-hidden="true">↗</span></a></div>
           <dl>
-            <div><dt>Fechas</dt><dd>Desde el 28 de octubre de 2026 hasta mediados de febrero de 2027</dd></div>
+            <div><dt>Fechas</dt><dd>Reprogramado para principios de 2027 · Fechas definitivas próximamente</dd></div>
             <div><dt>Horario</dt><dd>Miércoles de 18 a 21 h</dd></div>
             <div><dt>Formato</dt><dd>16 encuentros semanales · 48 horas lectivas</dd></div>
-            <div><dt>Open studio</dt><dd>Exposición colectiva de fin de semana · Marzo 2027</dd></div>
+            <div><dt>Open studio</dt><dd>Exposición colectiva de fin de semana al finalizar el seminario</dd></div>
             <div><dt>Precio</dt><dd>690 €</dd></div>
             <div><dt>Pago</dt><dd>Reserva de 100 € y dos pagos de 295 €</dd></div>
             <div><dt>Dirigido a</dt><dd>Artistas y creadores que quieran desarrollar una investigación, un cuerpo de trabajo o un proyecto personal</dd></div>

@@ -3,11 +3,11 @@ import { EnObraDetail } from "../../seminar-detail";
 
 export const metadata: Metadata = {
   title: "En obra — Seminario con Nacho Martín Silva",
-  description: "Seminario cuatrimestral de acompañamiento, crítica y producción de un proyecto artístico con Nacho Martín Silva.",
+  description: "Seminario cuatrimestral de acompañamiento, crítica y producción de un proyecto artístico con Nacho Martín Silva. Reprogramado para principios de 2027.",
   alternates: { canonical: "/seminarios/en-obra" },
   openGraph: {
     title: "En obra — Seminario con Nacho Martín Silva | fresco.",
-    description: "Seminario cuatrimestral de acompañamiento, crítica y producción de un proyecto artístico con Nacho Martín Silva.",
+    description: "Seminario cuatrimestral de acompañamiento, crítica y producción de un proyecto artístico con Nacho Martín Silva. Reprogramado para principios de 2027.",
     url: "/seminarios/en-obra",
     type: "article",
     images: [{ url: "/images/program/procesos cuatrimestrales/seminario en obra/IMG_6709.jpeg", alt: "Seminario En obra con Nacho Martín Silva" }],
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "En obra — Seminario con Nacho Martín Silva | fresco.",
-    description: "Seminario cuatrimestral de acompañamiento, crítica y producción de un proyecto artístico con Nacho Martín Silva.",
+    description: "Seminario cuatrimestral de acompañamiento, crítica y producción de un proyecto artístico con Nacho Martín Silva. Reprogramado para principios de 2027.",
     images: ["/images/program/procesos cuatrimestrales/seminario en obra/IMG_6709.jpeg"],
   },
 };
