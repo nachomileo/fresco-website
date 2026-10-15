@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import type { WorkshopEntry } from "./workshop-data";
 import { FrescaFixedMark } from "./fresca-fixed-mark";
 
@@ -60,6 +61,17 @@ const alejandraWorks = [
   "SaveClip.App_713164236_18590077168030561_6206997300848343689_n.jpg",
 ];
 
+const foragingBase = "/images/program/derivas materiales/paginas/micelo y textil/forrajeo-de-setas";
+const foragingImages = [
+  { image: "setas-en-la-mano.webp", alt: "Setas observadas durante una salida de forrajeo", feature: true },
+  { image: "setas-en-tronco.webp", alt: "Setas creciendo sobre un tronco" },
+  { image: "cesta-de-setas.webp", alt: "Diversidad de setas reunidas para su identificación" },
+  { image: "seta-azulada.webp", alt: "Detalle de una seta azulada durante el forrajeo" },
+  { image: "setas-sobre-corteza.webp", alt: "Hongos creciendo sobre la corteza de un árbol" },
+  { image: "seta-con-rocio.webp", alt: "Seta cubierta de gotas de rocío" },
+  { image: "setas-clasificadas.webp", alt: "Setas dispuestas para observar sus características" },
+];
+
 const eventDates: Record<string, { startDate: string; endDate: string }> = {
   "ese-instante-de-luz": { startDate: "2026-10-02T19:00:00+02:00", endDate: "2026-10-02T23:00:00+02:00" },
   "experimentacion-pictorica-sobre-ceramica": { startDate: "2026-10-31T10:00:00+01:00", endDate: "2026-11-01T14:00:00+01:00" },
@@ -76,6 +88,11 @@ const enrollmentUrls: Record<string, string> = {
   "arcillas-silvestres-y-paisaje-urbano": "https://buy.stripe.com/cNi3cv3zzaMC74Qaki7wA0O",
   "criaturas-elementales": "https://buy.stripe.com/dRm6oH2vv1c22OAaki7wA0P",
   "sirviendo-un-plato-bodegon": "https://buy.stripe.com/fZu7sL8TT4oefBm2RQ7wA0Q",
+};
+
+const micelioEnrollmentUrls = {
+  workshopAndForaging: "https://buy.stripe.com/00w3cv2vv8Euah27867wA0S",
+  foraging: "https://buy.stripe.com/fZu6oH4DDbQGcpagIG7wA0T",
 };
 
 const hasDanielDeJorgeCredit = (image: string) => image.includes("/Foto Daniel de Jorge");
@@ -130,6 +147,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
   return (
     <main>
       {eventSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema).replace(/</g, "\\u003c") }} />}
+      {workshop.slug === "micelio-y-textil" && <Script src="https://js.stripe.com/v3/pricing-table.js" strategy="afterInteractive" />}
       <header className="site-header">
         <Link className="brand" href="/" aria-label="Fresco, inicio"><Image src="/branding/fresco-wordmark-black.png" alt="fresco." fill sizes="96px" priority /></Link>
         <nav className="desktop-nav" aria-label="Navegación principal"><Link href="/#programa">Programa</Link><Link href="/#la-nave">La Nave</Link><Link href="/#archivo">Archivo</Link></nav>
@@ -143,8 +161,8 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
             <p className="meta-label">Derivas materiales · {workshop.number}</p>
             <div className="workshop-title-stack"><h1>{workshop.title}</h1><p>{workshop.byline}</p>{workshop.edition && <span>{workshop.edition}</span>}</div>
             <div className="workshop-hero-action" id="inscripcion">
-              <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>{workshop.duration}</dd></div><div><dt>Precio</dt><dd>{workshop.price}</dd></div></dl>
-              {enrollmentUrl ? <a href={enrollmentUrl} target="_blank" rel="noreferrer">Me apunto <span aria-hidden="true">↗</span></a> : <Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>}
+              <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>{workshop.duration}</dd></div><div><dt>Precio</dt><dd>{workshop.slug === "micelio-y-textil" ? <span className="workshop-price-choices"><span><strong>85 €</strong> Taller + forrajeo</span><span><strong>75 €</strong> Taller sin forrajeo</span></span> : workshop.price}</dd></div></dl>
+              {workshop.slug === "micelio-y-textil" ? <a href="#modalidades">Me apunto <span aria-hidden="true">↓</span></a> : enrollmentUrl ? <a href={enrollmentUrl} target="_blank" rel="noreferrer">Me apunto <span aria-hidden="true">↗</span></a> : <Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>}
             </div>
           </div>
         </header>
@@ -156,17 +174,48 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
           <div className="workshop-overview-copy"><p className="eyebrow">El taller</p><p className="workshop-overview-lead">{workshop.intro}</p><div className="workshop-overview-body"><p>{workshop.context}</p></div></div>
         </section>
 
+        {workshop.slug === "micelio-y-textil" && <section className="workshop-gallery workshop-gallery-micelio">{images.slice(1, 6).map((image, index) => <figure className={index === 0 ? "workshop-gallery-wide" : ""} key={image}><Image src={imageSource(image)} alt={`Proceso de ${workshop.cardTitle}`} fill sizes="(max-width: 760px) 100vw, 33vw" /></figure>)}</section>}
+
         <section className="workshop-journey">
           <header><p className="eyebrow">El recorrido</p><h2>{workshop.journeyTitle ?? `${workshop.steps.map((step) => step.title).join(", ")}.`}</h2></header>
-          <ol>{workshop.steps.map((step, index) => <li key={step.title}><span>{step.number ?? String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
+          <ol>{workshop.steps.map((step, index) => <li key={step.title}><span>{step.number ?? String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.text}</p>{workshop.slug === "micelio-y-textil" && step.title === "Recolectar" && <a className="workshop-step-link" href="#foraging-title">Más info <span aria-hidden="true">↓</span></a>}</div></li>)}</ol>
         </section>
+
+        {workshop.slug === "micelio-y-textil" && <div className="foraging-options" id="modalidades" aria-label="Modalidades de inscripción">
+            <article className="foraging-option-featured">
+              <span>01</span><p className="eyebrow">Experiencia ampliada</p><h3>Taller + forrajeo de setas</h3><p>Las dos sesiones del taller más el forrajeo del domingo 22 de noviembre por la mañana en la Casa de Campo.</p><strong>85 €</strong><a href={micelioEnrollmentUrls.workshopAndForaging} target="_blank" rel="noreferrer">Elegir esta modalidad <span aria-hidden="true">↗</span></a>
+            </article>
+            <article>
+              <span>02</span><p className="eyebrow">Taller</p><h3>Micelio y textil</h3><p>Dos sesiones de experimentación con micelio y fibras textiles en Fresca. La Nave. Incluye materiales y picoteo.</p><strong>75 €</strong><a href={enrollmentUrls["micelio-y-textil"]} target="_blank" rel="noreferrer">Reservar taller <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>}
+
+        {workshop.slug === "micelio-y-textil" && <section className="foraging-addon" aria-labelledby="foraging-title">
+          <header className="foraging-addon-intro">
+            <div><p className="eyebrow">Actividad opcional</p><h2 id="foraging-title">Forrajeo<br />de setas.</h2></div>
+            <div className="foraging-addon-copy">
+              <p className="foraging-addon-lead">Una mañana para observar, identificar y comprender las ecologías de los hongos en el contexto urbano.</p>
+              <p>Recorreremos la Casa de Campo junto a Alejandra Díaz-Guerra atendiendo a las relaciones entre hongos, árboles, suelo, humedad y materia en descomposición. Con libreta y lápiz, registraremos formas, comportamientos y conexiones que amplíen la investigación desarrollada en el taller.</p>
+              <p className="foraging-addon-note">Domingo 22 de noviembre, por la mañana · Duración aproximada: 2 horas · La actividad no está orientada al consumo.</p>
+            </div>
+          </header>
+          <div className="foraging-gallery">
+            {foragingImages.map((item) => <figure className={item.feature ? "foraging-gallery-feature" : ""} key={item.image}><Image src={`${foragingBase}/${item.image}`} alt={item.alt} fill sizes={item.feature ? "(max-width: 760px) 100vw, 50vw" : "(max-width: 760px) 50vw, 25vw"} /></figure>)}
+          </div>
+          <div className="foraging-standalone"><p><strong>¿Quieres participar solo en el forrajeo?</strong> La actividad también está abierta por 20 €, sujeta a disponibilidad.</p><a href={micelioEnrollmentUrls.foraging} target="_blank" rel="noreferrer">Reservar forrajeo <span aria-hidden="true">↗</span></a></div>
+        </section>}
 
         <section className="workshop-info">
-          <div>{workshop.edition && <p className="eyebrow">{workshop.edition}</p>}<h2>{workshop.infoTitle ?? `${workshop.duration} en Fresca. La Nave.`}</h2>{enrollmentUrl ? <a href={enrollmentUrl} target="_blank" rel="noreferrer">Me apunto <span aria-hidden="true">↗</span></a> : <Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>}</div>
-          <dl><div><dt>Fecha</dt><dd>{workshop.date}</dd></div><div><dt>Horario</dt><dd>{workshop.schedule}</dd></div><div><dt>Lugar</dt><dd>{workshop.place}</dd></div><div><dt>Precio</dt><dd>{workshop.price}<br />{workshop.includes}</dd></div></dl>
+          <div>{workshop.edition && <p className="eyebrow">{workshop.edition}</p>}<h2>{workshop.infoTitle ?? `${workshop.duration} en Fresca. La Nave.`}</h2>{workshop.slug === "micelio-y-textil" ? <a href="#modalidades">Me apunto <span aria-hidden="true">↑</span></a> : enrollmentUrl ? <a href={enrollmentUrl} target="_blank" rel="noreferrer">Me apunto <span aria-hidden="true">↗</span></a> : <Link href="mailto:info@fresco.art">Me apunto <span aria-hidden="true">↗</span></Link>}</div>
+          <dl><div><dt>Fecha</dt><dd>{workshop.date}{workshop.slug === "micelio-y-textil" && <><br /><span className="workshop-info-option">Forrajeo opcional: domingo 22 de noviembre, por la mañana</span></>}</dd></div><div><dt>Horario</dt><dd>{workshop.schedule}{workshop.slug === "micelio-y-textil" && <><br /><span className="workshop-info-option">Forrajeo: 2 horas</span></>}</dd></div><div><dt>Lugar</dt><dd>{workshop.place}{workshop.slug === "micelio-y-textil" && <><br /><span className="workshop-info-option">Forrajeo: Casa de Campo</span></>}</dd></div><div><dt>Precio</dt><dd>{workshop.slug === "micelio-y-textil" ? <><strong>85 € · Taller + forrajeo</strong><br /><span className="workshop-info-option">75 € · Taller sin forrajeo</span><br /><span className="workshop-info-option">Materiales y picoteo incluidos</span></> : <>{workshop.price}<br />{workshop.includes}</>}</dd></div></dl>
         </section>
 
-        <section className="workshop-gallery workshop-gallery-masonry">{images.slice(1).map((image) => <figure key={image}><Image src={imageSource(image)} alt={`Proceso de ${workshop.cardTitle}`} width={0} height={0} sizes="(max-width: 760px) 100vw, 33vw" />{hasDanielDeJorgeCredit(image) && <figcaption className="workshop-photo-credit">Foto de Daniel de Jorge</figcaption>}</figure>)}</section>
+        {workshop.slug === "micelio-y-textil" && <section className="stripe-pricing-embed" aria-labelledby="stripe-pricing-title">
+          <div><div className="stripe-pricing-heading"><p className="eyebrow">Inscripción</p><h3 id="stripe-pricing-title">Elige tu modalidad.</h3></div><p>Nos vemos muy pronto!</p></div>
+          <stripe-pricing-table pricing-table-id="prctbl_1UQmTgF1dYNyoaDnydWANWcl" publishable-key="pk_live_51JW5KtF1dYNyoaDnNJfcHeyog7gp4qybtIGyXW7LCIotvv6NcZD5c7C7Zl2mR9cVq0uJLkYuvQ9TolpK8CeoKs2c000FT57agf" />
+        </section>}
+
+        {workshop.slug !== "micelio-y-textil" && <section className="workshop-gallery workshop-gallery-masonry">{images.slice(1).map((image) => <figure key={image}><Image src={imageSource(image)} alt={`Proceso de ${workshop.cardTitle}`} width={0} height={0} sizes="(max-width: 760px) 100vw, 33vw" />{hasDanielDeJorgeCredit(image) && <figcaption className="workshop-photo-credit">Foto de Daniel de Jorge</figcaption>}</figure>)}</section>}
 
         <section className="workshop-tutors"><p className="eyebrow">Imparten</p><div>{workshop.tutors.map((tutor, index) => { const links = tutorLinks[tutor.name]; return <article key={tutor.name}><span>{String(index + 1).padStart(2, "0")}</span><div className="workshop-tutor-heading"><h2>{tutor.name}</h2>{links && <nav aria-label={`Enlaces de ${tutor.name}`}>{links.web && <a href={links.web} target="_blank" rel="noreferrer">Web ↗</a>}{links.instagram && <a href={links.instagram} target="_blank" rel="noreferrer">Instagram ↗</a>}</nav>}</div><div className="workshop-tutor-bio">{tutor.text.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></article>; })}</div></section>
 
@@ -175,9 +224,9 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
           <div>{anaCanoWorks.map((work, index) => <figure className={index % 4 === 0 ? "artist-work-wide" : ""} key={work.image}><Image src={`${anaCanoWorksBase}/${work.image}`} alt={`${work.title}, obra de Ana Cano Brookbank`} fill sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>{work.title} · Ana Cano Brookbank</figcaption></figure>)}</div>
         </section>}
 
-        {workshop.slug === "micelio-y-textil" && <section className="artist-work-section">
+        {workshop.slug === "micelio-y-textil" && <section className="artist-work-section artist-work-section-alejandra">
           <header className="artist-work-heading-single"><p className="eyebrow">Obra de la artista</p></header>
-          <div>{alejandraWorks.map((image, index) => <figure className={index % 4 === 0 ? "artist-work-wide" : ""} key={image}><Image src={`${alejandraWorksBase}/${image}`} alt="Obra e investigación con micelio de Alejandra Díaz-Guerra" fill sizes="(max-width: 760px) 100vw, 50vw" /></figure>)}</div>
+          <div>{alejandraWorks.map((image) => <figure key={image}><Image src={`${alejandraWorksBase}/${image}`} alt="Obra e investigación con micelio de Alejandra Díaz-Guerra" width={0} height={0} sizes="(max-width: 760px) 100vw, 33vw" /></figure>)}</div>
         </section>}
 
         {workshop.slug === "sirviendo-un-plato-bodegon" && <section className="artist-work-section">

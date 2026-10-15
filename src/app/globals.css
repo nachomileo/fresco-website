@@ -455,10 +455,52 @@ button, input { font: inherit; }
 .workshop-info dl div { padding: 22px 0; display: grid; grid-template-columns: 34% 66%; border-bottom: 1px solid rgba(255,255,255,.3); }
 .workshop-info dt { font: 9px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; opacity: .65; }
 .workshop-info dd { margin: 0; font-size: 18px; line-height: 1.45; }
+.workshop-info-option { display: inline-block; margin-top: 8px; color: rgba(255,255,255,.74); font: 10px/1.55 "SFMono-Regular", Consolas, monospace; letter-spacing: .035em; text-transform: uppercase; }
+.workshop-price-choices { display: grid; gap: 6px; }
+.workshop-price-choices > span { display: grid; grid-template-columns: 42px 1fr; gap: 7px; align-items: baseline; color: var(--muted); font: 9px/1.35 "SFMono-Regular", Consolas, monospace; letter-spacing: .025em; text-transform: uppercase; }
+.workshop-price-choices strong { color: var(--text); font-size: 13px; font-weight: 600; letter-spacing: -.02em; }
+.workshop-step-link { margin-top: 16px; display: inline-flex; gap: 12px; color: var(--blue-bright); font: 700 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
+.foraging-addon { border-top: 1px solid var(--line); background: var(--panel); color: var(--text); }
+.foraging-addon-intro { padding: 120px 40px 100px; display: grid; grid-template-columns: minmax(300px, 42fr) minmax(0, 58fr); gap: 70px; align-items: start; }
+.foraging-addon-intro h2 { max-width: 620px; margin: 22px 0 0; font-size: clamp(68px, 8.5vw, 126px); line-height: .84; letter-spacing: -.07em; }
+.foraging-addon-copy { max-width: 760px; }
+.foraging-addon-copy p { margin: 28px 0 0; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.foraging-addon-copy .foraging-addon-lead { margin-top: 0; color: var(--text); font-size: clamp(27px, 3vw, 46px); line-height: 1.12; letter-spacing: -.04em; }
+.foraging-addon-copy .foraging-addon-note { padding-top: 26px; border-top: 1px solid var(--line); color: var(--blue-bright); font: 11px/1.65 "SFMono-Regular", Consolas, monospace; letter-spacing: .045em; text-transform: uppercase; }
+.foraging-gallery { padding: 8px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-flow: dense; gap: 8px; background: #111; }
+.foraging-gallery figure { position: relative; grid-column: span 3; aspect-ratio: 3 / 4; margin: 0; overflow: hidden; }
+.foraging-gallery .foraging-gallery-feature { grid-column: span 6; grid-row: span 2; }
+.foraging-gallery img { object-fit: cover; filter: saturate(.82) contrast(1.04); transition: transform 650ms ease; }
+.foraging-gallery figure:hover img { transform: scale(1.018); }
+.foraging-options { padding: 100px 40px 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; background: var(--bone); color: var(--ink); }
+.foraging-options article { min-height: 480px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; align-items: flex-start; border: 1px solid var(--line); }
+.foraging-options article > span { color: var(--blue-bright); font: 10px/1.4 "SFMono-Regular", Consolas, monospace; }
+.foraging-options article .eyebrow { margin-top: 60px; }
+.foraging-options h3 { max-width: 650px; margin: 18px 0 24px; font-size: clamp(40px, 5vw, 72px); line-height: .93; letter-spacing: -.055em; }
+.foraging-options article > p:not(.eyebrow) { max-width: 580px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.65; }
+.foraging-options strong { margin-top: auto; padding-top: 44px; font-size: clamp(42px, 5vw, 70px); line-height: 1; letter-spacing: -.055em; }
+.foraging-options a { margin-top: 26px; padding: 16px 22px; display: inline-flex; gap: 28px; background: var(--blue-bright); color: white; font: 700 10px/1 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
+.foraging-options .foraging-option-featured { border-color: var(--blue-bright); background: var(--blue-bright); color: white; }
+.foraging-options .foraging-option-featured > span, .foraging-options .foraging-option-featured .eyebrow, .foraging-options .foraging-option-featured > p:not(.eyebrow) { color: white; }
+.foraging-options .foraging-option-featured a { background: white; color: var(--blue-bright); }
+.stripe-pricing-embed { padding: 110px clamp(40px, 6vw, 96px); display: grid; grid-template-columns: 1fr; gap: 64px; border-top: 1px solid var(--line); background: var(--bone); color: var(--ink); }
+.stripe-pricing-embed > div { width: 100%; max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: minmax(260px, 42fr) minmax(0, 58fr); gap: 80px; align-items: end; }
+.stripe-pricing-embed h3 { max-width: 500px; margin: 18px 0 22px; font-size: clamp(42px, 5vw, 72px); line-height: .92; letter-spacing: -.055em; }
+.stripe-pricing-embed h3, #modalidades, #foraging-title { scroll-margin-top: 90px; }
+.stripe-pricing-embed > div > p:not(.eyebrow) { max-width: 440px; margin: 0 0 25px; padding-left: clamp(0px, 3vw, 42px); color: var(--ink); font-size: clamp(20px, 2vw, 28px); line-height: 1.25; letter-spacing: -.025em; }
+.stripe-pricing-embed stripe-pricing-table { display: block; width: 100%; max-width: 1480px; min-width: 0; margin: 0 auto; }
+.foraging-standalone { margin: 0; padding: 36px 40px 100px; display: flex; justify-content: space-between; align-items: center; gap: 30px; background: var(--bone); color: var(--ink); }
+.foraging-standalone p { max-width: 760px; margin: 0; font-size: 17px; line-height: 1.55; }
+.foraging-standalone strong { color: var(--blue-bright); }
+.foraging-standalone a { flex: 0 0 auto; color: var(--blue-bright); font: 700 10px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: 1px; text-transform: uppercase; }
 .workshop-gallery { padding: 8px; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-flow: dense; gap: 8px; background: var(--panel); }
 .workshop-gallery figure { position: relative; min-height: 440px; margin: 0; overflow: hidden; }
 .workshop-gallery figure img { object-fit: cover; filter: saturate(.68) contrast(1.14) brightness(1.06); }
 .workshop-gallery .workshop-gallery-wide { min-height: 440px; grid-column: span 2; }
+.workshop-gallery-micelio { grid-template-columns: repeat(12, minmax(0, 1fr)); background: #111; }
+.workshop-gallery-micelio figure { min-height: 0; grid-column: span 4; aspect-ratio: 4 / 5; }
+.workshop-gallery-micelio figure.workshop-gallery-wide { min-height: 0; grid-column: span 8; aspect-ratio: 8 / 5; }
+.workshop-gallery-micelio figure img { object-fit: cover; }
 .workshop-gallery-editorial { grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: start; }
 .workshop-gallery-editorial figure { min-height: 0; }
 .workshop-gallery-editorial .workshop-gallery-portrait { grid-column: span 4; aspect-ratio: 3 / 4; }
@@ -503,6 +545,10 @@ button, input { font: inherit; }
 .artist-work-section figure.artist-work-portrait { min-height: 0; aspect-ratio: 3 / 4; background: #fff; }
 .artist-work-section figure.artist-work-portrait img { object-fit: contain; }
 .artist-work-section figcaption { position: absolute; left: 16px; right: 16px; bottom: 14px; padding: 9px 11px; background: rgba(16,16,16,.82); color: var(--bone); font: 9px/1.4 "SFMono-Regular", Consolas, monospace; letter-spacing: .4px; text-transform: uppercase; }
+.artist-work-section-alejandra > div { display: block; columns: 3; column-gap: 8px; }
+.artist-work-section-alejandra figure,
+.artist-work-section-alejandra figure.artist-work-wide { display: block; min-height: 0; margin: 0 0 8px; break-inside: avoid; background: var(--panel); }
+.artist-work-section-alejandra figure img { position: static !important; display: block; width: 100%; height: auto; object-fit: contain; }
 .artist-work-section-paula > div { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-flow: dense; align-items: start; gap: 8px; }
 .artist-work-section-paula figure,
 .artist-work-section-paula figure.artist-work-wide { display: block; min-height: 0; margin: 0; background: #fff; }
@@ -726,8 +772,24 @@ button, input { font: inherit; }
   .workshop-info h2 { font-size: 53px; }
   .workshop-page-experimentacion-pictorica-sobre-ceramica .workshop-info h2 { font-size: clamp(39px, 10.5vw, 54px); }
   .workshop-info dl div { grid-template-columns: 1fr; gap: 9px; }
+  .foraging-addon-intro { padding: 90px 24px 72px; grid-template-columns: 1fr; gap: 48px; }
+  .foraging-addon-intro h2 { font-size: clamp(58px, 18vw, 82px); overflow-wrap: anywhere; }
+  .foraging-addon-copy .foraging-addon-lead { font-size: 29px; }
+  .foraging-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .foraging-gallery figure { grid-column: span 1; aspect-ratio: 3 / 4; }
+  .foraging-gallery .foraging-gallery-feature { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 4 / 5; }
+  .foraging-options { padding: 72px 16px 16px; grid-template-columns: 1fr; }
+  .foraging-options article { min-height: 520px; padding: 26px; }
+  .foraging-options h3 { font-size: 48px; }
+  .stripe-pricing-embed { padding: 76px 16px; gap: 34px; }
+  .stripe-pricing-embed > div { grid-template-columns: 1fr; gap: 8px; }
+  .stripe-pricing-embed > div > p:not(.eyebrow) { padding-left: 0; }
+  .foraging-standalone { padding: 30px 24px 80px; flex-direction: column; align-items: flex-start; }
   .workshop-gallery { grid-template-columns: 1fr; }
   .workshop-gallery figure, .workshop-gallery .workshop-gallery-wide { min-height: 520px; grid-column: auto; }
+  .workshop-gallery-micelio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .workshop-gallery-micelio figure, .workshop-gallery-micelio figure.workshop-gallery-wide { min-height: 0; grid-column: span 1; aspect-ratio: 3 / 4; }
+  .workshop-gallery-micelio figure:first-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
   .workshop-gallery-editorial, .workshop-gallery-autoedicion { grid-template-columns: 1fr; }
   .workshop-gallery-laicha { grid-template-columns: 1fr; }
   .workshop-gallery-laicha .workshop-gallery-portrait, .workshop-gallery-laicha .workshop-gallery-landscape { min-height: 0; grid-column: auto; aspect-ratio: auto; }
@@ -743,6 +805,8 @@ button, input { font: inherit; }
   .artist-work-section > header { padding: 75px 16px 50px; grid-template-columns: 1fr; gap: 20px; }
   .artist-work-section > div { grid-template-columns: 1fr; }
   .artist-work-section figure, .artist-work-section figure.artist-work-wide { min-height: 520px; grid-column: auto; }
+  .artist-work-section-alejandra > div { display: block; columns: 1; }
+  .artist-work-section-alejandra figure, .artist-work-section-alejandra figure.artist-work-wide { min-height: 0; }
   .artist-work-section-paula > div { display: block; }
   .artist-work-section-paula figure, .artist-work-section-paula figure.artist-work-wide, .artist-work-section-paula figure.artist-work-landscape, .artist-work-section-paula figure.artist-work-portrait, .artist-work-section-paula figure.artist-work-feature { min-height: 0; margin: 0 0 8px; aspect-ratio: auto; }
   .artist-work-section-paula figure img { position: static !important; display: block; width: 100%; height: auto; }
