@@ -174,7 +174,7 @@ export function WorkshopDetail({ workshop }: { workshop: WorkshopEntry }) {
           <div className={`workshop-overview-copy${workshop.slug === "micelio-y-textil" ? " workshop-overview-copy-spaced" : ""}`}><p className="eyebrow">El taller</p><p className="workshop-overview-lead">{workshop.intro}</p><div className="workshop-overview-body">{workshop.context.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></div>
         </section>
 
-        {workshop.slug === "micelio-y-textil" && <section className="workshop-gallery workshop-gallery-micelio">{images.slice(1, 9).map((image, index) => <figure className={index === 0 || index === 7 ? "workshop-gallery-wide" : ""} key={image}><Image src={imageSource(image)} alt={`Proceso de ${workshop.cardTitle}`} fill sizes="(max-width: 760px) 100vw, 33vw" /></figure>)}</section>}
+        {workshop.slug === "micelio-y-textil" && <section className="workshop-gallery workshop-gallery-micelio">{images.slice(1).map((image, index) => <figure className={index % 7 === 0 || index % 7 === 6 ? "workshop-gallery-wide" : ""} key={image}><Image src={imageSource(image)} alt={`Proceso de ${workshop.cardTitle}`} fill sizes="(max-width: 760px) 100vw, 33vw" /></figure>)}</section>}
 
         <section className="workshop-journey">
           <header><p className="eyebrow">El recorrido</p><h2>{workshop.journeyTitle ?? `${workshop.steps.map((step) => step.title).join(", ")}.`}</h2></header>
