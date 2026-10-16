@@ -424,9 +424,9 @@ button, input { font: inherit; }
 .workshop-overview-copy > .workshop-overview-lead { margin: 0; font-size: clamp(27px, 3.2vw, 47px); line-height: 1.08; letter-spacing: -.04em; }
 .workshop-overview-body { display: grid; gap: 20px; }
 .workshop-overview-body p { margin: 0; color: #54524d; font-size: 16px; line-height: 1.58; letter-spacing: 0; }
-.workshop-page-micelio-y-textil .workshop-overview-copy { justify-content: flex-start; }
-.workshop-page-micelio-y-textil .workshop-overview-lead { margin-top: 34px; }
-.workshop-page-micelio-y-textil .workshop-overview-body { margin-top: 52px; }
+.workshop-overview-copy-spaced { justify-content: flex-start; gap: 0; }
+.workshop-overview-copy-spaced .workshop-overview-lead { margin-top: 34px; }
+.workshop-overview-copy-spaced .workshop-overview-body { margin-top: 52px; }
 .workshop-overview-subheading { margin: 12px 0 -4px; color: var(--ink); font-size: 21px; line-height: 1.1; letter-spacing: -.03em; }
 .workshop-overview-autoedicion .workshop-overview-copy { justify-content: flex-start; }
 .workshop-overview-autoedicion .workshop-overview-lead { margin-top: 32px; }
@@ -764,8 +764,8 @@ button, input { font: inherit; }
   .workshop-overview-copy { min-height: 650px; padding: 45px 24px; }
   .workshop-overview-copy > .workshop-overview-lead { font-size: 32px; }
   .workshop-overview-body p { font-size: 16px; }
-  .workshop-page-micelio-y-textil .workshop-overview-lead { margin-top: 28px; }
-  .workshop-page-micelio-y-textil .workshop-overview-body { margin-top: 42px; }
+  .workshop-overview-copy-spaced .workshop-overview-lead { margin-top: 28px; }
+  .workshop-overview-copy-spaced .workshop-overview-body { margin-top: 42px; }
   .workshop-overview-autoedicion .workshop-overview-body { padding-top: 56px; }
   .workshop-overview-aguafuerte .workshop-overview-body { margin-top: 42px; }
   .sonic-program-note { padding: 90px 24px; grid-template-columns: 1fr; gap: 44px; align-items: start; }
