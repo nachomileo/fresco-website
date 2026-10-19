@@ -58,7 +58,7 @@ export function AguafuerteDetail() {
         <header className="workshop-hero">
           <div className="workshop-hero-image"><Image src={`${base}/aguafuerte-estampas-en-proceso.jpg`} alt="Pruebas de aguafuerte en el taller de Paula Cid Cerezo" fill sizes="(max-width: 760px) 100vw, 44vw" priority /></div>
           <div className="workshop-hero-copy">
-            <p className="meta-label">Seminarios · SE—03</p>
+            <p className="meta-label">Seminarios · SE—02</p>
             <div className="workshop-title-stack"><h1>Exploraciones<br />al aguafuerte.</h1><p>Seminario de dibujo y grabado.</p><span>Con Paula Cid Cerezo · Febrero 2027</span></div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>13, 14, 20, 21 y 27 de febrero de 2027</dd></div><div><dt>Lugar</dt><dd>Colonia de la Prensa, Carabanchel</dd></div><div><dt>Duración</dt><dd>32 horas + open studio</dd></div><div><dt>Precio</dt><dd>460 €</dd></div></dl>
