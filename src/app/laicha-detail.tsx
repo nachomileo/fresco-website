@@ -5,10 +5,17 @@ import { FrescaFixedMark } from "./fresca-fixed-mark";
 const base = "/images/program/derivas-sonoras/laboratorio-laicha";
 
 const steps = [
-  { title: "Compartir", text: "Entrar en el proceso de composición de laicHa y conocer las herramientas, decisiones y preguntas que atraviesan sus canciones." },
-  { title: "Desarmar", text: "Observar cómo una canción se construye para reconocer sus partes, tensiones, ritmos y posibilidades." },
-  { title: "Experimentar", text: "Poner esas herramientas en juego mediante ejercicios prácticos individuales, sin exigir experiencia previa." },
-  { title: "Componer en común", text: "Cruzar ideas, probarlas colectivamente y cerrar el laboratorio compartiendo lo producido durante el encuentro." },
+  { title: "El proceso", text: "Conocer cómo laicHa compone, arregla y produce, tomando como punto de partida su disco Desterrar a los poetas." },
+  { title: "La estructura", text: "Observar cómo se arma una canción, tanto en su trabajo como en el de otros autores." },
+  { title: "A probar", text: "Realizar ejercicios prácticos individuales para encontrar y desarrollar herramientas propias." },
+  { title: "En común", text: "Componer en grupo y cerrar el laboratorio compartiendo lo creado durante el encuentro." },
+];
+
+const compositionClues = [
+  { title: "Una letra que nace de los sonidos", text: "Escribir partiendo de cómo suenan las palabras, antes que de lo que dicen." },
+  { title: "Nombres que dicen otra cosa", text: "Descubrir cómo una lista de nombres puede guardar un segundo sentido." },
+  { title: "Una nota que se queda quieta", text: "Hacer que una melodía insista en un mismo lugar mientras todo se mueve alrededor." },
+  { title: "Un camino armónico propio", text: "Construir la armonía desde una idea, sin necesidad de partir de la teoría." },
 ];
 
 const gallery = [
@@ -43,17 +50,24 @@ export function LaichaDetail() {
           </div>
         </header>
 
-        <section className="workshop-question"><p className="eyebrow">El laboratorio</p><h2>Las herramientas de composición del músico puestas a la experimentación colectiva.</h2></section>
+        <section className="workshop-question"><p className="eyebrow">El laboratorio</p><h2>Crear canciones desde la búsqueda y el desarrollo de herramientas propias.</h2></section>
 
         <section className="workshop-overview workshop-overview-laicha">
           <div className="workshop-overview-image"><Image src={`${base}/desterrar-a-los-poetas.jpg`} alt="Desterrar a los poetas, el nuevo disco de laicHa" fill sizes="(max-width: 760px) 100vw, 50vw" /></div>
-          <div className="workshop-overview-copy"><p className="eyebrow">Abrir el proceso de una canción</p><p className="workshop-overview-lead">Desarmar la composición, compartir herramientas y seguir los desvíos que propone cada canción.</p><div className="workshop-overview-body"><p>laicHa acaba de publicar <em>Desterrar a los poetas</em>, un disco de ocho canciones que recorre paisajes de la música sudamericana como el tango, la zamba y el bolero. Este encuentro funciona como un laboratorio donde comparte su proceso creativo y las herramientas que utiliza para componer, arreglar y producir sus canciones.</p><p>A partir de ese recorrido, la propuesta es poner esas herramientas a prueba en instancias prácticas individuales y colectivas: desarmar ideas, probar caminos posibles y observar qué aparece cuando una canción comienza a construirse en común.</p></div></div>
+          <div className="workshop-overview-copy"><p className="eyebrow">Abrir el proceso de una canción</p><p className="workshop-overview-lead">Desarmar la composición, compartir herramientas y seguir los desvíos que propone cada canción.</p><div className="workshop-overview-body"><p>laicHa acaba de publicar <em>Desterrar a los poetas</em>, un disco de ocho canciones que recorre paisajes de la música sudamericana como el tango, la zamba y el bolero. Este encuentro funciona como un laboratorio donde comparte su proceso creativo y las herramientas que utiliza para componer, arreglar y producir sus canciones.</p><p>Partiremos de recursos conocidos —nociones de armonía, formas poéticas como la décima o el soneto y estructuras de canción como la zamba o el tango— mediante una aproximación rápida y accesible. Desde allí, investigaremos las reglas que cada persona puede inventar: un juego, una restricción o una idea capaz de disparar la escritura.</p><p>La propuesta es construir una caja de herramientas propia y ponerla a prueba en instancias prácticas individuales y colectivas, con ejemplos de canciones de laicHa y de otros autores.</p></div></div>
+        </section>
+
+        <section className="laicha-tools" aria-labelledby="laicha-tools-heading">
+          <header><p className="eyebrow">Algunas pistas</p><h2 id="laicha-tools-heading">Herramientas propias.</h2><p>Escucharemos fragmentos de canciones en las que cada autor inventó su propia manera de componer. Estas son algunas de las posibilidades que exploraremos:</p></header>
+          <div>{compositionClues.map((clue, index) => <article key={clue.title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{clue.title}</h3><p>{clue.text}</p></article>)}</div>
         </section>
 
         <section className="workshop-journey">
           <header><p className="eyebrow">El recorrido</p><h2>De una herramienta propia a una experiencia colectiva.</h2><p className="workshop-journey-note">Un encuentro para acercarse a la composición desde la práctica, compartir recursos y ensayar nuevas formas de hacer canciones.</p><Link href="mailto:info@fresco.art?subject=Consulta%20sobre%20el%20laboratorio%20de%20laicHa">Quiero más info <span aria-hidden="true">↗</span></Link></header>
           <ol>{steps.map((step, index) => <li key={step.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
         </section>
+
+        <section className="laicha-audience"><p className="eyebrow">Para quién</p><div><h2>Para cualquiera que quiera escribir canciones.</h2><p>Aquí la música y la letra van de la mano: trabajamos canciones, no solo textos ni solo melodías. No hace falta formación musical; basta con tocar algunos acordes, cantar o tener ganas de que tus palabras suenen. Cada persona llega a su propio resultado.</p></div></section>
 
         <section className="workshop-info">
           <div><p className="eyebrow">Una tarde en la nave</p><h2>Escuchar, probar y componer con otras personas.</h2><a href="https://buy.stripe.com/5kQaEXc65dYO60M6427wA0L" target="_blank" rel="noreferrer">Me apunto <span aria-hidden="true">↗</span></a></div>
