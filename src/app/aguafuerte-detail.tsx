@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FrescaFixedMark } from "./fresca-fixed-mark";
 
 const base = "/images/program/procesos cuatrimestrales/exploraciones-al-aguafuerte";
+const enrollmentUrl = "https://buy.stripe.com/28EeVdb215si2OA7867wA0M";
 const gallery = [
   { image: "prensa-de-grabado-en-el-taller.jpg", layout: "landscape" },
   { image: "plancha-de-cobre-aguafuerte.jpg", layout: "portrait" },
@@ -62,7 +63,7 @@ export function AguafuerteDetail() {
             <div className="workshop-title-stack"><h1>Exploraciones<br />al aguafuerte.</h1><p>Seminario de dibujo y grabado.</p><span>Con Paula Cid Cerezo · Febrero 2027</span></div>
             <div className="workshop-hero-action" id="inscripcion">
               <dl><div><dt>Fecha</dt><dd>13, 14, 20, 21 y 27 de febrero de 2027</dd></div><div><dt>Lugar</dt><dd>Colonia de la Prensa, Carabanchel</dd></div><div><dt>Duración</dt><dd>32 horas + open studio</dd></div><div><dt>Precio</dt><dd>460 €</dd></div></dl>
-              <Link href="mailto:info@fresco.art?subject=Exploraciones%20al%20aguafuerte">Reserva plaza <span aria-hidden="true">↗</span></Link>
+              <a href={enrollmentUrl} target="_blank" rel="noreferrer">Reservar plaza <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </header>
@@ -80,7 +81,7 @@ export function AguafuerteDetail() {
         </section>
 
         <section className="workshop-info">
-          <div><p className="eyebrow">3 fines de semana</p><h2>Investigar el dibujo a través de la huella, la repetición y la materia.</h2><Link href="mailto:info@fresco.art?subject=Exploraciones%20al%20aguafuerte">Me apunto <span aria-hidden="true">↗</span></Link></div>
+          <div><p className="eyebrow">3 fines de semana</p><h2>Investigar el dibujo a través de la huella, la repetición y la materia.</h2><a href={enrollmentUrl} target="_blank" rel="noreferrer">Reservar plaza <span aria-hidden="true">↗</span></a></div>
           <dl>
             <div><dt>Fechas</dt><dd>13 y 14 · 20 y 21 · 27 de febrero de 2027</dd></div>
             <div><dt>Horario</dt><dd>Sábados de 10 a 19 h · Domingos de 10 a 14 h</dd></div>
