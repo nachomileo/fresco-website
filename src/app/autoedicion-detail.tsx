@@ -69,7 +69,7 @@ export function AutoedicionDetail() {
             <p className="meta-label">Seminarios · SE—01</p>
             <div className="workshop-title-stack"><h1>Autoedición.</h1><p>Herramientas para crear y producir una publicación.</p><span>Con Ana Bustelo · Febrero—mayo 2027<br />II edición</span></div>
             <div className="workshop-hero-action" id="inscripcion">
-              <dl><div><dt>Fecha</dt><dd>Febrero—mayo 2027</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>23 horas lectivas + open studio</dd></div><div><dt>Precio</dt><dd>420 €</dd></div></dl>
+              <dl><div><dt>Fecha</dt><dd>Intensivo: 20 y 21 de febrero de 2027 · Seguimientos hasta mayo</dd></div><div><dt>Lugar</dt><dd>Carabanchel, Madrid</dd></div><div><dt>Duración</dt><dd>23 horas lectivas + open studio</dd></div><div><dt>Precio</dt><dd>420 €</dd></div></dl>
               <a href={enrollmentUrl} target="_blank" rel="noreferrer">Reservar plaza <span aria-hidden="true">↗</span></a>
             </div>
           </div>
@@ -90,8 +90,8 @@ export function AutoedicionDetail() {
         <section className="workshop-info">
           <div><p className="eyebrow workshop-info-eyebrow">23 horas lectivas + open studio</p><h2>Un proyecto editorial desarrollado entre sesiones de trabajo, tutoría y revisión.</h2><a href={enrollmentUrl} target="_blank" rel="noreferrer">Reservar plaza <span aria-hidden="true">↗</span></a></div>
           <dl>
-            <div><dt>Fechas</dt><dd>Febrero—mayo 2027</dd></div>
-            <div><dt>Horario</dt><dd>Intensivo: sábado y domingo de 11 a 19 h, con pausa para comer · Seguimientos: tres encuentros los jueves, en fechas a confirmar con el grupo</dd></div>
+            <div><dt>Fechas</dt><dd>Intensivo: 20 y 21 de febrero de 2027 · Tres seguimientos entre febrero y mayo</dd></div>
+            <div><dt>Horario</dt><dd>Intensivo: sábado y domingo de 10 a 18 h, con pausa para comer · Seguimientos: tres encuentros los jueves, en fechas a confirmar con el grupo</dd></div>
             <div><dt>Formato</dt><dd>Taller intensivo de fin de semana: 2 días · 14 horas<br />Tres encuentros de seguimiento: 3 horas cada uno · 9 horas<br />Total: 23 horas lectivas</dd></div>
             <div><dt>Open studio</dt><dd>Presentación pública de las ediciones producidas en Fresca. La Nave</dd></div>
             <div><dt>Precio</dt><dd>420 € · No incluye los gastos de producción</dd></div>
